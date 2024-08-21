@@ -30,25 +30,16 @@ Contact [our team](https://lter.github.io/scicomp/staff.html) with your requests
 
 ## Navigating this Website
 
-### If you're a working group member...
+::::{.panel-tabset}
+### Working Group Members
 
-For members of our working groups, this website is a centralized hub of resources designed to help you get familiar with the way our team works and what we offer. The pages under the **Working Group Onboarding** tab contain materials that will facilitate collaboration between our team and your group! 
+For members of our working groups, this website is a centralized hub of resources designed to help you get familiar with the way our team works and what we offer. The pages under the **Working Group Onboarding** dropdown menu are particularly targeted at facilitating collaboration between your group and our team!
 
-[**Team Coding**](https://lter.github.io/scicomp/onboard-scaffold_team_coding.html) contains 5 essential recommendations to keep in mind while coding collaboratively. 
+### Other Visitors
 
-Visit [**Working Together**](https://lter.github.io/scicomp/onboard-scaffold_services.html) for more details on the types of tasks we can help with. 
+Welcome! Even if you're not a part of a working group, we hope that you find the various resources on this website helpful! If you're interested in learning more about open, reproducible science, please feel free to take a look at our [**Workshops**](https://lter.github.io/scicomp/workshops.html) pages and [**Coding Tips**](https://lter.github.io/scicomp/best_practices.html) pages for other useful tips in R. 
 
-For information on the modern technological infrastructure that NCEAS provides, check out [**NCEAS Infrastructure**](https://lter.github.io/scicomp/onboard-scaffold_infrastructure.html).
-
-To see a list of the supported, collaborative tools that our team uses, visit [**Suggested Tools**](https://lter.github.io/scicomp/onboard-scaffold_suggested-tools.html).
-
-For other miscellaneous resources, see [**Other Resources**](https://lter.github.io/scicomp/onboard-scaffold_other-materials.html).
-
-We look forward to assisting your group however we can! Please do not hesitate to contact [our team](https://lter.github.io/scicomp/staff.html) for any task requests and questions. 
-
-### For working groups and all our other visitors...
-
-Welcome! Even if you're not a part of a synthesis working group, we hope that you find the various resources on this website helpful! If you're interested in learning more about open, reproducible science, please feel free to take a look at our [**Workshops**](https://lter.github.io/scicomp/workshops.html) on GitHub, `tidyverse`, and R Shiny apps! Or peruse our [**Tutorials**](https://lter.github.io/scicomp/tutorials.html) and [**Coding Tips**](https://lter.github.io/scicomp/best_practices.html) pages for other useful tips in R. 
+::::
 
 <p align="center">
 <img src = "images/lter_asm.jpeg" width = "100%"/>
