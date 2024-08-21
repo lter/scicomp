@@ -1,0 +1,55 @@
+---
+title: "Scientific Computing Support"
+---
+
+<p align="center">
+<img src = "images/lter_logo_wide.png" width = "60%"/>
+</p>
+
+## What We Do
+
+The Scientific Computing team is a small (but mighty!) team of data analysts/scientists supporting Long Term Ecological Research ([LTER](https://lternet.edu/)) Network synthesis working groups. The LTER Network Office (LNO) regularly issues calls for synthesis research projects, which are open to scientists from within and outside of the LTER Network. We provide modern technological infrastructure to support analytical, computing, or network-based needs for these synthesis working groups. 
+
+We are housed at the National Center for Ecological Analysis and Synthesis ([NCEAS](https://www.nceas.ucsb.edu/)). **Our goal is to support and promote an open and reproducible approach to synthesis science**. We do so by providing on-demand training, coaching, and analytical support via sprints of 3-4 weeks. In addition to the support during meetings at NCEAS, our team is available in-between visits to discuss and advise on data science and scientific programming tasks, such as:
+
+- Structuring and integrating heterogeneous datasets
+- Writing code to wrangle, analyze, model, or visualize the data your group has already collected
+- Designing workflows, scripting best practices for reproducible science, and reviewing code
+- Helping you get set up on NCEAS' server and scale your analysis
+- Preserving and promoting your products on the Web - from derived datasets and terminological glossaries/vocabularies, to scripts, model codes, and interactive "web applications"
+- Offering workshops on new skills or programs (such as git)
+
+Depending on your team's preferences, we can operate on a spectrum of independence ranging from complete self-sufficiency after initial definition of task scope to coding together with your team.
+
+Contact [our team](https://nceas.github.io/scicomp.github.io/staff.html) with your requests at scicomp@nceas.ucsb.edu
+
+<p align="center">
+<img src = "images/wg-timeline.png" width = "100%"/>
+</p>
+
+## Navigating this Website
+
+### If you're a working group member...
+
+For members of our working groups, this website is a centralized hub of resources designed to help you get familiar with the way our team works and what we offer. The pages under the **Working Group Onboarding** tab contain materials that will facilitate collaboration between our team and your group! 
+
+[**Team Coding**](https://nceas.github.io/scicomp.github.io/onboard-scaffold_team_coding.html) contains 5 essential recommendations to keep in mind while coding collaboratively. 
+
+Visit [**Working Together**](https://nceas.github.io/scicomp.github.io/onboard-scaffold_services.html) for more details on the types of tasks we can help with. 
+
+For information on the modern technological infrastructure that NCEAS provides, check out [**NCEAS Infrastructure**](https://nceas.github.io/scicomp.github.io/onboard-scaffold_infrastructure.html).
+
+To see a list of the supported, collaborative tools that our team uses, visit [**Suggested Tools**](https://nceas.github.io/scicomp.github.io/onboard-scaffold_suggested-tools.html).
+
+For other miscellaneous resources, see [**Other Resources**](https://nceas.github.io/scicomp.github.io/onboard-scaffold_other-materials.html).
+
+We look forward to assisting your group however we can! Please do not hesitate to contact [our team](https://nceas.github.io/scicomp.github.io/staff.html) for any task requests and questions. 
+
+### For working groups and all our other visitors...
+
+Welcome! Even if you're not a part of a synthesis working group, we hope that you find the various resources on this website helpful! If you're interested in learning more about open, reproducible science, please feel free to take a look at our [**Workshops**](https://nceas.github.io/scicomp.github.io/workshops.html) on GitHub, `tidyverse`, and R Shiny apps! Or peruse our [**Tutorials**](https://nceas.github.io/scicomp.github.io/tutorials.html) and [**Coding Tips**](https://nceas.github.io/scicomp.github.io/best_practices.html) pages for other useful tips in R. 
+
+<p align="center">
+<img src = "images/lter_asm.jpeg" width = "100%"/>
+<figcaption>LTER All Scientists' Meeting 2022, Pacific Grove CA</figcaption>
+</p>
