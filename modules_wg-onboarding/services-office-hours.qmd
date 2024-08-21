@@ -1,4 +1,0 @@
-
-## Weekly Office Hours
-
-Each of [our staff members](https://nceas.github.io/scicomp.github.io/staff.html) offers a one-hour block weekly as a standing office hour each week. This is a great time to join us with small hurdles or obstacles you're experiencing in a given week. For example, previous office hours have dealt with topics like refreshing on `git`/GitHub vocabulary, authenticating the `googledrive` R package, or solving a specific error in a new R script.

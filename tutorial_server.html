@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Scientific Computing Support - Server Tutorial</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/scicomptools_hex.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<meta name="twitter:title" content="Scientific Computing Support - Server Tutorial">
+<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Scientific Computing Support</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-working-group-onboarding" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Working Group Onboarding</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-working-group-onboarding">    
+        <li>
+    <a class="dropdown-item" href="./onboard-scaffold_team_coding.html">
+ <span class="dropdown-text">Team Coding</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./onboard-scaffold_services.html">
+ <span class="dropdown-text">Working Together</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./sci-comp-definition.html">
+ <span class="dropdown-text">What is Scientific Computing?</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./onboard-scaffold_infrastructure.html">
+ <span class="dropdown-text">Computing Infrastructure</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./onboard-scaffold_suggested-tools.html">
+ <span class="dropdown-text">Suggested Tools</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./onboard-scaffold_other-materials.html">
+ <span class="dropdown-text">Other Resources</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-trainings" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Trainings</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-trainings">    
+        <li>
+    <a class="dropdown-item" href="./workshops.html">
+ <span class="dropdown-text">Workshops</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorial_server.html">
+ <span class="dropdown-text">Server Tutorial</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorials.html">
+ <span class="dropdown-text">Other Tutorials</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="./best_practices.html"> 
+<span class="menu-text">Coding Tips</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./portfolio.html"> 
+<span class="menu-text">Portfolio</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-our-team" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Our Team</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-our-team">    
+        <li>
+    <a class="dropdown-item" href="./staff.html">
+ <span class="dropdown-text">People</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./data-acquisition.html">
+ <span class="dropdown-text">Data Acquisition</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./team-onboarding.html">
+ <span class="dropdown-text">Internal - Team Onboarding</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./wg-setup.html">
+ <span class="dropdown-text">Internal - Group Setup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./shiny-server.html">
+ <span class="dropdown-text">Internal - Deploy Shiny Apps</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lter/scicomp"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#server-workflow" id="toc-server-workflow" class="nav-link" data-scroll-target="#server-workflow">Server Workflow</a>
+  <ul class="collapse">
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
+  <li><a href="#code" id="toc-code" class="nav-link" data-scroll-target="#code">Code</a></li>
+  </ul></li>
+  <li><a href="#getting-set-up" id="toc-getting-set-up" class="nav-link" data-scroll-target="#getting-set-up">Getting Set Up</a>
+  <ul class="collapse">
+  <li><a href="#necessary-software" id="toc-necessary-software" class="nav-link" data-scroll-target="#necessary-software">Necessary Software</a></li>
+  <li><a href="#get-invited" id="toc-get-invited" class="nav-link" data-scroll-target="#get-invited">Get Invited!</a></li>
+  <li><a href="#setting-your-password" id="toc-setting-your-password" class="nav-link" data-scroll-target="#setting-your-password">Setting your Password</a></li>
+  </ul></li>
+  <li><a href="#accessing-the-server" id="toc-accessing-the-server" class="nav-link" data-scroll-target="#accessing-the-server">Accessing the Server</a></li>
+  <li><a href="#connecting-github" id="toc-connecting-github" class="nav-link" data-scroll-target="#connecting-github">Connecting GitHub</a></li>
+  <li><a href="#uploading-data" id="toc-uploading-data" class="nav-link" data-scroll-target="#uploading-data">Uploading Data</a>
+  <ul class="collapse">
+  <li><a href="#via-rstudio" id="toc-via-rstudio" class="nav-link" data-scroll-target="#via-rstudio">Via RStudio</a></li>
+  <li><a href="#via-sftp-software" id="toc-via-sftp-software" class="nav-link" data-scroll-target="#via-sftp-software">Via sFTP Software</a></li>
+  <li><a href="#via-the-command-line" id="toc-via-the-command-line" class="nav-link" data-scroll-target="#via-the-command-line">Via the Command Line</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    <div class="quarto-margin-footer"><div class="margin-footer-item">
+<p><img src="images/lter_logo_square.png" width="40%"> <img src="images/nceas_logo_square.png" width="40%"></p>
+</div></div></div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Server Tutorial</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Working on <a href="https://aurora.nceas.ucsb.edu/">NCEAS’ Server</a> is similar to working on an entirely separate computer from the laptop or desktop computer on which you typically work. This means that you need to go through the steps of connecting GitHub to your “RStudio” again for the instance of RStudio accessed through Aurora. GitHub’s Personal Access Token is referred to as “token” hereafter for simplicity. Note that our server also runs other analytical tools such as JupyterHub for python users.</p>
+<p>Often the reason to engage with the server is to increase the scale of your analyses far beyond what your personal computer can handle. There are other advantages such as:</p>
+<ul>
+<li><strong>Storage Capacity</strong> – More disk space &amp; faster storage</li>
+<li><strong>Computing Power</strong> – More CPUs &amp; RAM (384GB!!)</li>
+<li><strong>Security</strong> – Nightly backups and data are distributed across multiple drives</li>
+<li><strong>Collaboration</strong> – Shared data &amp; consistent software versions accessible to everyone on your team</li>
+</ul>
+</section>
+<section id="server-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="server-workflow">Server Workflow</h2>
+<p>Before diving into the process of getting set up on and using the server, it will be helpful to briefly consider what a workflow involving the server “looks” like! When you are working on the server you will need to consider what is stored on your personal computer (bottom left), on GitHub (bottom right), and on NCEAS’ server (top).</p>
+<p>To simplify, let’s focus on (1) where your data live and (2) where your code lives.</p>
+<p align="center">
+<img src="images/tutorial_server/workflow-server.png" width="100%">
+</p>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>Your data (or at least some of it) is likely on your personal computer. Those specific files are only accessible to you and you almost certainly have a file path to those data (i.e., levels of nested folders) that is unique to you. Even if you share the data file with someone on your team–via email or a cloud storage device–they will likely have to tweak any code that you share to ensure that the file paths are correct for their computer.</p>
+<p>When you involve the server, all of your group’s data can live in a folder on the server within the <code>shares</code> folder. Only your group will have access to the data in that subfolder of <code>shares</code> . A huge advantage of this is that everyone in your group will now have <u>the exact same file path to the data</u> while working on the server.</p>
+<p>This means that there is <em>no chance</em> that you can be working in the “wrong” version of the data (i.e., one that is outdated, doesn’t reflect new metadata, etc.) because everyone is using the <u>exact same file(s)</u> rather than emailing static copies of data that may become outdated without warning.</p>
+</section>
+<section id="code" class="level3">
+<h3 class="anchored" data-anchor-id="code">Code</h3>
+<p>We strongly recommend that you use <a href="https://github.com/">GitHub</a> to manage your code to streamline the use of either the server or your personal computer while collaborating with other group members.</p>
+<p>If you are unfamiliar with git, it is a “version control system” that allows line-by-line tracking of changes to code. GitHub add features to git to enable multiple people to share and work on the same code which is very useful in collaborative contexts like working groups. Git and GitHub are not really meant to track or store data (though it can do this in a somewhat limited way) so notice that the <strong><span style="color:gold">yellow</span></strong> “Data” folder is absent from the bottom right part of the triangle. We offer <a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/">an entire workshop on GitHub</a> that we are happy to offer to your group if that is of interest so just let us know!</p>
+<p>Assuming that you use GitHub, your code (and its history) will be preserved there. You can then write or edit code either on your personal computer or on the server. Regardless of where you make the changes, so long as you connect both your personal computer and your server profile to your GitHub account, you will have a centralized place for all of your code that is accessible to both workspaces.</p>
+<p>Notice that on the server, your code will be in your subfolder of the <code>home</code> folder on the server. Only you can access this folder and you will be leveraging GitHub to share your code with others! This means that everyone in your group can have their own code files while every copy of those scripts can use the file path in the <code>shares</code> folder to access the data files. In other words, use GitHub to share your code stored in your home folder and your group shared folder to share data.</p>
+<p>A final advantage in the ‘code’ realm is that the server has a consistent version of R, RStudio, and <code>git</code> (the program underpinning GitHub) so there is no chance that a software version difference can affect different members of your group differently.</p>
+</section>
+</section>
+<section id="getting-set-up" class="level2">
+<h2 class="anchored" data-anchor-id="getting-set-up">Getting Set Up</h2>
+<section id="necessary-software" class="level3">
+<h3 class="anchored" data-anchor-id="necessary-software">Necessary Software</h3>
+<p>The only software that you will need on your personal computer to get set up on NCEAS’ server is RStudio!</p>
+<p>You likely have worked in the “Console” tab of RStudio (where run lines and outputs appear; see below) but RStudio has another tab to the right of the “Console” called “Terminal” which offers RStudio users access to the <strong>command line</strong> (a.k.a. the <strong>shell</strong>). If you are a veteran command line user you may prefer to use the standalone Terminal app on MacOS or <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a> on Windows but for the sake of keeping your tool kit streamlined, we’ll walk through getting set up on NCEAS’ server using only RStudio’s Terminal tab.</p>
+<p align="center">
+<img src="images/tutorial_server/server-setup-1-console.png" width="85%">
+</p>
+<p>The Terminal <u>does not</u> accept R syntax (and the Console doesn’t accept Terminal syntax) so you may notice that some of the code we’ll walk you through below is formatted differently than you would write an R script.</p>
+<p align="center">
+<img src="images/tutorial_server/server-setup-2-terminal.png" width="85%">
+</p>
+</section>
+<section id="get-invited" class="level3">
+<h3 class="anchored" data-anchor-id="get-invited">Get Invited!</h3>
+<p>In order to access the server (and follow the instructions below) we’ll need to create an account on the server for you. Please email <a href="https://nceas.github.io/scicomp.github.io/staff.html">someone on our team</a> or <strong>scicomp@nceas.ucsb.edu</strong> so that we can contact NCEAS’ IT team and get an invite email sent to you.</p>
+<p>In that email, please include the name and email addresses of all of your team members who want to access the server. After that information has been received, NCEAS’ IT team will create accounts for all of those people and will send you an invitation email to set up your account on the server.</p>
+<p>An example of what that email may look like is included below but there are two key pieces of information:</p>
+<ol type="1">
+<li>Your username</li>
+<li>Your temporary password (covered by a <strong><span style="color:red">red bar</span></strong> in the screenshot).</li>
+</ol>
+<p>If you have not received that email, check your Spam folder for emails from Thomas Hetmank (hetmank@nceas.ucsb.edu) or Nick Outin (outin@nceas.ucsb.edu). If you have not received the email and it is not in your Spam, reach out to our team and we will work to get an invite sent to you.</p>
+<p align="center">
+<img src="images/tutorial_server/server-setup-3-invite-email.png" width="85%">
+</p>
+</section>
+<section id="setting-your-password" class="level3">
+<h3 class="anchored" data-anchor-id="setting-your-password">Setting your Password</h3>
+<section id="note-on-this-step-of-the-set-up" class="level4">
+<h4 class="anchored" data-anchor-id="note-on-this-step-of-the-set-up">Note on this Step of the Set Up</h4>
+<p>Note that <em>you only have to set your password once!</em> For security, when we create your account on the server we create a temporary password that can only be used once (see the invite email screenshot above). So, when you first login to the server by following the instructions below, you’ll need to create a “real” (i.e., non-temporary) password. Subsequent sign-ins to the server do not require this ‘Setting your Password’ section at all!</p>
+<p>In the following instructions we use text formatting to explain what you should type.</p>
+<ol type="1">
+<li>Text <code>like this</code> should be typed into the Terminal tab of Rstudio</li>
+</ol>
+<ul>
+<li>Run it by pressing “enter” or “return”</li>
+<li>Note that typing these commands into an R script or R Markdown <em>will not work</em> because it will attempt to run in the Console rather than the Terminal</li>
+</ul>
+<ol start="2" type="1">
+<li>Text wrapped by brackets <code>[like this]</code> should also be typed in the Terminal tab <strong>BUT</strong> <u>you should replace the text in brackets</u> in a user-specific way that is clarified in the nearby text</li>
+</ol>
+</section>
+<section id="password-setting-instructions" class="level4">
+<h4 class="anchored" data-anchor-id="password-setting-instructions">Password Setting Instructions</h4>
+<ol type="1">
+<li><p>In the Terminal pane of RStudio, you will “ssh” into the server by running the following code: <code>ssh [your username]@aurora.nceas.ucsb.edu</code>. It is “<span class="citation" data-cites="aurora">@aurora</span>” because <strong>the name of the server is Aurora</strong>.</p></li>
+<li><p>You will need to enter <code>yes</code> to accept the server’s SSH key.</p></li>
+<li><p>You will then be prompted to enter your <code>[temporary password]</code> (see the above email example). <strong>Note that the cursor will <u>not</u> advance as you type but it <u>is</u> registering your entries!</strong> There will be no indication that you are typing (such as: “•••••••••”). This throws off many users so hopefully this note helps set your mind at ease!</p></li>
+</ol>
+<p>Next, you will be prompted to change your “expired” password. We consider your temporary password to be expired as soon as you use it because sharing passwords via email is not secure and this “expiration” lets you set the password to something that only you know at the outset of your time in the server. <strong><u>Note again that the cursor will not advance as you type but it is working</u>!</strong></p>
+<ol start="4" type="1">
+<li><p>To update your password, (i) enter your <code>[temporary password]</code>, then (ii) <code>[your strong new password]</code> and finally (iii) re-type <code>[your strong new password]</code> to confirm it. Note that your new password should not be “your strong new password” <i class="fa-solid fa-face-smile" aria-label="face-smile"></i></p></li>
+<li><p>You are all set up! Run <code>exit</code> to log out of the server in the Terminal tab.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="accessing-the-server" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-the-server">Accessing the Server</h2>
+<ol type="1">
+<li>Use your favorite web browser (e.g., Firefox, Chrome, etc.) to access Aurora at <a href="https://aurora.nceas.ucsb.edu/">aurora.nceas.ucsb.edu</a> and click “Login to RStudio Server”</li>
+</ol>
+<p align="center">
+<img src="images/tutorial_server/server-signin-1.png" width="60%">
+</p>
+<ol start="2" type="1">
+<li>Sign in with your username and the password that you created in the “Getting Set Up” section of this tutorial.</li>
+</ol>
+<p align="center">
+<img src="images/tutorial_server/server-signin-2.png" width="100%">
+</p>
+<p>You should now be in something that looks very much like RStudio but is housed in a tab on your browser!</p>
+<p align="center">
+<img src="images/tutorial_server/server-signin-3.png" width="100%">
+</p>
+<p>If the above steps have not resulted in successfully accessing Aurora, consult <a href="https://help.nceas.ucsb.edu/NCEAS/Computing/first_login_to_nceas_analytical_server">NCEAS’ instructions on first login</a> and/or <a href="https://help.nceas.ucsb.edu/NCEAS/Computing/connecting_to_linux_using_ssh.html">SSH-specific instructions for Mac vs.&nbsp;Windows</a> and/or email us!</p>
+</section>
+<section id="connecting-github" class="level2">
+<h2 class="anchored" data-anchor-id="connecting-github">Connecting GitHub</h2>
+<p>As stated at the beginning of this tutorial, we cannot overstate how strongly we suggest integrating <a href="https://github.com/">GitHub</a> into your collaborative coding process. We are happy to work through <a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/">our GitHub tutorial</a> if that is of interest though you may find walking through the materials at your own pace helpful even without a formal workshop!</p>
+<p>When setting up <code>git</code>/GitHub on your personal computer, you normally have to install R, RStudio, <code>git</code>, and make an account on GitHub. When working on the server, R, RStudio, and <code>git</code> are already successfully installed and ready for you to use. So, to begin connecting your server profile with GitHub you need only follow these steps:</p>
+<ol type="1">
+<li><p><strong><a href="https://happygitwithr.com/github-acct.html">Create a GitHub account</a></strong> using the web browser of your choosing.</p></li>
+<li><p>Install and load the <code>usethis</code> and <code>gitcreds</code> packages</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"usethis"</span>, <span class="st">"gitcreds"</span>))</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis); <span class="fu">library</span>(gitcreds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>Tell the server your GitHub username and email</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"Your GitHub Username"</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                        <span class="at">user.email =</span> <span class="st">"Your GitHub Email"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>4A. Create a Personal Access Token (PAT) on GitHub for your server profile. Note: <u>running the below line of code will open a browser window for you to create a token on GitHub</u>! For additional information, see <a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">GitHub’s PAT Tutorial</a> or the <a href="https://happygitwithr.com/https-pat.html">Happy Git with R PAT Tutorial</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Be sure to copy the token when you're done!!!</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="do">## It will be a long string of letters and numbers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>4B. Before you navigate away from the token page, <u>copy the token and paste it somewhere safe for the rest of these setup instructions</u>. If you close or leave the window without copying the token, you will <u>not</u> be able to see the token again so you’d have to make a new one to complete the next step.</p>
+<ol start="5" type="1">
+<li>Next, give your server profile the token you just created! Running the below line of code will prompt you to paste your token into the Console and hit enter. Note that your token <em>should not</em> be in quotes when you give it to the Console.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>At the end of the above steps your token should be set! You should now be able to interact with code that you can access on GitHub directly from the server.</p>
+<ol start="6" type="1">
+<li>Finally, <u>in the Terminal pane of RStudio</u> you need to tell the server to “remember” your token for some set amount of time.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> credential.helper <span class="st">'cache --timeout=10000000'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <code>timeout</code> bit of that argument is the amount of time in minutes you want your token to be remembered. You can’t set it to remember your token forever so 10 million minutes (just over 19 years) should be long enough that you don’t need to worry about this again.</p>
+</section>
+<section id="uploading-data" class="level2">
+<h2 class="anchored" data-anchor-id="uploading-data">Uploading Data</h2>
+<section id="via-rstudio" class="level3">
+<h3 class="anchored" data-anchor-id="via-rstudio">Via RStudio</h3>
+<p>If you are uploading a single file, it may be most convenient to use RStudio’s data upload capabilities. In the “Files” pane (default is top right but it may differ on your computer), you can click the button that is a white rectangle with a <strong><span style="color:gold">yellow</span></strong> circle with an upward facing arrow inside of it. In the below image the relevant button is in a <strong><span style="color:red">red</span></strong> square.</p>
+<p align="center">
+<img src="images/tutorial_server/server-upload-1.png" width="75%">
+</p>
+<p>Clicking that button allows you to choose (1) where you want the uploaded file to go and (2) which file you want to upload.</p>
+<p align="center">
+<img src="images/tutorial_server/server-upload-2.png" width="75%">
+</p>
+<p>You can also download data via the RStudio interface. To download a file, check the box next to it in the “Files” pane.</p>
+<p align="center">
+<img src="images/tutorial_server/server-download-1.png" width="75%">
+</p>
+<p>Once the box is checked, click the gear icon then click the “Export…” option (about halfway down). In the image below this option is surrounded by a <strong><span style="color:red">red</span></strong> square</p>
+<p align="center">
+<img src="images/tutorial_server/server-download-2.png" width="75%">
+</p>
+<p>In the resulting box you can choose to rename the file before downloading to your local computer. After renaming the file (or keeping its original name), click the “Download” button and the download should begin after a moment.</p>
+<p align="center">
+<img src="images/tutorial_server/server-download-3.png" width="65%">
+</p>
+<p>These methods are effective for one or a few files being up/downloaded to the same directory but can quickly become cumbersome if you want to handle many files or a few files to several different folders.</p>
+</section>
+<section id="via-sftp-software" class="level3">
+<h3 class="anchored" data-anchor-id="via-sftp-software">Via sFTP Software</h3>
+<p>If you want to upload or download many files we recommend using sFTP software (<u>s</u>ecure <u>F</u>ile <u>T</u>ransfer <u>P</u>rotocol). We use <a href="https://cyberduck.io/">Cyberduck</a> internally, though there are alternatives like <a href="https://winscp.net/eng/index.php">WinSCP</a>. Both programs are free to use and more than capable of uploading and download many files to/from the server quickly and easily.</p>
+<p>Once you have installed one of these programs, you can sign in to the server from the sFTP program using your server username and password and can then upload or download files from your personal computer in the same way as you would move files among folders within your personal computer.</p>
+<section id="cyberduck-set-up-tutorial" class="level4">
+<h4 class="anchored" data-anchor-id="cyberduck-set-up-tutorial">Cyberduck Set Up Tutorial</h4>
+<p>Here we briefly demonstrate how to set up a connection between Cyberduck and NCEAS’ Server. Note that you must have already installed Cyberduck to follow these steps.</p>
+<ol type="1">
+<li>In the Cyberduck window, click the “Open Connection” button with an icon of a globe with a plus sign. In the below image the button has a <strong><span style="color:red">red</span></strong> square around it.</li>
+</ol>
+<p align="center">
+<img src="images/tutorial_server/server-cyberduck-1.png" width="100%">
+</p>
+<ol start="2" type="1">
+<li><p>In the resulting window, input the following information:</p>
+<ul>
+<li>“Server” – “aurora.nceas.ucsb.edu”</li>
+<li>“Username” – whatever your username on the server is</li>
+<li>“Password” – your password to the server</li>
+<li>“Port” – change it to “22” (it will start as “21”)</li>
+</ul></li>
+</ol>
+<p align="center">
+<img src="images/tutorial_server/server-cyberduck-2.png" width="85%">
+</p>
+<ol start="3" type="1">
+<li>Also, click the dropdown menu at the top that says “FTP (File Transfer Protocol) and select”SFTP (SSH File Transfer Protocol)” from the set of available options.</li>
+</ol>
+<p align="center">
+<img src="images/tutorial_server/server-cyberduck-3.png" width="85%">
+</p>
+<ol start="4" type="1">
+<li>Once you’ve input the above information, click the “Connect” button and you should have access to the server! You can now click around the different folders you have access to and upload or download from there.</li>
+</ol>
+<ul>
+<li>To download: click the files/folders that you want and they should begin downloading to your personal computer</li>
+<li>To upload: drag and drop the files where you want them</li>
+</ul>
+</section>
+</section>
+<section id="via-the-command-line" class="level3">
+<h3 class="anchored" data-anchor-id="via-the-command-line">Via the Command Line</h3>
+<p>If you are more comfortable with a CLI (<u>C</u>ommand <u>L</u>ine <u>I</u>nterface) you can also use that method of uploading/downloading. The command line includes the Terminal pane in RStudio, Terminal app for Macs, PuTTY, and gitBash among others. CLI can be a great tool to leverage filenames or types to filter specific files you would like to upload / download. Text in code chunks below are command line commands and any bracketed text <code>[like this]</code> should be replaced by some user-specific information before running.</p>
+<p>This portion of the tutorial is focused on using the command line to interact with the server. That said, if you’re interested in the command line more generally or for other purposes, please reach out to <a href="https://nceas.github.io/scicomp.github.io/staff.html">our team</a>!</p>
+<section id="cli-option-a-scp" class="level4">
+<h4 class="anchored" data-anchor-id="cli-option-a-scp">CLI Option A: <code>scp</code></h4>
+<p>The <code>scp</code> command can be used to <em>upload</em> a file or folder from your computer to the server.</p>
+<p>1A. Navigate to the folder <u>on your computer</u> containing the file(s) you want to upload</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="pp">[</span><span class="ss">folder</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Note that if the folder name has spaces you’ll need to “escape” the space by using a backslash (<code>\</code>)</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="pp">[</span><span class="ss">folder</span><span class="dt">\ </span><span class="ss">name</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>2A. Now you can upload that file to the server!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="pp">[</span><span class="ss">file_name</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">user</span><span class="pp">]</span>@aurora.nceas.ucsb.edu:/<span class="pp">[</span><span class="ss">path/to/destination_folder/</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If instead you’d like to upload all of the files in a folder, do the following:</p>
+<p>1B. Navigate to the folder containing the folder on your computer you want to upload (using <code>cd</code>)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="pp">[</span><span class="ss">folder</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>2B. Use <code>scp</code> with the recursive option (<code>-r</code>) to upload all of the files in that folder</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="at">-r</span> <span class="pp">[</span><span class="ss">folder</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">user</span><span class="pp">]</span>@aurora.nceas.ucsb.edu:/<span class="pp">[</span><span class="ss">path/to/destination_folder/</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Note that this uploads all of the files in the folder <em>not</em> the folder itself so you may want to create a new folder on the server to upload your local folder’s contents into.</li>
+</ul>
+<p>Finally, note that you can also <em>download</em> files from the server to your local machine by simply switching the order of the machines:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">scp</span> <span class="pp">[</span><span class="ss">user</span><span class="pp">]</span>@aurora.nceas.ucsb.edu:/<span class="pp">[</span><span class="ss">path/to/server_folder/file_name</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">local_folder</span><span class="pp">]</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="cli-option-b-sftp" class="level4">
+<h4 class="anchored" data-anchor-id="cli-option-b-sftp">CLI Option B: <code>sftp</code></h4>
+<p>The <code>get</code> command can be used to <em>download</em> a file.</p>
+<ol type="1">
+<li>Connect to the server</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">sftp</span> <span class="pp">[</span><span class="ss">user</span><span class="pp">]</span>@aurora.nceas.ucsb.edu:/home/shares</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Your prompt at the shell should now have switched to <code>sftp&gt;</code> and although it is the same window you are now looking at the files on the server! Try it by typing the <code>ls</code> command at the prompts. This will list all the files and folders within the <code>shares</code> folder on Aurora.</p>
+<ol start="2" type="1">
+<li>Enter your group’s folder in the <code>shares</code> folder</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="pp">[</span><span class="ss">your_group_folder</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>If needed, continue using <code>cd</code> to get to the subfolder you want to access. Remember to “escape” any spaces in the folder name with backslashes!</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> <span class="pp">[</span><span class="ss">subfolder</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Note that most of the bash command will work, so you can use <code>ls</code> to list files and <code>pwd</code> to check your current path.</p>
+<ol start="4" type="1">
+<li>When you are in the folder containing the file(s) you want, download the file you want</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">get</span> <span class="pp">[</span><span class="ss">file_name_server</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
+<li>You can also upload a local file to the server by using the <code>put</code> sFTP command</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">put</span> <span class="pp">[</span><span class="ss">file_name_local</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="6" type="1">
+<li>When you are done downloading, close the connection to the server</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">exit</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/lter\.github\.io\/scicomp\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Copyright 2024, NCEAS</p>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

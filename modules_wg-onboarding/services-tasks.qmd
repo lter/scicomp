@@ -1,6 +1,0 @@
-
-## Tasks
-
-**This level of collaboration is the core of our value to working groups!** When your group identifies a data-related need (e.g., designing an analytical workflow, creating a website, writing an R Shiny app, etc.), you reach out to [our team](https://nceas.github.io/scicomp.github.io/staff.html) and get the conversation started. During that time we will work closely with you to define the scope of the work and get a clear picture of what "success" looks like in this context.
-
-Once the task is appropriately defined, the conversation moves on to how independently you'd like us to work. This varies dramatically between tasks even within a single working group and *there is no single right answer*! For some tasks, we are capable of working completely independently and returning to your team with a finished product in hand for review but we are equally comfortable working closely with you throughout the life-cycle of a task. 
