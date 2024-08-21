@@ -1,0 +1,12 @@
+When you first start working on a project with your group members, figuring out what to name your folders/files may not be at the top of your priority list. However, following a good naming convention will allow team members to quickly locate files and figure out what they contain. The organized naming structure will also allow new members of the group to be onboarded more easily! 
+
+Here is a summary of some naming tips that we recommend. These were taken from the [Reproducibility Best Practices module](https://lter.github.io/ssecr/mod_reproducibility.html#naming-tips) in the LTER's SSECR course. Please feel free to refer to the aforementioned link for more information.
+
+- Names should be informative
+  - An ideal file name should give some information about the file’s contents, purpose, and relation to other project files.
+  - For example, if you have a bunch of scripts that need to be run in order, consider adding step numbers to the start of each file name (e.g., "01_harmonize_data.R" or "step01_harmonize_data.R"). 
+- Names should avoid spaces and special characters
+  - Spaces and special characters (e.g., é, ü, etc.) in folder/file names may cause errors when someone with a Windows computer tries to read those file paths. You can replace spaces with delimiters like underscores or hyphens to increase machine readability. 
+- Follow a consistent naming convention throughout!
+  - If you and your group members find a naming convention that works, stick with it! Having a consistent naming convention is key to getting new collaborators to follow it. 
+  

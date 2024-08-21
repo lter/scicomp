@@ -1,0 +1,27 @@
+
+Loading packages / libraries in R can be cumbersome when working collaboratively because there is no guarantee that you all have the same packages installed. While you could comment-out an `install.packages()` line for every package you need for a given script, we recommend using the R package `librarian` to greatly simplify this process!
+
+`librarian::shelf()` accepts the names of all of the packages--either CRAN or GitHub--installs those that are missing in that particular R session and then attaches all of them. See below for an example:
+
+To load packages typically you'd have something like the following in your script:
+
+```{r library_og_method, eval = FALSE}
+## Install packages (if needed)
+# install.packages("tidyverse")
+# install.packages("devtools")
+# devtools::install_github("NCEAS/scicomptools")
+
+# Load libraries
+library(tidyverse); library(scicomptools)
+```
+
+With `librarian::shelf()` however this becomes *much* cleaner! In addition to being fewer lines, using `librarian` also removes the possibility that someone running your code misses one of the packages that your script depends on and then the script breaks for them later on. `librarian::shelf()` automatically detects whether a package is installed, installs it if necessary, and then attaches the package.
+
+In essence, `librarian::shelf()` wraps `install.packages()`, `devtools::install_github()`, and `library()` into a single, human-readable function.
+
+```{r shelf_demo, eval = FALSE}
+# Install and load packages!
+librarian::shelf(tidyverse, NCEAS/scicomptools)
+```
+
+When using `librarian::shelf()`, package names do not need to be quoted and GitHub packages can be installed without the additional steps of installing the `devtools` package and using `devtools::install_github()` instead of `install.packages()`.
