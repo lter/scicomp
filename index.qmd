@@ -42,6 +42,6 @@ Welcome! Even if you're not a part of a working group, we hope that you find the
 ::::
 
 <p align="center">
-<img src = "images/lter_asm.jpeg" width = "100%"/>
+<img src="images/lter_asm.jpeg" alt="Photo of attendees at the 2022 LTER All Scientists' Meeting standing on steps in front of the main hall of the conference building" width = "100%"/>
 <figcaption>LTER All Scientists' Meeting 2022, Pacific Grove CA</figcaption>
 </p>
