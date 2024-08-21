@@ -1,0 +1,75 @@
+
+Now that you've authorized the `googledrive` package, you can start downloading the Google Drive files you need through R! Let's say that you want to download a csv file from a folder or shared drive. You can save the URL of that folder/shared drive to a variable. 
+
+The `googledrive` package makes it straightforward to access Drive folders and files with the `as_id` function. This function allows the full link to a file or folder to serve as a direct connection to that file/folder. Most of the other `googledrive` functions will require a URL that is wrapped with `as_id` in this way. You would replace "your url here" with the actual link but make sure it is in quotation marks.
+
+```{r as-id, eval = F}
+drive_url <- googledrive::as_id("your url here")
+```
+
+To list all the contents of this folder, we can use the `drive_ls` function. You will get a dataframe-like object of the files back as the output. An example is shown below in the screenshot. Here, this Google Drive folder contains 4 csv files: `ingredients.csv`, `favorite_soups.csv`, `favorite_fruits.csv` and `favorite_desserts.csv`
+
+```{r drive-ls-p1, eval = F}
+drive_folder <- googledrive::drive_ls(path = drive_url)
+drive_folder
+```
+
+<p align="center">
+<img src="images/tutorial_drive-auth/drive-download-0.png" width = "90%" />
+</p>
+
+If it has been a while since you've used `googledrive`, it will prompt you to refresh your token. Simply enter the number that corresponds to the correct Google Drive account.
+
+<p align="center">
+<img src="images/tutorial_drive-auth/drive-download-1.png" width = "90%" />
+</p>
+
+If you only want to list files of a certain type, you can specify this in the `type` argument. And let's say that my folder contains a bunch of csv files, but I only want to download the one named "favorite_desserts.csv". In that case, I can also put a matching string in the `pattern` argument in order to filter down to 1 file.
+
+```{r drive-ls-p2, eval = F}
+drive_folder <- googledrive::drive_ls(path = drive_url,
+                                      type = "csv", 
+                                      pattern = "favorite_desserts")
+drive_folder
+```
+
+<p align="center">
+<img src="images/tutorial_drive-auth/drive-download-2.png" width = "90%" />
+</p>
+
+Once we've narrowed down to the file we want, we can download it using `drive_download`. This function takes the file identifier as an argument so we can access it using `drive_folder$id`.
+
+```{r, eval = F}
+googledrive::drive_download(file = drive_folder$id)
+```
+
+This will automatically download the file to our working directory. If you want, you can specify a different path to download to. Just put the new file path into the `path` argument, replacing the "your path here", but keep the quotation marks.
+
+```{r, eval = F}
+googledrive::drive_download(file = drive_folder$id, 
+                            path = "your path here")
+```
+
+If you've downloaded the file before, and you want to overwrite it, there's a handy `overwrite` argument that you can set to `TRUE`. Note that the default is `FALSE`.
+
+```{r, eval = F}
+googledrive::drive_download(file = drive_folder$id, 
+                            path = "your path here",
+                            overwrite = T)
+```
+
+If there are multiple files in the Drive folder and you want to download them all, you can use a loop like so:
+
+```{r, eval = F}
+# For each file:
+for(focal_file in drive_folder$name){
+  
+  # Find the file identifier for that file
+  file_id <- subset(drive_folder, name == focal_file)
+
+  # Download that file
+  drive_download(file = file_id$id, 
+                 path = "your path here",
+                 overwrite = T)
+}
+```

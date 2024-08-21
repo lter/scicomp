@@ -1,0 +1,48 @@
+
+The following steps include a sequence of command line operations that will be relayed in code chunks below. **Unless otherwise stated, all of the following code should be run in "Terminal".**
+
+If you didn't check the "Create a git repository" button while creating the R project, you'll need to do that via the command line now. **If you did check that box, you should skip this step!**
+
+```{r create-repo, eval = F}
+# Start a git repository on the "main" branch
+git init -b main
+```
+
+**Stage all of the files in your project to the git repository.** This includes the .yml file, all .qmd files and all of their rendered versions created when you ran `quarto render` earlier. This code is equivalent to checking the box for the files in the "Git" pane of RStudio.
+
+```{r stage-everything, eval = F}
+# Stage all files
+git add .
+```
+
+Once everything has been staged, **you now must commit those staged files** with a message.
+
+```{r commit-everything, eval = F}
+# Commit all files with the message in quotes
+git commit -m "Initial commit"
+```
+
+Now that your project files have been committed, you need to **tell your computer where you will be pushing to and pulling from.** Paste the link you copied at the end of the "Make a New GitHub Repository" into the code shown in the chunk below (instead of `GITHUB_URL`) and run it.
+
+```{r set-remote, eval = F}
+# Tell your computer which GitHub repository to connect to
+git remote add origin GITHUB_URL
+```
+
+**Verify that URL** before continuing.
+
+```{r verify-remote, eval = F}
+# Confirm that URL worked
+git remote -v
+```
+
+Finally, **push your commited changes** to the repostory that you set as the remote in the preceding two steps.
+
+```{r push, eval = F}
+# Push all of the content to the main branch
+git push -u origin main
+```
+
+Now, **go back to GitHub** and refresh the page to see your project content safe and sound in your new GitHub repository!
+
+<img src="images/tutorial_github-modules/git-github-connect-1.png" width = "100%" />
