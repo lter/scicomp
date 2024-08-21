@@ -1,0 +1,41 @@
+
+[Quarto](https://quarto.org/) is a new tool developed by RStudio (the company, not the program) to create a more 'what you see is what you get' editor for creating markdown files and products (e.g., books, websites, etc.). Additionally, it includes a visual editor that allows users to insert headings and embed figures via buttons that are intuitively labeled rather than through somewhat arcane HTML text or symbols. While Quarto is still in its infancy, it is rapidly gathering a following due to the aforementioned visual editor and for the ease with which quarto documents and websites can be created.
+
+### Prerequisites
+
+To follow along with this tutorial you will need to take the following steps:
+
+- Do all of the [pre-workshop steps](https://nceas.github.io/scicomp-workshop-collaborative-coding/#workshop-preparation) relevant to our "Collaborative Coding with GitHub" workshop
+- [Download Quarto](https://quarto.org/docs/get-started/)
+
+Feel free to skip any steps that you have already completed!
+
+### Create a Quarto Website R Project
+
+{{< include /modules_tutorials/quarto-website_new-proj.qmd >}}
+
+### Preparing Project for Web Deployment
+
+{{< include /modules_tutorials/quarto-website_deploy-prep.qmd >}}
+
+### Make a New GitHub Repository
+
+{{< include /modules_tutorials/github-create.qmd >}}
+
+### Adding your Project to GitHub
+
+{{< include /modules_tutorials/github-connect.qmd >}}
+
+### Deploy Website via GitHub
+
+{{< include /modules_tutorials/github-website-deploy.qmd >}}
+
+### Adding Website Content
+
+{{< include /modules_tutorials/quarto-website_add-content.qmd >}}
+
+### Supplementary Information
+
+Quarto is developing at a rapid pace so quality of life changes and new functionalities are introduced relatively frequently. Additionally, Quarto supports user-created "extensions" that can be downloaded in a given project and then used (similar to the way user-developed R packages can be shared) so if you want to do something that Quarto itself doesn't support, chances are you'll be able to find an extension that handles it.
+
+[Quarto's documentation of website creation and formatting](https://quarto.org/docs/websites/) is extremely thorough and is a great resource as you become more comfortable with your new website. We hope this tutorial was useful to you and welcome constructively critical feedback! Please [post an issue](https://github.com/NCEAS/scicomptasks/issues) with any thoughts for improvement that you have.

@@ -1,0 +1,76 @@
+Working groups sometimes need to handle user-specific information in their code. For example, if your group stores your data in the cloud (e.g., in Box, in Dropbox, etc.) each user will have a different "absolute file path" to the synced version of the data folder on their personal computer. Similarly, groups may find it valuable to use their email address in the code. While you _could_ simply have each group member add their information (file path, email, etc.) and comment out all but one of them when you work in that script, there is a better option: user-specific JSON files!
+
+The main advantage of this method is that you and your group members <u>do not have to manually change _any user-specific information_ in scripts</u> just because a different person runs them!
+
+### Prerequisites
+
+To follow along with this tutorial you will need to take the following steps:
+
+- Download [R](https://cran.r-project.org/)
+- Download [RStudio](https://posit.co/downloads/)
+- Install the `jsonlite` R package
+
+Feel free to skip any steps that you have already completed!
+
+### 1. Create the JSON
+
+First, you'll need to use RStudio to create your JSON file by creating a new text file (in the top left of RStudio click "File" {{< fa arrow-right >}} "New File" {{< fa arrow-right >}} "Text File"). In the new text file, add content that looks like this:
+
+```{r create-json}
+#| eval: false
+
+{
+  "email":"my_email@gmail.com"
+  "dropbox_path":"path/to/dropbox-sync/for/me"
+}
+```
+
+Replace the content on the _right_ of the colon with your actual information. If desired, you can add as many other pieces of user-specific information as you'd like! Simply follow the `"info name":"info content"` format and make sure that each piece of information is on its own line.
+
+One small note here for when you work with your group: <u>all group members need to use _exactly the same name_ to the left of each colon</u>.
+
+You'll see later when we show an example of this but you can think of the information on the left of the colon as comparable with a column name. It doesn't matter that the text in the "rows" will differ between users as long as the script has a consistent "column" in which to look for that text.
+
+### 2. Save the JSON with a Consistent Name
+
+This may seem self-evident but <u>all group members need to use the same file name for this new JSON file</u>. We recommend `user.json` if you are undecided. This will let scripts that refer to the JSON use the same file name regardless of which user is running the code (same spirit as using consistent names for each piece of information in the file.)
+
+### 3. Tell Git to Ignore the JSON
+
+If you're using version control for your project (which we strongly recommend!), you'll want Git to ignore the fact that this file differs for each user. Navigate to the `.gitignore` file of your project and put in the name of your JSON file as one of the files to ignore. We don't want to push the JSON to GitHub since each person's file will look different (that is our intent after all) and you wouldn't want to accidentally overwrite your teammate's user-specific information or cause a merge conflict.
+
+For a deeper dive into the `.gitignore` check out [that module](https://nceas.github.io/scicomp-workshop-collaborative-coding/git_ignore.html) of our "Collaborative Coding with GitHub" workshop!
+
+### 4. Benefit from the JSON!
+
+If you've made it through the preceding steps, you can now use the information you stored in the JSON file. You'll need to use the `jsonlite` R package to read in your file but once you've done that, you can access the information inside of it in classic R fashion.
+
+See an example below:
+
+```{r read-json}
+#| eval: false
+
+# Load needed library
+library(jsonlite)
+
+# Read in the JSON file
+user_info <- jsonlite::read_json("user.json")
+
+# Grab the file path out of it
+dropbox <- user_info$dropbox_path
+
+# Use it as you would any other file path
+my_data <- read.csv(file = file.path(dropbox, "2024_data.csv"))
+```
+
+Now everyone in your group can use the same script because their personal file paths are readily accessible without needing to be hard-coded! The same theory applies to any other piece of information your group finds it valuable to store in the JSON.
+
+#### Help with Absolute File Paths
+
+Identifying and manually writing out an absolute file path can be cumbersome so we've found a nice work-around (at least for Mac users) that you may find useful. First, in Finder, navigate to the last folder in the file path you'd like to preserve. In the row of folder names in the bottom of the Finder window, right-click the folder name and select "Copy '\<folder name\>' as Pathname".
+
+Once you've done that, you can simply paste the file path into your JSON file.
+
+<p align="center">
+<img src="images/tutorial_jsonlite/jsonlite-1.png" width = "75%" />
+</p>
