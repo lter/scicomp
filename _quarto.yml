@@ -31,25 +31,25 @@ website:
            href: workshops.qmd
          - text: "Server Tutorial"
            href: tutorial_server.qmd
+         - text: "Data Acquisition"
+           href: data-acquisition.qmd
          - text: "Tutorials"
            href: tutorials.qmd
-      - text: "Coding Tips"
-        href: best_practices.qmd
+         - text: "Coding Tips"
+           href: best_practices.qmd
       - text: "Portfolio"
         href: portfolio.qmd
+    right:
       - text: "Our Team"
         menu:
           - text: "People"
             href: staff.qmd
-          - text: "Data Acquisition"
-            href: data-acquisition.qmd
-          - text: "Internal - Team Onboarding"
-            href: team-onboarding.qmd
-          - text: "Internal - Group Setup"
-            href: wg-setup.qmd
-          - text: "Internal - Deploy Shiny Apps"
-            href: shiny-server.qmd
-    right:
+          - text: "Internal: Team Onboarding"
+            href: internal_team-onboard.qmd
+          - text: "Internal: WG Setup"
+            href: internal_new-wg-setup.qmd
+          - text: "Internal: Deploy Shiny Apps"
+            href: internal_deploy-shiny.qmd
       - icon: github
         href: https://github.com/lter/scicomp
   page-footer:
