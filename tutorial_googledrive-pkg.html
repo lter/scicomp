@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tutorial-scaffold_quarto-website – LTER Scientific Computing Team</title>
+<title>Conecting R &amp; Google Drive – LTER Scientific Computing Team</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta name="twitter:title" content="LTER Scientific Computing Team">
+<meta name="twitter:title" content="Conecting R &amp; Google Drive – LTER Scientific Computing Team">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -161,11 +161,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="./tutorial_server.html">
- <span class="dropdown-text">Server Tutorial</span></a>
+ <span class="dropdown-text">Tutorial: NCEAS’ Server</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./tutorials.html">
- <span class="dropdown-text">Tutorials</span></a>
+    <a class="dropdown-item" href="./tutorial_quarto-website.html">
+ <span class="dropdown-text">Tutorial: Create a Website</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorial_json.html">
+ <span class="dropdown-text">Tutorial: Store User-Specific Info</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorial_googledrive-pkg.html">
+ <span class="dropdown-text">Tutorial: Google Drive + R</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./best_practices.html">
@@ -228,14 +236,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#create-a-quarto-website-r-project" id="toc-create-a-quarto-website-r-project" class="nav-link" data-scroll-target="#create-a-quarto-website-r-project">Create a Quarto Website R Project</a></li>
-  <li><a href="#preparing-project-for-web-deployment" id="toc-preparing-project-for-web-deployment" class="nav-link" data-scroll-target="#preparing-project-for-web-deployment">Preparing Project for Web Deployment</a></li>
-  <li><a href="#make-a-new-github-repository" id="toc-make-a-new-github-repository" class="nav-link" data-scroll-target="#make-a-new-github-repository">Make a New GitHub Repository</a></li>
-  <li><a href="#adding-your-project-to-github" id="toc-adding-your-project-to-github" class="nav-link" data-scroll-target="#adding-your-project-to-github">Adding your Project to GitHub</a></li>
-  <li><a href="#deploy-website-via-github" id="toc-deploy-website-via-github" class="nav-link" data-scroll-target="#deploy-website-via-github">Deploy Website via GitHub</a></li>
-  <li><a href="#adding-website-content" id="toc-adding-website-content" class="nav-link" data-scroll-target="#adding-website-content">Adding Website Content</a></li>
-  <li><a href="#supplementary-information" id="toc-supplementary-information" class="nav-link" data-scroll-target="#supplementary-information">Supplementary Information</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#authorize-googledrive" id="toc-authorize-googledrive" class="nav-link" data-scroll-target="#authorize-googledrive">Authorize <code>googledrive</code></a></li>
+  <li><a href="#problems-with-authorization" id="toc-problems-with-authorization" class="nav-link" data-scroll-target="#problems-with-authorization">Problems with Authorization</a></li>
+  <li><a href="#find-and-download-files" id="toc-find-and-download-files" class="nav-link" data-scroll-target="#find-and-download-files">Find and Download Files</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -244,193 +251,166 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Conecting R &amp; Google Drive</h1>
+</div>
 
 
 
-<p><a href="https://quarto.org/">Quarto</a> is a new tool developed by RStudio (the company, not the program) to create a more ‘what you see is what you get’ editor for creating markdown files and products (e.g., books, websites, etc.). Additionally, it includes a visual editor that allows users to insert headings and embed figures via buttons that are intuitively labeled rather than through somewhat arcane HTML text or symbols. While Quarto is still in its infancy, it is rapidly gathering a following due to the aforementioned visual editor and for the ease with which quarto documents and websites can be created.</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The <a href="https://googledrive.tidyverse.org/"><code>googledrive</code> R package</a> is a package that lets R users directly interact with files on GoogleDrive. This can be extremely useful because it lets all members of a team share the same source data file(s) and guarantees that updates to “living” documents are received by all group members the next time they run their R script. This package is technically part of the Tidyverse but is not loaded by running <code>library(tidyverse)</code>.</p>
+<p>Because this package requires access to an R user’s GoogleDrive, you must “authenticate” the <code>googledrive</code> package. This essentially tells Google that it is okay if an R package uses your credentials to access and (potentially) modify your Drive content. There are only a few steps to this process but follow along with the below tutorial and we’ll get you ready to integrate the Google Drive into your code workflows using the <code>googledrive</code> package in no time!</p>
 <section id="prerequisites" class="level3">
 <h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
 <p>To follow along with this tutorial you will need to take the following steps:</p>
 <ul>
-<li>Do all of the <a href="https://lter.github.io/workshop-github/#workshop-preparation">pre-workshop steps</a> relevant to our “Collaborative Coding with GitHub” workshop</li>
-<li><a href="https://quarto.org/docs/get-started/">Download Quarto</a></li>
+<li>Download <a href="https://cran.r-project.org/">R</a></li>
+<li>Download <a href="https://posit.co/downloads/">RStudio</a></li>
+<li>Create a Gmail account</li>
 </ul>
 <p>Feel free to skip any steps that you have already completed!</p>
 </section>
-<section id="create-a-quarto-website-r-project" class="level3">
-<h3 class="anchored" data-anchor-id="create-a-quarto-website-r-project">Create a Quarto Website R Project</h3>
-<p>To begin, <strong>click the “Project” button</strong> in the top right of your RStudio session.</p>
-<p><img src="images/tutorial_quarto-website/website-tutorial_new-proj-1.png" width="100%"></p>
-<p>In the resulting dialogue, <strong>click the “New Directory” option.</strong></p>
-<p align="center">
-<img src="images/tutorial_quarto-website/website-tutorial_new-proj-2.png" width="60%">
-</p>
-<p>From the list of options for project templates, <strong>select “Quarto Website”.</strong></p>
-<p align="center">
-<img src="images/tutorial_quarto-website/website-tutorial_new-proj-3.png" width="60%">
-</p>
-<p><strong>Pick a title</strong> and <strong>check the “Create a git repository” checkbox.</strong> For your title, short but descriptive titles are most effective. Once that is done, click <strong>“Create Project”</strong> in the bottom right of the window.</p>
-<p align="center">
-<img src="images/tutorial_quarto-website/website-tutorial_new-proj-4.png" width="60%">
-</p>
-<p>After a few seconds, RStudio should refresh with a Quarto document (such documents have the file extension “.qmd”) and a “_quarto.yml” file open.</p>
-<p align="center">
-<img src="images/tutorial_quarto-website/website-tutorial_new-proj-5.png" width="75%">
-</p>
-<p>Part of Quarto’s central philosophy is that all of the formatting of individual .qmd files in a project is governed by the settings created by a singular .yml file. In an R markdown project some of the global settings are set in .yml but other settings are handled within each .Rmd file. This centralization is a key innovation in streamlining projects and is one reason for Quarto’s quick popularity.</p>
-</section>
-<section id="preparing-project-for-web-deployment" class="level3">
-<h3 class="anchored" data-anchor-id="preparing-project-for-web-deployment">Preparing Project for Web Deployment</h3>
-<p>To prepare your project for web deployment via GitHub Pages, we have <strong>three</strong> quick steps that we must first complete.</p>
-<p><em>First</em>, in the “_quarto.yml” file, <strong>add <code>output-dir: docs</code> as a subheading beneath the <code>project:</code> heading.</strong> Make sure that the indentation is the same as the <code>type: website</code> but the new line can be either above or below that line.</p>
-<p align="center">
-<img src="images/tutorial_quarto-website/website-tutorial_deploy-prep-1.png" width="75%">
-</p>
-<p><em>Second</em>, <strong>in the “Terminal” pane run <code>touch .nojekyll</code>.</strong> This creates a file called “.nojekyll” that is necessary for hosting your website via GitHub Pages.</p>
-<p><em>Third</em>, <strong>in the “Terminal” pane run <code>quarto render</code>.</strong> This processes the template .qmd files you currently have in the repository and prepares them to become actual web pages.</p>
-<p>Once you’ve done these three things you can move on to creating a GitHub repository so that we can take the necessary steps to having GitHub host your website!</p>
-</section>
-<section id="make-a-new-github-repository" class="level3">
-<h3 class="anchored" data-anchor-id="make-a-new-github-repository">Make a New GitHub Repository</h3>
-<p>From your GitHub <strong>“Repositories”</strong> tab, click the <strong><span style="color:green"> green </span> “New”</strong> button.</p>
-<p><img src="images/tutorial_github-modules/new-github-1.png" width="100%"></p>
-<p><strong>Add a title</strong> to your repository and <strong>add a description.</strong> Once you’ve added these two things, scroll down and click the <strong><span style="color:green"> green </span> “Create repository” button.</strong></p>
-<p align="center">
-<img src="images/tutorial_github-modules/new-github-2.png" width="60%">
-</p>
-<p>Be sure that you <strong>do not add a README</strong>, <strong>do not add a gitignore</strong>, and <strong>do not add a license.</strong> Adding any of these three will cause a merge conflict when we link the project that you just created with the GitHub repository that you are in the process of creating.</p>
-<p align="center">
-<img src="images/tutorial_github-modules/new-github-3.png" width="60%">
-</p>
-<p>After a few seconds you should be placed on your new repository’s landing page which will look like the below image because there isn’t anything in your repository (yet).</p>
-<p>Copy the link in the field and go back to your RStudio session.</p>
-<p align="center">
-<img src="images/tutorial_github-modules/new-github-4.png" width="100%">
-</p>
-</section>
-<section id="adding-your-project-to-github" class="level3">
-<h3 class="anchored" data-anchor-id="adding-your-project-to-github">Adding your Project to GitHub</h3>
-<p>The following steps include a sequence of command line operations that will be relayed in code chunks below. <strong>Unless otherwise stated, all of the following code should be run in “Terminal”.</strong></p>
-<p>If you didn’t check the “Create a git repository” button while creating the R project, you’ll need to do that via the command line now. <strong>If you did check that box, you should skip this step!</strong></p>
+<section id="authorize-googledrive" class="level3">
+<h3 class="anchored" data-anchor-id="authorize-googledrive">Authorize <code>googledrive</code></h3>
+<p>In order to connect R with a GoogleDrive, we’ll need to authorize <code>googledrive</code> to act on our behalf. This only needs to be done once (per computer) so follow along and you’ll be building GoogleDrive into your workflows in no time!</p>
+<p>First, <strong>install the <code>googledrive</code> and <code>httpuv</code> R packages</strong>. The <code>googledrive</code> package’s need is self-evident while the <code>httpuv</code> package makes the following steps a little easier than <code>googledrive</code> makes it alone. Be sure to load the <code>googledrive</code> package after you install it!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Start a git repository on the "main" branch</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>git init <span class="sc">-</span>b main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install packages</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"googledrive"</span>, <span class="st">"httpuv"</span>))</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load them</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(googledrive)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Stage all of the files in your project to the git repository.</strong> This includes the .yml file, all .qmd files and all of their rendered versions created when you ran <code>quarto render</code> earlier. This code is equivalent to checking the box for the files in the “Git” pane of RStudio.</p>
+<p>Once you’ve installed the packages we can begin the authentication in R using the <code>drive_auth</code> function in the <code>googledrive</code> package.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stage all files</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>git add .</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_auth</span>(<span class="at">email =</span> <span class="st">"enter your gmail here!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Once everything has been staged, <strong>you now must commit those staged files</strong> with a message.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Commit all files with the message in quotes</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>git commit <span class="sc">-</span>m <span class="st">"Initial commit"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If this is your <em>first time</em> using <code>googledrive</code>, <code>drive_auth</code> will kick you to a new tab of your browser (see below for a screen grab of that screen) where you can pick which Gmail you’d like to connect to R.</p>
+<p align="center">
+<img src="images/tutorial_drive-auth/drive-auth-1.png" width="50%">
+</p>
+<p><strong>Click the Gmail you want to use</strong> and you will get a second screen where Google tells you that “Tidyverse API” wants access to your Google Account. This message is followed by three checkboxes, the first two are grayed out but the third is unchecked.</p>
+<p align="center">
+<img src="images/tutorial_drive-auth/drive-auth-2.png" width="50%">
+</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<p>Now that your project files have been committed, you need to <strong>tell your computer where you will be pushing to and pulling from.</strong> Paste the link you copied at the end of the “Make a New GitHub Repository” into the code shown in the chunk below (instead of <code>GITHUB_URL</code>) and run it.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Tell your computer which GitHub repository to connect to</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>git remote add origin GITHUB_URL</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-title-container flex-fill">
+NOTE
 </div>
-<p><strong>Verify that URL</strong> before continuing.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Confirm that URL worked</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>git remote <span class="sc">-</span>v</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Finally, <strong>push your commited changes</strong> to the repostory that you set as the remote in the preceding two steps.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Push all of the content to the main branch</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>git push <span class="sc">-</span>u origin main</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-body-container callout-body">
+<p>This next bit is vitally important so <em>carefully</em> read and follow the next instruction!</p>
 </div>
-<p>Now, <strong>go back to GitHub</strong> and refresh the page to see your project content safe and sound in your new GitHub repository!</p>
-<p><img src="images/tutorial_github-modules/git-github-connect-1.png" width="100%"></p>
+</div>
+<p>In this screen, <strong>you must check the unchecked box</strong> to be able to use the <code>googledrive</code> R package. If you do not check this box all attempts to use <code>googledrive</code> functions will get an error that says “insufficient permissions”.</p>
+<p align="center">
+<img src="images/tutorial_drive-auth/drive-auth-3.png" width="50%">
+</p>
+<p>While granting access to “see, edit, create, and”delete” all of your Google Drive files” sounds like a significant security risk, those powers are actually why you’re using the <code>googledrive</code> package in the first place! You want to be able to download existing Drive files, change them in R on your computer, and then put them back in Google Drive which is exactly what is meant by “see, edit, create, and delete”.</p>
+<p>Also, this power <em>only applies to the computer you’re currently working on!</em> Granting access on your work computer allows <strong>only</strong> that computer to access your Drive files. So don’t worry about giving access to your Drive to the whole world, that is protected by the same failsafes that you use when you let your computer remember a password to a website you frequent.</p>
+<p><em>After</em> you’ve checked the authorization box, <strong>scroll down and click the “Continue” button</strong>.</p>
+<p align="center">
+<img src="images/tutorial_drive-auth/drive-auth-4.png" width="50%">
+</p>
+<p>This should result in a plain text page that tells you to close this window and return to R. If you see this message you are ready to use the <code>googledrive</code> package!</p>
+<p align="center">
+<img src="images/tutorial_drive-auth/drive-auth-5.png" width="75%">
+</p>
 </section>
-<section id="deploy-website-via-github" class="level3">
-<h3 class="anchored" data-anchor-id="deploy-website-via-github">Deploy Website via GitHub</h3>
-<p>In order to get your new website actually on the web, we’ll need to tell GitHub that we want our website to be accessible at a .github.io URL.</p>
-<p>To do this, <strong>go to the “Settings” tab</strong> with a gear icon and click it. You may be prompted to re-enter your GitHub password, do so and you can proceed.</p>
-<p><img src="images/tutorial_github-modules/github-deploy-1.png" width="100%"></p>
-<p>In the resulting page, look towards the bottom of the left sidebar of settings categories and <strong>click the “Pages” option.</strong> This is at the very bottom of the sidebar in the screen capture below but is towards the middle of all of the settings categories Github offers you.</p>
-<p><img src="images/tutorial_github-modules/github-deploy-2.png" width="100%"></p>
-<p>Scroll down to the middle of this page and where it says “Branch” <strong>click the dropdown menu that says “None” by default.</strong></p>
-<p><img src="images/tutorial_github-modules/github-deploy-3.png" width="100%"></p>
-<p><strong>Select “main”</strong> from the dropdown.</p>
-<p align="center">
-<img src="images/tutorial_github-modules/github-deploy-4.png" width="60%">
-</p>
-<p>This opens up a new dropdown menu where you can select which folder in your repository contains your website’s content (it defaults to “/ (root)”). Because we specified <code>output-dir: docs</code> in the .yml file earlier we can <strong>select “/docs” from the dropdown menu.</strong></p>
-<p align="center">
-<img src="images/tutorial_github-modules/github-deploy-5.png" width="60%">
-</p>
-<p>Once you’ve told GitHub that you want a website generated from the “docs” folder on the main branch, <strong>click the “Save” button.</strong></p>
-<p align="center">
-<img src="images/tutorial_github-modules/github-deploy-6.png" width="75%">
-</p>
-<p>From this moment your website has begun being deployed by GitHub! You can check the status of the building process by <strong>navigating to the “Actions” tab of your repository.</strong></p>
-<p><strong>Select the “pages build and deployment workflow”</strong> in the list of workflows on the bottom righthand side of the page.</p>
-<p><img src="images/tutorial_github-modules/github-deploy-7.png" width="100%"></p>
-<p>This <strong>shows you GitHub’s building and deployment process as a flowchart.</strong> While it is working on each step there will be an <strong><span style="color:orange">amber</span></strong> circle next to the name of that sub-task. When a sub-task is completed, the <strong><span style="color:orange">amber</span></strong> circle becomes a <strong><span style="color:green">green</span></strong> circle with a check mark.</p>
-<p><img src="images/tutorial_github-modules/github-deploy-8.png" width="100%"></p>
-<p>When the three steps are complete the <strong><span style="color:orange">amber</span></strong> clock symbol next to the “pages build and deployment” action will turn into a larger <strong><span style="color:green">green</span></strong> circle with a check mark. This is GitHub’s way of telling you that your website is live and accessible to anyone on the internet.</p>
-<p><img src="images/tutorial_github-modules/github-deploy-9.png" width="100%"></p>
-<p>You can now visit your website by visiting its dedicated URL. <strong>This URL can be found by returning to the “Settings” tab and then scrolling through the sidebar to the “Pages” section.</strong></p>
-<p>Alternately, the website for your repository always uses the following composition: <em>https://<strong><span style="color:blue">repository owner</span></strong>.github.io/<strong><span style="color:purple">repository name</span></strong>/</em></p>
-<p><img src="images/tutorial_github-modules/github-deploy-10.png" width="100%"></p>
-<p>If we visit that link, we can see that our website is live!</p>
-<p><img src="images/tutorial_github-modules/github-deploy-11.png" width="100%"></p>
-<section id="github-housekeeping" class="level4">
-<h4 class="anchored" data-anchor-id="github-housekeeping">GitHub Housekeeping</h4>
-<p>We recommend a quick housekeeping step now to make it easier to find this URL in the future. <strong>Copy the URL from the Pages setting area and return to the “Code” tab of the repository</strong>.</p>
-<p>Once there, <strong>click the small gear icon to the right of the “About” header.</strong></p>
-<p><img src="images/tutorial_github-modules/github-tidy-1.png" width="100%"></p>
-<p>In the resulting window, <strong>paste the copied URL into the “Website” field.</strong> Once you’ve pasted it in, <strong>click the</strong> <strong><span style="color:green">green</span></strong> <strong>“Save changes” button.</strong></p>
-<p align="center">
-<img src="images/tutorial_github-modules/github-tidy-2.png" width="60%">
-</p>
-<p>This places the link to your deployed website in an intuitive, easy-to-find location both for interested third parties and yourself in the future.</p>
-<p><img src="images/tutorial_github-modules/github-tidy-3.png" width="100%"></p>
+<section id="problems-with-authorization" class="level3">
+<h3 class="anchored" data-anchor-id="problems-with-authorization">Problems with Authorization</h3>
+<p>If you have tried to use <code>drive_auth</code> and <em>did not</em> check the box indicated above, you need to make the <code>googledrive</code> package ask you again. Using <code>drive_auth</code> will not (annoyingly) return you to the place it sent you the first time. However, if you run the following code chunk it should give you another chance to check the needed box.</p>
+<p>The <a href="https://gargle.r-lib.org/"><code>gargle</code> R package</a> referenced below is required for interacting with Google Application Program Interfaces (APIs). This package does the heavy lifting of secure password and token management and is necessary for the <code>googledrive</code> authentication chunk below.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_auth</span>(</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">email =</span> gargle<span class="sc">::</span><span class="fu">gargle_oauth_email</span>(),</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">path =</span> <span class="cn">NULL</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">scopes =</span> <span class="st">"https://www.googleapis.com/auth/drive"</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">cache =</span> gargle<span class="sc">::</span><span class="fu">gargle_oauth_cache</span>(),</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">use_oob =</span> gargle<span class="sc">::</span><span class="fu">gargle_oob_default</span>(),</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">token =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Unfortunately, to use the <code>googledrive</code> package you <em>must</em> check the box that empowers the package to function as designed. If you’re uncomfortable giving the <code>googledrive</code> that much power you will need to pivot your workflow away from using GoogleDrive directly. However, NCEAS does offer access to an <a href="https://lter.github.io/workshop-github/server.html">internal server called “Aurora”</a> where data can be securely saved and shared among group members without special authentication like what <code>googledrive</code> requires. Reach out to our team if this seems like a more attractive option for your working group and we can offer training on how to use this powerful tool!</p>
 </section>
-</section>
-<section id="adding-website-content" class="level3">
-<h3 class="anchored" data-anchor-id="adding-website-content">Adding Website Content</h3>
-<p>Now that you have a live website you can build whatever you’d like! Given the wide range of possibility, we’ll only cover how to add a new page but the same process applies to any edit to the living webpage.</p>
-<p>To add a new page <strong>create a new Quarto document.</strong> You can do this by going to the “File” menu, entering the “New File” options, and selecting “Quarto Document…”</p>
+<section id="find-and-download-files" class="level3">
+<h3 class="anchored" data-anchor-id="find-and-download-files">Find and Download Files</h3>
+<p>Now that you’ve authorized the <code>googledrive</code> package, you can start downloading the Google Drive files you need through R! Let’s say that you want to download a csv file from a folder or shared drive. You can save the URL of that folder/shared drive to a variable.</p>
+<p>The <code>googledrive</code> package makes it straightforward to access Drive folders and files with the <code>as_id</code> function. This function allows the full link to a file or folder to serve as a direct connection to that file/folder. Most of the other <code>googledrive</code> functions will require a URL that is wrapped with <code>as_id</code> in this way. You would replace “your url here” with the actual link but make sure it is in quotation marks.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>drive_url <span class="ot">&lt;-</span> googledrive<span class="sc">::</span><span class="fu">as_id</span>(<span class="st">"your url here"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To list all the contents of this folder, we can use the <code>drive_ls</code> function. You will get a dataframe-like object of the files back as the output. An example is shown below in the screenshot. Here, this Google Drive folder contains 4 csv files: <code>ingredients.csv</code>, <code>favorite_soups.csv</code>, <code>favorite_fruits.csv</code> and <code>favorite_desserts.csv</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>drive_folder <span class="ot">&lt;-</span> googledrive<span class="sc">::</span><span class="fu">drive_ls</span>(<span class="at">path =</span> drive_url)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>drive_folder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p align="center">
-<img src="images/tutorial_quarto-website/website-tutorial_new-content-1.png" width="60%">
+<img src="images/tutorial_drive-auth/drive-download-0.png" width="90%">
 </p>
-<p>Similarly to an R markdown file, this will open a new window that lets you enter a title and author as well as decide what format you want to render files to along with some other settings options. <strong>You only need to click the “Create” button</strong> in the bottom right of this dialogue (though you can definitely play with the other options and text boxes as you desire).</p>
+<p>If it has been a while since you’ve used <code>googledrive</code>, it will prompt you to refresh your token. Simply enter the number that corresponds to the correct Google Drive account.</p>
 <p align="center">
-<img src="images/tutorial_quarto-website/website-tutorial_new-content-2.png" width="75%">
+<img src="images/tutorial_drive-auth/drive-download-1.png" width="90%">
 </p>
-<p>After a moment, a new .qmd file will open in Quarto’s visual editor. <strong>For the purposes of this tutorial, you only need to add a <code>title</code> in the top of the file</strong> but for a real website you can add whatever content sparks joy for you!</p>
+<p>If you only want to list files of a certain type, you can specify this in the <code>type</code> argument. And let’s say that my folder contains a bunch of csv files, but I only want to download the one named “favorite_desserts.csv”. In that case, I can also put a matching string in the <code>pattern</code> argument in order to filter down to 1 file.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>drive_folder <span class="ot">&lt;-</span> googledrive<span class="sc">::</span><span class="fu">drive_ls</span>(<span class="at">path =</span> drive_url,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">type =</span> <span class="st">"csv"</span>, </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">pattern =</span> <span class="st">"favorite_desserts"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>drive_folder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p align="center">
-<img src="images/tutorial_quarto-website/website-tutorial_new-content-3.png" width="75%">
+<img src="images/tutorial_drive-auth/drive-download-2.png" width="90%">
 </p>
-<p><strong>Save that file into your project folder.</strong> Its name can be anything but be sure that you remember what you name it!</p>
-<p align="center">
-<img src="images/tutorial_quarto-website/website-tutorial_new-content-4.png" width="60%">
-</p>
-<p><strong>Add the name of the new Quarto document to the .yml file</strong> in the website navbar area (in this example the file is called “more-stuff.qmd”).</p>
-<p align="center">
-<img src="images/tutorial_quarto-website/website-tutorial_new-content-5.png" width="75%">
-</p>
-<p>Once you’ve added the file to the fundamental architecture of your website, you need to tell Quarto to re-build the part of the website that GitHub looks for when it deploys. To do this <strong>run <code>quarto render</code> in the Terminal.</strong></p>
-<p>If you want to <em>preview</em> your changes, run <code>quarto preview</code> in the Terminal and a new browser window will be displayed showing your current website content. This preview continues until you click the <strong><span style="color:red">red</span></strong> stop sign icon in RStudio so be sure to end it when you’re done with the preview!</p>
-<p><img src="images/tutorial_quarto-website/website-tutorial_new-content-6.png" width="100%"></p>
-<p>Regardless, once you’ve run either <code>quarto render</code> or <code>quarto preview</code> <strong>you need to stage and commit all changed files indicated in the Git pane of RStudio</strong>. As a reminder, to stage files you check the box next to them, to commit staged files, type an informative message and press the “Commit” button in the right side of the window.</p>
-<p><img src="images/tutorial_quarto-website/website-tutorial_new-content-7.png" width="100%"></p>
-<p>Switch back to GitHub and you’ll see an <strong><span style="color:orange">amber</span></strong> dot next to the commit hash just beneath and to the left of the <strong><span style="color:green">green</span></strong> “Code” button.</p>
-<p><img src="images/tutorial_quarto-website/website-tutorial_new-content-8.png" width="100%"></p>
-<p>When the <strong><span style="color:orange">amber</span></strong> dot turns into a <strong><span style="color:green">green</span></strong> check mark that means that your edits to your website are now included in the live version of your site!</p>
-<p><img src="images/tutorial_quarto-website/website-tutorial_new-content-9.png" width="100%"></p>
-<p>When you visit your website you may need to refresh the page for your edits to appear but all new visitors will see the updated content when they load the page.</p>
-<p><img src="images/tutorial_quarto-website/website-tutorial_new-content-10.png" width="100%"></p>
-</section>
-<section id="supplementary-information" class="level3">
-<h3 class="anchored" data-anchor-id="supplementary-information">Supplementary Information</h3>
-<p>Quarto is developing at a rapid pace so quality of life changes and new functionalities are introduced relatively frequently. Additionally, Quarto supports user-created “extensions” that can be downloaded in a given project and then used (similar to the way user-developed R packages can be shared) so if you want to do something that Quarto itself doesn’t support, chances are you’ll be able to find an extension that handles it.</p>
-<p><a href="https://quarto.org/docs/websites/">Quarto’s documentation of website creation and formatting</a> is extremely thorough and is a great resource as you become more comfortable with your new website. We hope this tutorial was useful to you and welcome constructively critical feedback! Please <a href="https://github.com/NCEAS/scicomptasks/issues">post an issue</a> with any thoughts for improvement that you have.</p>
+<p>Once we’ve narrowed down to the file we want, we can download it using <code>drive_download</code>. This function takes the file identifier as an argument so we can access it using <code>drive_folder$id</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(<span class="at">file =</span> drive_folder<span class="sc">$</span>id)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This will automatically download the file to our working directory. If you want, you can specify a different path to download to. Just put the new file path into the <code>path</code> argument, replacing the “your path here”, but keep the quotation marks.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(<span class="at">file =</span> drive_folder<span class="sc">$</span>id, </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">path =</span> <span class="st">"your path here"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you’ve downloaded the file before, and you want to overwrite it, there’s a handy <code>overwrite</code> argument that you can set to <code>TRUE</code>. Note that the default is <code>FALSE</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_download</span>(<span class="at">file =</span> drive_folder<span class="sc">$</span>id, </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                            <span class="at">path =</span> <span class="st">"your path here"</span>,</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>                            <span class="at">overwrite =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If there are multiple files in the Drive folder and you want to download them all, you can use a loop like so:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># For each file:</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(focal_file <span class="cf">in</span> drive_folder<span class="sc">$</span>name){</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Find the file identifier for that file</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  file_id <span class="ot">&lt;-</span> <span class="fu">subset</span>(drive_folder, name <span class="sc">==</span> focal_file)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Download that file</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drive_download</span>(<span class="at">file =</span> file_id<span class="sc">$</span>id, </span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">path =</span> <span class="st">"your path here"</span>,</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>                 <span class="at">overwrite =</span> T)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

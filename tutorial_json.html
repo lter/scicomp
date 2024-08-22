@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>tutorial_json – LTER Scientific Computing Team</title>
+<title>Storing User-Specific Information with JSONs – LTER Scientific Computing Team</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta name="twitter:title" content="LTER Scientific Computing Team">
+<meta name="twitter:title" content="Storing User-Specific Information with JSONs – LTER Scientific Computing Team">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -163,11 +163,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="./tutorial_server.html">
- <span class="dropdown-text">Server Tutorial</span></a>
+ <span class="dropdown-text">Tutorial: NCEAS’ Server</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./tutorials.html">
- <span class="dropdown-text">Tutorials</span></a>
+    <a class="dropdown-item" href="./tutorial_quarto-website.html">
+ <span class="dropdown-text">Tutorial: Create a Website</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorial_json.html">
+ <span class="dropdown-text">Tutorial: Store User-Specific Info</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tutorial_googledrive-pkg.html">
+ <span class="dropdown-text">Tutorial: Google Drive + R</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./best_practices.html">
@@ -230,11 +238,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
   <li><a href="#create-the-json" id="toc-create-the-json" class="nav-link" data-scroll-target="#create-the-json">1. Create the JSON</a></li>
   <li><a href="#save-the-json-with-a-consistent-name" id="toc-save-the-json-with-a-consistent-name" class="nav-link" data-scroll-target="#save-the-json-with-a-consistent-name">2. Save the JSON with a Consistent Name</a></li>
   <li><a href="#tell-git-to-ignore-the-json" id="toc-tell-git-to-ignore-the-json" class="nav-link" data-scroll-target="#tell-git-to-ignore-the-json">3. Tell Git to Ignore the JSON</a></li>
   <li><a href="#benefit-from-the-json" id="toc-benefit-from-the-json" class="nav-link" data-scroll-target="#benefit-from-the-json">4. Benefit from the JSON!</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -243,9 +254,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Storing User-Specific Information with JSONs</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>Working groups sometimes need to handle user-specific information in their code. For example, if your group stores your data in the cloud (e.g., in Box, in Dropbox, etc.) each user will have a different “absolute file path” to the synced version of the data folder on their personal computer. Similarly, groups may find it valuable to use their email address in the code. While you <em>could</em> simply have each group member add their information (file path, email, etc.) and comment out all but one of them when you work in that script, there is a better option: user-specific JSON files!</p>
 <p>The main advantage of this method is that you and your group members <u>do not have to manually change <em>any user-specific information</em> in scripts</u> just because a different person runs them!</p>
 <section id="prerequisites" class="level3">
@@ -307,6 +336,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </p>
 
 
+</section>
 </section>
 </section>
 
