@@ -147,11 +147,11 @@
     "text": "R Packages\n\n\nscicomptools\nWhile much of the work we do is specific to a given working group or task, sometimes we realize afterwards that our functions have the potential to be useful beyond the scope for which they were initially written. To that end, we have created the R package scicomptools!\n\nPackage Description\nThis package contains a diverse mix of functions for everything from repetitive data wrangling tasks to checking whether you have a token attached for GitHub. In addition, functions that we wrote that are deprecated (usually because their internal workings have been superseded by packages on CRAN) are removed from the package but retained in the GitHub repository in case they are useful to you! All functions–both live and deprecated–are summarized in the README on the GitHub repository so take a look!\n\n\nInstallation Instructions\nTo install the package in R, use the following:\n\ninstall.packages(\"scicomptools\")\n\n\n\n\n\nHERON\nWhen we’ve developed enough custom functions for a working group’s workflow, we can move those functions into its very own R package! For example, we’ve created a package for the Silica Exports working group called HERON (“HElpers for River ObservatioN”).\n\nPackage Description\nThis package contains several helper functions that are integral to the group’s workflow, which includes identifying inflection points (i.e., hills & valleys) in trendlines and running separate regressions on each chunk of the line between such points. HERON is meant to be used for workflows involving the EGRET and SiZer R packages.\n\n\nInstallation Instructions\nTo install the package in R, use the following:\n\n# install.packages(\"devtools\")\ndevtools::install_github(\"lter/HERON\")"
   },
   {
-    "objectID": "portfolio.html#r-shiny-apps",
-    "href": "portfolio.html#r-shiny-apps",
+    "objectID": "portfolio.html#shiny-apps",
+    "href": "portfolio.html#shiny-apps",
     "title": "Portfolio",
-    "section": "R Shiny Apps",
-    "text": "R Shiny Apps\n\nOur team created another R package–lterpalettefinder–to extract color palettes from user-supplied photos. To help non-R users still explore this package and have fun pulling color palettes from photos, we created this standalone Shiny app. This app lets anyone interact with lterpalettefinder via their browser with no R experience required!\nWe have also built apps to help working groups visualize data or present survey results in an interactive, visually-appealing format. Shiny apps can also include useful ‘overview’ portions that serve as an excellent landing page for third parties to your group’s activities!"
+    "section": "Shiny Apps",
+    "text": "Shiny Apps\n\nOur team created another R package–lterpalettefinder–to extract color palettes from user-supplied photos. To help non-R users still explore this package and have fun pulling color palettes from photos, we created this standalone Shiny app. This app lets anyone interact with lterpalettefinder via their browser with no R experience required!\nWe have also built apps to help working groups visualize data or present survey results in an interactive, visually-appealing format. Shiny apps can also include useful ‘overview’ portions that serve as an excellent landing page for third parties to your group’s activities!"
   },
   {
     "objectID": "tutorials.html",
@@ -319,7 +319,7 @@
     "href": "best_practices.html",
     "title": "Coding Tips",
     "section": "",
-    "text": "This page contains the collected best practice tips of the NCEAS Scientific Computing Support Team. More will be added over time and feel free to post an issue if you have a specific request for a section to add to this document.\nPlease feel free to reach out to our team (see here) if you have any questions about this best practices manual and/or need help implementing some of this content.\nCheck the headings below or in the table of contents on the right of this page to see which tips and tricks we have included so far and we hope this page is a useful resource to you and your team!"
+    "text": "This page contains the collected best practice tips of our team. More will be added over time and feel free to post an issue if you have a specific request for a section to add to this document. Please feel free to reach out to our team if you have any questions about this best practices manual and/or need help implementing some of this content.\nCheck the headings below or in the table of contents on the right of this page to see which tips and tricks we have included so far and we hope this page is a useful resource to you and your team!"
   },
   {
     "objectID": "best_practices.html#r-scripts-versus-r-markdowns",
