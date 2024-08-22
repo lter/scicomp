@@ -35,8 +35,6 @@ website:
             href: https://njlyon0.github.io/asm-2022_shiny-workshop/
       - text: "Tutorials"
         menu:
-         - text: "Use NCEAS' Server"
-           href: tutorial_server.qmd
          - text: "Create a Website"
            href: tutorial_quarto-website.qmd
          - text: "Store User-Specific Info"
