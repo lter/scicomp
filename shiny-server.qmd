@@ -5,7 +5,7 @@ engine: knitr
 :::callout-note
 Please note that the following instructions for deploying Shiny apps are meant to serve as internal documentation and will only work if you have `sudo` power on the SciComp team's Shiny server.
 
-Feel free to [contact us](https://nceas.github.io/scicomp.github.io/staff.html) if you have a LTER-related Shiny app that you would like to deploy on our server!
+Feel free to [contact us](https://lter.github.io/scicomp/staff.html) if you have a LTER-related Shiny app that you would like to deploy on our server!
 :::
 
 SciComp team members can deploy LTER-related Shiny apps on our server at: [https://shiny.lternet.edu/](https://shiny.lternet.edu/)
