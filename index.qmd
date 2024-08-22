@@ -34,7 +34,7 @@ For members of our working groups, this website is a centralized hub of resource
 
 ### Other Visitors
 
-Welcome! Even if you're not a part of a working group, we hope that you find the various resources on this website helpful! If you're interested in learning more about open, reproducible science, please feel free to take a look at our [**Workshops**](https://lter.github.io/scicomp/workshops.html) pages and [**Coding Tips**](https://lter.github.io/scicomp/best_practices.html) pages for other useful tips in R. 
+Welcome! Even if you're not a part of a working group, we hope that you find the various resources on this website helpful! If you're interested in learning more about open, reproducible science, please feel free to take a look at the items under our **Workshops** and **Tips** dropdown menus.
 
 ::::
 

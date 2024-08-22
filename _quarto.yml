@@ -26,7 +26,13 @@ website:
           - text: "Facilitation"
             href: wg_facilitation.qmd
       - text: "Workshops"
-        href: workshops.qmd
+        menu:
+          - text: "Collaborative Coding with GitHub"
+            href: https://lter.github.io/workshop-github/
+          - text: "Coding in the Tidyverse"
+            href: https://lter.github.io/workshop-tidyverse/
+          - text: "Shiny Apps for Sharing Science"
+            href: https://njlyon0.github.io/asm-2022_shiny-workshop/
       - text: "Tutorials"
         menu:
          - text: "Use NCEAS' Server"

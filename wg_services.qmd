@@ -13,7 +13,7 @@ The categories below are not exhaustive so if you think your needs will fall bet
 
 ## Tasks
 
-**This level of collaboration is the core of our value to working groups!** When your group identifies a data-related need (e.g., designing an analytical workflow, creating a website, writing an R Shiny app, etc.), you reach out to [our team](https://lter.github.io/scicomp/staff.html) and get the conversation started. During that time we will work closely with you to define the scope of the work and get a clear picture of what "success" looks like in this context.
+**This level of collaboration is the core of our value to working groups!** When your group identifies a data-related need (e.g., designing an analytical workflow, creating a website, writing an R Shiny app, etc.), you reach out to our team and get the conversation started. During that time we will work closely with you to define the scope of the work and get a clear picture of what "success" looks like in this context.
 
 Once the task is appropriately defined, the conversation moves on to how independently you'd like us to work. This varies dramatically between tasks even within a single working group and _there is no single right answer!_ For some tasks, we are capable of working completely independently and returning to your team with a finished product in hand for review but we are equally comfortable working closely with you throughout the life-cycle of a task. 
 
@@ -25,14 +25,22 @@ We are excited that these sprints are a part of our menu of offerings to you all
 
 ## Weekly Office Hours
 
-Each of [our staff members](https://lter.github.io/scicomp/staff.html) offers a one-hour block weekly as a standing office hour each week. This is a great time to join us with small hurdles or obstacles you're experiencing in a given week. For example, previous office hours have dealt with topics like refreshing on Git/GitHub vocabulary, authenticating the `googledrive` R package, or solving a specific error in a new R script.
+Each of our staff members offers a one-hour block weekly as a standing office hour each week. This is a great time to join us with small hurdles or obstacles you're experiencing in a given week. For example, previous office hours have dealt with topics like refreshing on Git/GitHub vocabulary, authenticating the `googledrive` R package, or solving a specific error in a new R script.
 
-## Workshops & Trainings
+## Trainings
 
-With those workshops, our team aims to help your group further develop skills in reproducible data science to enable your team to better collaborate and efficiently tackle data and analytical challenges. It is sometimes the case that your working group wants to become more familiar (or get a refresher) on a tool you'd like to include in your group's workflow. To that end **we can offer workshops on a selection of data science tools.** 
+We have three primary methods for helping your group further develop skills in reproducible data science to enable your team to better collaborate and efficiently tackle data and analytical challenges. **To access a category of our skill development content, click the corresponding dropdown menu in the navbar at the top of this website.**
 
-For our current workshop catalog, see [here](https://lter.github.io/scicomp/workshops.html).
+We are also happy to design new workshops, tutorials, or tips if your group wants training on something within our knowledge base for which we haven't yet built something.
 
-We are also happy to offer new workshops if your group wants training on something within our knowledge base for which we haven't (yet) built a workshop. These workshops are typically done remotely (we can also accommodate time during one of your meetings if desired) and last 2-3 hours but we can be flexible with that timing depending on your group's needs.
+### Workshops
 
-Similarly, we also have been creating more **'go at your own pace'-style tutorials** that can be accessed [here](https://lter.github.io/scicomp/tutorials.html). These tutorials are usually smaller in scope than workshops but are still built to maximize value to your group either as review or first contact with a given subject. As with the workshops, we are happy to create new tutorials if something comes up for your team so please reach out and we can discuss further!
+Workshops are typically done remotely and last 2-3 hours but we can be flexible with that timing depending on your group's needs. We can also accommodate time during one of your meetings if desired.
+
+### Tutorials
+
+The tutorials tend to be smaller in scope than the full workshops and more 'go at your own pace'-style. Despite that, they are still built to maximize value to your group either as review or first contact with a given subject.
+
+### Tips
+
+Finally, we've also curated a set of 'code tips' that are even smaller in scale than the tutorials. These are often just a short summary of our team's opinion on a given subject.
