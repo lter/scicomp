@@ -312,7 +312,7 @@
     "href": "wg_tools.html#computing-tools",
     "title": "Suggested Tools",
     "section": "Computing Tools",
-    "text": "Computing Tools\n\nAnalysis\n\nOur team is most well-versed in R and many data synthesis ends can be accomplished in this language. R’s primary advantage is its amazing user community! R users have developed all kinds of custom functions and packages so even when what you want to do is not supported by an R package on CRAN, chances are that you can find the tools you need online!\n\nWe strongly recommend using R through RStudio as the RStudio interface allows several ‘quality of life’ improvements that you will grow to greatly appreciate if you’re not already an RStudio user. RStudio enables an easier connection to Git (see below), facilitates use of the command line, and allows you to generate PDF or HTML reports with embedded code chunks for easy sharing in and outside of your group.\n\nIf your group is working with genomes or other large data files, you may find R’s memory limit to be a serious hindrance. If this is the case (or if you prefer to not use R!) we suggest Python as an alternative. Python works better with larger files and is also a well-respected programming language.\n\n\nCode Storage & Versioning\n\nGit is a great program to use for tracking changes to your code as your project grows and evolves. Git is one type of “version control” software which is specifically built to track changes to code in an informative and useful way. It is analogous to using “track changes” in Microsoft Word but is built in a more seamless way and is purpose-built for working with code. You can install Git following the instructions here.\n\nSimilarly to R versus RStudio, we recommend that you create an account with GitHub so that the changes you track with Git can be viewed and interacted with in a straightforward way. GitHub is the industry standard for tracking changes to code and is a great way of making code for a specific project publicly-accessible once you are at a stage where that feels appropriate. We offer an introductory workshop on Git and GitHub that we are happy to offer to your group if that is of interest!"
+    "text": "Computing Tools\n\nCode Storage & Versioning\n\nGit is a great program to use for tracking changes to your code as your project grows and evolves. Git is one type of “version control” software which is specifically built to track changes to code in an informative and useful way. It is analogous to using “track changes” in Microsoft Word but is built in a more seamless way and is purpose-built for working with code. You can install Git following the instructions here.\n\nSimilarly to R versus RStudio, we recommend that you create an account with GitHub so that the changes you track with Git can be viewed and interacted with in a straightforward way. GitHub is the industry standard for tracking changes to code and is a great way of making code for a specific project publicly-accessible once you are at a stage where that feels appropriate. We offer an introductory workshop on Git and GitHub that we are happy to offer to your group if that is of interest!\n\n\nAnalysis\n\nOur team is most well-versed in R and many data synthesis ends can be accomplished in this language. R’s primary advantage is its amazing user community! R users have developed all kinds of custom functions and packages so even when what you want to do is not supported by an R package on CRAN, chances are that you can find the tools you need online!\n\nWe strongly recommend using R through RStudio as the RStudio interface allows several ‘quality of life’ improvements that you will grow to greatly appreciate if you’re not already an RStudio user. RStudio enables an easier connection to Git (see below), facilitates use of the command line, and allows you to generate PDF or HTML reports with embedded code chunks for easy sharing in and outside of your group.\n\nIf your group is working with genomes or other large data files, you may find R’s memory limit to be a serious hindrance. If this is the case (or if you prefer to not use R!) we suggest Python as an alternative. Python works better with larger files and is also a well-respected programming language."
   },
   {
     "objectID": "best_practices.html",
@@ -492,35 +492,35 @@
   {
     "objectID": "wg_facilitation.html",
     "href": "wg_facilitation.html",
-    "title": "Meeting Facilitation & Santa Barbara tips",
+    "title": "Meeting Facilitation & Santa Barbara Tips",
     "section": "",
     "text": "Facilitating a working group meeting is both hugely rewarding and a significant effort. NCEAS and the LTER Network have gathered some guiding resources that may prove to be helpful to your meeting. See the sub-sections below for more details."
   },
   {
     "objectID": "wg_facilitation.html#lter-network-office-guidance",
     "href": "wg_facilitation.html#lter-network-office-guidance",
-    "title": "Meeting Facilitation & Santa Barbara tips",
+    "title": "Meeting Facilitation & Santa Barbara Tips",
     "section": "LTER Network Office Guidance",
     "text": "LTER Network Office Guidance\nThe LTER Network Office (LNO) has curated some useful resources on their website (lternet.edu) that we strongly recommend exploring! In particular, the LNO has centralized resources for working group primary investigators (PIs) (see here). Additionally, the LNO has created some broader resources for all members of working groups (see here).\nThe LTER Code of Conduct is also publicly available if you’d like to explore it."
   },
   {
     "objectID": "wg_facilitation.html#nceas-resources-for-working-groups",
     "href": "wg_facilitation.html#nceas-resources-for-working-groups",
-    "title": "Meeting Facilitation & Santa Barbara tips",
+    "title": "Meeting Facilitation & Santa Barbara Tips",
     "section": "NCEAS’ Resources for Working Groups",
     "text": "NCEAS’ Resources for Working Groups\nNCEAS hosts many working groups and so has drawn from its wealth of experience to assemble a set of useful information on its Resources for Working Groups page.\nIn particular, we recommend checking out the documents nested in the “How to Run a Working Group” dropdown menu. Your group may also want to check out the “Reimbursement Forms” dropdown after your meetings in Santa Barbara to ensure that your eligible expenses get reimbursed!"
   },
   {
     "objectID": "wg_facilitation.html#diversity-equity-and-inclusion",
     "href": "wg_facilitation.html#diversity-equity-and-inclusion",
-    "title": "Meeting Facilitation & Santa Barbara tips",
+    "title": "Meeting Facilitation & Santa Barbara Tips",
     "section": "Diversity, Equity, and Inclusion",
     "text": "Diversity, Equity, and Inclusion\nThe LTER Network and NCEAS are committed to improving diversity and inclusion in science. For the LTER Network Office’s diversity, equity and inclusion resources see here. For more information on NCEAS’ commitment to this mission–and related links–please visit NCEAS’ DEIJ page."
   },
   {
     "objectID": "wg_facilitation.html#visiting-santa-barbara",
     "href": "wg_facilitation.html#visiting-santa-barbara",
-    "title": "Meeting Facilitation & Santa Barbara tips",
+    "title": "Meeting Facilitation & Santa Barbara Tips",
     "section": "Visiting Santa Barbara",
     "text": "Visiting Santa Barbara\nWhen your group is visiting at NCEAS’ office in beautiful Santa Barbara there are additional resources available to your group and opportunities for recreation and bonding as a team! Check out NCEAS’ general computing resources page for a quick rundown of some resources available only in Santa Barbara (including how to get on the WiFi!).\nWe very much recommend taking an afternoon or morning on one of the days of your visit to get out and explore Santa Barbara! NCEAS’ page for things to do in SB for new employees might prove to be a helpful resource for you and your group as you’re deciding where to eat and what to do!"
   },
