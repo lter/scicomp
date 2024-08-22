@@ -19,7 +19,8 @@ website:
         menu: 
           - text: "Team Coding"
             href: wg_team-coding.qmd
-          - onboard-scaffold_services.qmd
+          - text: "Support Services"
+            href: wg_services.qmd
           - href: sci-comp-definition.qmd
             text: "What is Scientific Computing?"
           - onboard-scaffold_infrastructure.qmd
