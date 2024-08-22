@@ -21,9 +21,10 @@ website:
             href: wg_team-coding.qmd
           - text: "Support Services"
             href: wg_services.qmd
-          - href: sci-comp-definition.qmd
-            text: "What is Scientific Computing?"
-          - onboard-scaffold_infrastructure.qmd
+          - text: "Scientific Computing Definition"
+            href: wg_sci-comp-def.qmd
+          - text: "Suggested Tools"
+            href: wg_tools.qmd
           - onboard-scaffold_suggested-tools.qmd
           - onboard-scaffold_other-materials.qmd
       - text: "Trainings"
