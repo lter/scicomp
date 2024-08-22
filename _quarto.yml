@@ -27,11 +27,16 @@ website:
             href: wg_facilitation.qmd
       - text: "Trainings"
         menu:
-         - workshops.qmd
-         - tutorial_server.qmd
-         - tutorials.qmd
-      - best_practices.qmd
-      - portfolio.qmd
+         - text: "Workshops"
+           href: workshops.qmd
+         - text: "Server Tutorial"
+           href: tutorial_server.qmd
+         - text: "Tutorials"
+           href: tutorials.qmd
+      - text: "Coding Tips"
+        href: best_practices.qmd
+      - text: "Portfolio"
+        href: portfolio.qmd
       - text: "Our Team"
         menu:
           - text: "People"
