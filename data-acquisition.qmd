@@ -179,7 +179,3 @@ Of particular relevance is likely the "crop-drivers.R" script where we read in t
 The National Ecological Observatory Network (NEON) is a facility that collects long-term ecological data from aquatic and terrestrial ecosystems in the United States. Their data usually falls into one of three categories: data collected by an airborne observation platform like LIDAR, data collected by a person in the field, or data collected by an automated sensor. 
 
 NEON has a handy [API](https://www.neonscience.org/resources/learning-hub/tutorials/neon-api-usage) that will allow you to pull their data using R. Additionally, they have created a whole suite of [tutorials](https://www.neonscience.org/resources/learning-hub/tutorials) for various needs, including a tutorial on how to [download and explore NEON data](https://www.neonscience.org/resources/learning-hub/tutorials/download-explore-neon-data) using their helper R packages. 
-
-## Relevant Example
-
-See our [NEON tutorial script](https://github.com/NCEAS/scicomptasks/tree/main/misc_neon) in `scicomptasks` for an example on how to handle NEON data with R. 
