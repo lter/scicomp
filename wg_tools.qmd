@@ -32,6 +32,16 @@ For the more analytical intensive phase of your project, NCEAS also has several 
 
 ## Computing Tools
 
+### Code Storage & Versioning
+
+<img src="images/logos/git.png" alt="Git logo" width="20%" align="right"/>
+
+Git is a great program to use for tracking changes to your code as your project grows and evolves. Git is one type of "version control" software which is specifically built to track changes to code in an informative and useful way. It is analogous to using "track changes" in Microsoft Word but is built in a more seamless way and is purpose-built for working with code. You can install Git following the instructions [here](https://lter.github.io/workshop-github/#install-git).
+
+<img src="images/logos/github.png" alt="GitHub logo" width="15%" align="right"/>
+
+Similarly to R versus RStudio, **we recommend that you create an account with [GitHub](https://github.com/)** so that the changes you track with Git can be viewed and interacted with in a straightforward way. GitHub is the industry standard for tracking changes to code and is a great way of making code for a specific project publicly-accessible once you are at a stage where that feels appropriate. We offer an introductory [workshop on Git and GitHub](https://lter.github.io/workshop-github/) that we are happy to offer to your group if that is of interest!
+
 ### Analysis
 
 <img src="images/logos/r.png" alt="Logo for the R programming language" width="15%" align="right"/>
@@ -45,13 +55,3 @@ Our team is most well-versed in [R](https://cran.r-project.org/) and many data s
 <img src="images/logos/python.png" alt="Python logo" width="30%" align="right"/>
 
 If your group is working with genomes or other large data files, you may find R's memory limit to be a serious hindrance. If this is the case (or if you prefer to not use R!) we suggest [Python](https://www.python.org/) as an alternative. Python works better with larger files and is also a well-respected programming language.
-
-### Code Storage & Versioning
-
-<img src="images/logos/git.png" alt="Git logo" width="20%" align="right"/>
-
-Git is a great program to use for tracking changes to your code as your project grows and evolves. Git is one type of "version control" software which is specifically built to track changes to code in an informative and useful way. It is analogous to using "track changes" in Microsoft Word but is built in a more seamless way and is purpose-built for working with code. You can install Git following the instructions [here](https://lter.github.io/workshop-github/#install-git).
-
-<img src="images/logos/github.png" alt="GitHub logo" width="15%" align="right"/>
-
-Similarly to R versus RStudio, **we recommend that you create an account with [GitHub](https://github.com/)** so that the changes you track with Git can be viewed and interacted with in a straightforward way. GitHub is the industry standard for tracking changes to code and is a great way of making code for a specific project publicly-accessible once you are at a stage where that feels appropriate. We offer an introductory [workshop on Git and GitHub](https://lter.github.io/workshop-github/) that we are happy to offer to your group if that is of interest!
