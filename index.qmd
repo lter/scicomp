@@ -1,6 +1,6 @@
 
 <p align="center">
-<img src = "images/lter_logo_wide.png" alt="LTER network logo" width = "60%"/>
+<img src = "images/logos/lter-wide.png" alt="LTER network logo" width = "50%"/>
 </p>
 
 ## What We Do
