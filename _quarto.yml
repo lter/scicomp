@@ -37,8 +37,8 @@ website:
            href: tutorial_json.qmd
          - text: "Connect Google Drive + R"
            href: tutorial_googledrive-pkg.qmd
-         - text: "Coding Tips"
-           href: best_practices.qmd
+      - text: "Coding Tips"
+        href: best_practices.qmd
       - text: "Portfolio"
         href: portfolio.qmd
     right:
