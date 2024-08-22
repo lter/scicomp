@@ -58,18 +58,3 @@ Make a repository in the [LTER GitHub Organization](https://github.com/lter) wit
 4. Add a README
 4. Create a `.gitignore` <u>using the R template</u>
     - R is the most common working group language and the `.gitignore` is easily changed in the event the group is primarily using a different language
-
-## NCEAS' Server
-
-Some groups wind up doing computationally-intense work (e.g., machine learning, spatial data wrangling, etc.). Such groups often find it useful to get set up on NCEAS' server "Aurora" to leverage the greater computing power to do these heavy operations relatively quickly. However, because adoption/need for this is somewhat mixed we _do not_ recommend creating a server group for every group before they request one.
-
-Instead, gage group interest and need and when it becomes relevant we can do the setup steps listed below. Note that we have a nice [group-facing server tutorial](https://nceas.github.io/scicomp-workshop-collaborative-coding/server.html) in our GitHub workshop materials.
-
-1. Reach out to Thomas Hetmank / Nick Outin to get a group made on the server for this working group
-2. Make sure that NCEAS Scientific Computing team staff are added as members
-3. Make a folder in the "shares" folder for this group
-4. Gather emails from all interested working group members and get them added to the Aurora group
-
-## Google Group
-
-There is ongoing discussion within the larger NCEAS administration that this task may become something handled by NCEAS' IT team so we will leave out our setup instructions at this time.
