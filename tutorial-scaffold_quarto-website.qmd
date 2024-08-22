@@ -5,7 +5,7 @@
 
 To follow along with this tutorial you will need to take the following steps:
 
-- Do all of the [pre-workshop steps](https://nceas.github.io/scicomp-workshop-collaborative-coding/#workshop-preparation) relevant to our "Collaborative Coding with GitHub" workshop
+- Do all of the [pre-workshop steps](https://lter.github.io/workshop-github/#workshop-preparation) relevant to our "Collaborative Coding with GitHub" workshop
 - [Download Quarto](https://quarto.org/docs/get-started/)
 
 Feel free to skip any steps that you have already completed!

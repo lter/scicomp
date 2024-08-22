@@ -32,7 +32,7 @@ googledrive::drive_auth(
   token = NULL)
 ```
 
-Unfortunately, to use the `googledrive` package you *must* check the box that empowers the package to function as designed. If you're uncomfortable giving the `googledrive` that much power you will need to pivot your workflow away from using GoogleDrive directly. However, NCEAS does offer access to an [internal server called "Aurora"](https://nceas.github.io/scicomp-workshop-collaborative-coding/server.html) where data can be securely saved and shared among group members without special authentication like what `googledrive` requires. Reach out to our team if this seems like a more attractive option for your working group and we can offer training on how to use this powerful tool!
+Unfortunately, to use the `googledrive` package you *must* check the box that empowers the package to function as designed. If you're uncomfortable giving the `googledrive` that much power you will need to pivot your workflow away from using GoogleDrive directly. However, NCEAS does offer access to an [internal server called "Aurora"](https://lter.github.io/workshop-github/server.html) where data can be securely saved and shared among group members without special authentication like what `googledrive` requires. Reach out to our team if this seems like a more attractive option for your working group and we can offer training on how to use this powerful tool!
 
 ### Find and Download Files
 
