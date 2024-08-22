@@ -1,3 +1,9 @@
+---
+title: "Conecting R & Google Drive"
+---
+
+## Overview
+
 The [`googledrive` R package](https://googledrive.tidyverse.org/) is a package that lets R users directly interact with files on GoogleDrive. This can be extremely useful because it lets all members of a team share the same source data file(s) and guarantees that updates to "living" documents are received by all group members the next time they run their R script. This package is technically part of the Tidyverse but is not loaded by running `library(tidyverse)`.
 
 Because this package requires access to an R user's GoogleDrive, you must "authenticate" the `googledrive` package. This essentially tells Google that it is okay if an R package uses your credentials to access and (potentially) modify your Drive content. There are only a few steps to this process but follow along with the below tutorial and we'll get you ready to integrate the Google Drive into your code workflows using the `googledrive` package in no time!

@@ -1,5 +1,5 @@
 ---
-title: "Server Tutorial"
+title: "NCEAS' Server: Aurora"
 ---
 
 ## Overview

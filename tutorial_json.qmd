@@ -1,3 +1,9 @@
+---
+title: "Storing User-Specific Information with JSONs"
+---
+
+## Overview 
+
 Working groups sometimes need to handle user-specific information in their code. For example, if your group stores your data in the cloud (e.g., in Box, in Dropbox, etc.) each user will have a different "absolute file path" to the synced version of the data folder on their personal computer. Similarly, groups may find it valuable to use their email address in the code. While you _could_ simply have each group member add their information (file path, email, etc.) and comment out all but one of them when you work in that script, there is a better option: user-specific JSON files!
 
 The main advantage of this method is that you and your group members <u>do not have to manually change _any user-specific information_ in scripts</u> just because a different person runs them!
