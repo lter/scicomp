@@ -1,16 +1,19 @@
 ---
 title: "Coding Tips"
 ---
-```{r libraries, include = FALSE, message = FALSE, echo = FALSE}
+
+```{r libraries}
+#| include: false
+#| message: false
+#| echo: false
+
 library(librarian)
 librarian::shelf(tidyverse, cran_repo = 'https://cran.r-project.org')
 ```
 
 ### Welcome!
 
-This page contains the collected best practice tips of the NCEAS Scientific Computing Support Team. More will be added over time and feel free to post [an issue](https://github.com/NCEAS/scicomp.github.io/issues) if you have a specific request for a section to add to this document.
-
-Please feel free to reach out to our team (see [here](https://nceas.github.io/scicomp.github.io/staff.html)) if you have any questions about this best practices manual and/or need help implementing some of this content.
+This page contains the collected best practice tips of our team. More will be added over time and feel free to post [an issue](https://github.com/lter/scicomp/issues) if you have a specific request for a section to add to this document. Please feel free to reach out to [our team](https://lter.github.io/scicomp/staff.html) if you have any questions about this best practices manual and/or need help implementing some of this content.
 
 Check the headings below or in the table of contents on the right of this page to see which tips and tricks we have included so far and we hope this page is a useful resource to you and your team!
 
@@ -19,7 +22,7 @@ Check the headings below or in the table of contents on the right of this page t
 {{< include /modules_best-practices/markdown-vs-script.qmd >}}
 
 <p align="center">
-<img src="images/lter-photos/patches.jpg" width="100%"/>
+<img src="images/lter-photos/patches.jpg" alt="Photo of people walking sampling insects at a farm where a wildflower strip has been planted between two row-cropped areas" width="100%"/>
 </p>
 
 ## File Paths
@@ -27,7 +30,7 @@ Check the headings below or in the table of contents on the right of this page t
 {{< include /modules_best-practices/file-paths.qmd >}}
 
 <p align="center">
-<img src="images/lter-photos/penguins.jpg" width="100%"/>
+<img src="images/lter-photos/penguins.jpg" alt="Photo of two penguins swimming in icy water" width="80%"/>
 </p>
 
 ## Good Naming Conventions
