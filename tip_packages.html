@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>markdown-vs-script – LTER Scientific Computing Team</title>
+<title>Streamlined R Package Loading – LTER Scientific Computing Team</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,28 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/logos/hex_scicomptools.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./images/logos/hex_scicomptools.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta name="twitter:title" content="LTER Scientific Computing Team">
+<meta name="twitter:title" content="Streamlined R Package Loading – LTER Scientific Computing Team">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -83,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">LTER Scientific Computing Team</span>
     </a>
   </div>
@@ -99,25 +133,25 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-working-group-onboarding">    
         <li>
-    <a class="dropdown-item" href="../wg_team-coding.html">
+    <a class="dropdown-item" href="./wg_team-coding.html">
  <span class="dropdown-text">Team Coding</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../wg_services.html">
+    <a class="dropdown-item" href="./wg_services.html">
  <span class="dropdown-text">Support Services</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../wg_tools.html">
+    <a class="dropdown-item" href="./wg_tools.html">
  <span class="dropdown-text">Suggested Tools</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../wg_facilitation.html">
+    <a class="dropdown-item" href="./wg_facilitation.html">
  <span class="dropdown-text">Facilitation</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../workshops.html"> 
+    <a class="nav-link" href="./workshops.html"> 
 <span class="menu-text">Workshops</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -126,29 +160,48 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
         <li>
-    <a class="dropdown-item" href="../tutorial_server.html">
+    <a class="dropdown-item" href="./tutorial_server.html">
  <span class="dropdown-text">Use NCEAS’ Server</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorial_quarto-website.html">
+    <a class="dropdown-item" href="./tutorial_quarto-website.html">
  <span class="dropdown-text">Create a Website</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorial_json.html">
+    <a class="dropdown-item" href="./tutorial_json.html">
  <span class="dropdown-text">Store User-Specific Info</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorial_googledrive-pkg.html">
+    <a class="dropdown-item" href="./tutorial_googledrive-pkg.html">
  <span class="dropdown-text">Connect Google Drive + R</span></a>
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../best_practices.html"> 
-<span class="menu-text">Coding Tips</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tips" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Tips</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tips">    
+        <li>
+    <a class="dropdown-item" href="./tip_notebook-vs-script.html">
+ <span class="dropdown-text">Notebooks vs.&nbsp;Scripts</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./tip_names.html">
+ <span class="dropdown-text">File Names</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tip_paths.html">
+ <span class="dropdown-text">File Paths</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./tip_packages.html">
+ <span class="dropdown-text">Package Loading</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
-    <a class="nav-link" href="../portfolio.html"> 
+    <a class="nav-link" href="./portfolio.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
 </ul>
@@ -159,23 +212,23 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-our-team">    
         <li>
-    <a class="dropdown-item" href="../staff.html">
+    <a class="dropdown-item" href="./staff.html">
  <span class="dropdown-text">People</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../internal_team-onboard.html">
+    <a class="dropdown-item" href="./internal_team-onboard.html">
  <span class="dropdown-text">Internal: Team Onboarding</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../internal_new-wg-setup.html">
+    <a class="dropdown-item" href="./internal_new-wg-setup.html">
  <span class="dropdown-text">Internal: WG Setup</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../internal_get-data.html">
+    <a class="dropdown-item" href="./internal_get-data.html">
  <span class="dropdown-text">Internal: Data Portals</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../internal_deploy-shiny.html">
+    <a class="dropdown-item" href="./internal_deploy-shiny.html">
  <span class="dropdown-text">Internal: Deploy Shiny Apps</span></a>
   </li>  
     </ul>
@@ -202,11 +255,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-scripts---positives" id="toc-r-scripts---positives" class="nav-link active" data-scroll-target="#r-scripts---positives">R Scripts - Positives</a></li>
-  <li><a href="#r-scripts---potential-weaknesses" id="toc-r-scripts---potential-weaknesses" class="nav-link" data-scroll-target="#r-scripts---potential-weaknesses">R Scripts - Potential Weaknesses</a></li>
-  <li><a href="#r-markdowns---positives" id="toc-r-markdowns---positives" class="nav-link" data-scroll-target="#r-markdowns---positives">R Markdowns - Positives</a></li>
-  <li><a href="#r-markdowns---potential-weaknesses" id="toc-r-markdowns---potential-weaknesses" class="nav-link" data-scroll-target="#r-markdowns---potential-weaknesses">R Markdowns - Potential Weaknesses</a></li>
-  <li><a href="#script-vs.-markdown-summary" id="toc-script-vs.-markdown-summary" class="nav-link" data-scroll-target="#script-vs.-markdown-summary">Script vs.&nbsp;Markdown Summary</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#traditional-package-loading" id="toc-traditional-package-loading" class="nav-link" data-scroll-target="#traditional-package-loading">Traditional Package Loading</a></li>
+  <li><a href="#package-loading-with-librarian" id="toc-package-loading-with-librarian" class="nav-link" data-scroll-target="#package-loading-with-librarian">Package Loading with <code>librarian</code></a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -215,29 +266,52 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Streamlined R Package Loading</h1>
+</div>
 
 
 
-<p>When coding in R, either R scripts (.R files) or R markdowns (.Rmd files) are viable options but they have different advantages and disadvantages that we will cover below.</p>
-<section id="r-scripts---positives" class="level3">
-<h3 class="anchored" data-anchor-id="r-scripts---positives">R Scripts - Positives</h3>
-<p>R scripts’ greatest strength is their flexibility. They allow you to format a file in whatever way is most intuitive to you. Additionally, R scripts can be cleaner for <code>for</code> loops insofar as they need not be concerned with staying within a given code chunk (as would be the case for a .Rmd). Developing a new workflow can be swiftly accomplished in an R script as some or all of the code in a script can be run by simply selecting the desired lines rather than manually running the desired chunks in a .Rmd file. Finally, R scripts can also be a better home for custom functions that can be <code>source</code>d by another file (even a .Rmd!) for making repeated operations simpler to read.</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Loading packages / libraries in R can be cumbersome when working collaboratively because there is no guarantee that you all have the same packages installed. While you could comment-out an <code>install.packages()</code> line for every package you need for a given script, we recommend using the R package <code>librarian</code> to greatly simplify this process!</p>
+<p><code>librarian::shelf()</code> accepts the names of all of the packages–either CRAN or GitHub–installs those that are missing in that particular R session and then attaches all of them.</p>
 </section>
-<section id="r-scripts---potential-weaknesses" class="level3">
-<h3 class="anchored" data-anchor-id="r-scripts---potential-weaknesses">R Scripts - Potential Weaknesses</h3>
-<p>The benefit of extreme flexibility in R scripts can sometimes be a disadvantage however. We’ve all seen (and written) R scripts that have few or no comments or where lines of code are densely packed without spacing or blank lines to help someone new to the code understand what is being done. R scripts can certainly be written in a way that is accessible to those without prior knowledge of what the script accomplishes but they do not <em>enforce</em> such structure. This can make it easy, especially when we’re feeling pressed for time, to exclude structure that helps our code remain reproducible and understandable.</p>
+<section id="traditional-package-loading" class="level2">
+<h2 class="anchored" data-anchor-id="traditional-package-loading">Traditional Package Loading</h2>
+<p>To load packages typically you’d have something like the following in your script:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install packages (if needed)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"NCEAS/scicomptools"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Load libraries</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse); <span class="fu">library</span>(scicomptools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="r-markdowns---positives" class="level3">
-<h3 class="anchored" data-anchor-id="r-markdowns---positives">R Markdowns - Positives</h3>
-<p>R markdown files’ ability to “knit” as HTML or PDF documents makes them extremely useful in creating outward-facing reports. This is particularly the case when the specific code is less important to communicate than visualizations and/or analyses of the data but .Rmd files do facilitate <code>echo</code>ing the code so that report readers can see how background operations were accomplished. The code chunk structure of these files can also nudge users towards including valuable comments (both between chunks and within them) though of course .Rmd files do not enforce such non-code content.</p>
-</section>
-<section id="r-markdowns---potential-weaknesses" class="level3">
-<h3 class="anchored" data-anchor-id="r-markdowns---potential-weaknesses">R Markdowns - Potential Weaknesses</h3>
-<p>R markdowns can fail to knit due to issues even when the code within the chunks works as desired. Duplicate code chunk names or a failure to install LaTeX can be a frustrating hurdle to overcome between functioning code and a knit output file. When code must be re-run repeatedly (as is often the case when developing a new workflow) the stop-and-start nature of running each code chunk separately can also be a small irritation.</p>
-</section>
-<section id="script-vs.-markdown-summary" class="level3">
-<h3 class="anchored" data-anchor-id="script-vs.-markdown-summary">Script vs.&nbsp;Markdown Summary</h3>
-<p>Taken together, both R scripts and R markdown files can empower users to write reproducible, transparent code. However, both file types have some key limitations that should be taken into consideration when choosing which to use as you set out to create a new code product.</p>
+<section id="package-loading-with-librarian" class="level2">
+<h2 class="anchored" data-anchor-id="package-loading-with-librarian">Package Loading with <code>librarian</code></h2>
+<p>With <code>librarian::shelf()</code> however this becomes <em>much</em> cleaner! In addition to being fewer lines, using <code>librarian</code> also removes the possibility that someone running your code misses one of the packages that your script depends on and then the script breaks for them later on. <code>librarian::shelf()</code> automatically detects whether a package is installed, installs it if necessary, and then attaches the package.</p>
+<p>In essence, <code>librarian::shelf()</code> wraps <code>install.packages()</code>, <code>devtools::install_github()</code>, and <code>library()</code> into a single, human-readable function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install and load packages!</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>librarian<span class="sc">::</span><span class="fu">shelf</span>(tidyverse, NCEAS<span class="sc">/</span>scicomptools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>When using <code>librarian::shelf()</code>, package names do not need to be quoted and GitHub packages can be installed without the additional steps of installing the <code>devtools</code> package and using <code>devtools::install_github()</code> instead of <code>install.packages()</code>.</p>
 
 
 </section>
