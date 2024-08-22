@@ -203,13 +203,6 @@
     "text": "Guide\nThe National Ecological Observatory Network (NEON) is a facility that collects long-term ecological data from aquatic and terrestrial ecosystems in the United States. Their data usually falls into one of three categories: data collected by an airborne observation platform like LIDAR, data collected by a person in the field, or data collected by an automated sensor.\nNEON has a handy API that will allow you to pull their data using R. Additionally, they have created a whole suite of tutorials for various needs, including a tutorial on how to download and explore NEON data using their helper R packages."
   },
   {
-    "objectID": "data-acquisition.html#relevant-example-2",
-    "href": "data-acquisition.html#relevant-example-2",
-    "title": "Data Acquisition",
-    "section": "Relevant Example",
-    "text": "Relevant Example\nSee our NEON tutorial script in scicomptasks for an example on how to handle NEON data with R."
-  },
-  {
     "objectID": "wg_tools.html",
     "href": "wg_tools.html",
     "title": "Suggested Tools",
