@@ -4,7 +4,7 @@ title: "Sci Comp Team Onboarding"
 
 ### Welcome to the Team!
 
-This page contains a quick, cookbook-style set of instructions for new staff on the Scientific Computing Support Team. We are so excited to have you join us and we hope that these instructions are clear and easy-to-follow. Please don't hesitate to reach out if you run into any issues (see the "Our Team" tab of this site) or [post a GitHub issue yourself](https://github.com/NCEAS/scicomp.github.io/issues) on this website's repository!
+This page contains a quick, cookbook-style set of instructions for new staff on the Scientific Computing Support Team. We are so excited to have you join us and we hope that these instructions are clear and easy-to-follow. Please don't hesitate to reach out if you run into any issues (see the "Our Team" tab of this site) or [post a GitHub issue yourself](https://github.com/lter/scicomp/issues) on this website's repository!
 
 Listed below are a mix of references and tutorials on concepts we aim to promote to researchers who we support, as well as tools and workflows we use in our team. The goal is to give context about open and reproducible science principles NCEAS is promoting to the scientific community. You will also find information on getting access to the tools that you will need and some general information about working at NCEAS.
 
@@ -12,19 +12,16 @@ Listed below are a mix of references and tutorials on concepts we aim to promote
 
 ## Background Reading Material
 
-* Hampton et al 2015. ["The Tao of open science for ecology"](https://doi.org/10.1890/ES14-00402.1)
-
-* Borer et al 2009. ["Effective Data Management"](https://doi.org/10.1890/0012-9623-90.2.205)
-
-* Fegraus et al 2005. ["Maximizing the Value of Ecological Data with Structured Metadata:"](https://doi.org/10.1890/0012-9623%282005%2986[158:MTVOED]2.0.CO;2)
-
-* Heidborn 2008. ["Shedding Light on the Dark Data in the Long Tail of Science"](http://doi.org/10.1353/lib.0.0036)
+- Hampton et al 2015. ["The Tao of open science for ecology"](https://doi.org/10.1890/ES14-00402.1)
+- Borer et al 2009. ["Effective Data Management"](https://doi.org/10.1890/0012-9623-90.2.205)
+- Heidborn 2008. ["Shedding Light on the Dark Data in the Long Tail of Science"](http://doi.org/10.1353/lib.0.0036)
+- Fegraus et al 2005. ["Maximizing the Value of Ecological Data with Structured Metadata:"](https://doi.org/10.1890/0012-9623%282005%2986[158:MTVOED]2.0.CO;2)
 
 ## Programs & Resources
 
 ### GitHub Tutorial
 
-We rely heavily on [GitHub](https://github.com/) for collaboration, and there are a few things you must do to get set up. First, complete the NCEAS GitHub Tutorial [here](https://nceas.github.io/training-git-intro/getting-started-with-git-rstudio.html). This tutorial will help you with getting started with `git` and GitHub using RStudio.
+We rely heavily on [GitHub](https://github.com/) for collaboration, and there are a few things you must do to get set up. First, complete the NCEAS GitHub Tutorial [here](https://lter.github.io/workshop-github/rstudio.html). This tutorial will help you with getting started with `git` and GitHub using RStudio.
 
 ### LTER GitHub Organization
 
@@ -36,7 +33,7 @@ We use a GitHub Enterprise account to keep track of tasks for the Scientific Com
 
 Follow the directions outlined [here](https://docs.google.com/document/d/1eoR1oDrCrczgbYHPZU_1szB_2fhzu7EUHnh5nFI3eSg/edit) and send your username to Marty Downs (not the email outlined in the Google Doc).
 
-After you have been added, you will be able to access the [Issues tab of the lter-wg-scicomp GitHub repository](https://github.nceas.ucsb.edu/LTER/lter-wg-scicomp/issues). We use issues on this repository to keep track of tasks and projects as well as who is primarily responsible for a given task and which working group gave us the task initially.
+After you have been added, you will be able to access the [Issues tab of the `lter-wg-scicomp` GitHub repository](https://github.nceas.ucsb.edu/LTER/lter-wg-scicomp/issues). We use issues on this repository to keep track of tasks and projects as well as who is primarily responsible for a given task and which working group gave us the task initially.
 
 ### Slack
 
