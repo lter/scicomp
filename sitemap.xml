@@ -2,154 +2,138 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://lter.github.io/scicomp/tutorial-scaffold_quarto-website.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
+    <lastmod>2024-08-22T17:44:23.014Z</lastmod>
   </url>
   <url>
     <loc>https://lter.github.io/scicomp/workshops.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
+    <lastmod>2024-08-22T17:44:23.014Z</lastmod>
   </url>
   <url>
     <loc>https://lter.github.io/scicomp/index.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
   </url>
   <url>
     <loc>https://lter.github.io/scicomp/staff.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
   </url>
   <url>
     <loc>https://lter.github.io/scicomp/tutorial_server.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/tutorials.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_tutorials/quarto-website_deploy-prep.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_tutorials/github-connect.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_tutorials/quarto-website_new-proj.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_tutorials/googledrive-fxns.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_wg-onboarding/services-tasks.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_wg-onboarding/services-office-hours.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_wg-onboarding/infrastructure-data-archive.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/wg-setup.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/onboard-scaffold_other-materials.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/tutorial-scaffold_googledrive-auth.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/team-onboarding.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_best-practices/pkg-loading.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_best-practices/markdown-vs-script.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_best-practices/file-paths.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_best-practices/naming-conventions.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/onboard-scaffold_suggested-tools.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/best_practices.html</loc>
-    <lastmod>2024-08-22T17:32:43.019Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/sci-comp-definition.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/data-acquisition.html</loc>
-    <lastmod>2024-08-22T17:32:43.019Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_wg-onboarding/services-trainings.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_wg-onboarding/infrastructure-server.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_wg-onboarding/services-sprints.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_tutorials/quarto-website_add-content.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_tutorials/github-create.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_tutorials/github-website-deploy.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
-  </url>
-  <url>
-    <loc>https://lter.github.io/scicomp/modules_tutorials/googledrive-auth.html</loc>
-    <lastmod>2024-08-22T17:32:43.219Z</lastmod>
+    <lastmod>2024-08-22T17:44:23.014Z</lastmod>
   </url>
   <url>
     <loc>https://lter.github.io/scicomp/tutorial_json.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
+    <lastmod>2024-08-22T17:44:23.014Z</lastmod>
   </url>
   <url>
-    <loc>https://lter.github.io/scicomp/onboard-scaffold_services.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
+    <loc>https://lter.github.io/scicomp/modules_tutorials/googledrive-auth.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_tutorials/github-website-deploy.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_tutorials/github-create.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_tutorials/quarto-website_add-content.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_wg-onboarding/infrastructure-data-archive.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/data-acquisition.html</loc>
+    <lastmod>2024-08-22T17:44:22.822Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/wg_services.html</loc>
+    <lastmod>2024-08-22T17:44:23.014Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/tutorial-scaffold_googledrive-auth.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/team-onboarding.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_best-practices/pkg-loading.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_best-practices/markdown-vs-script.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_best-practices/file-paths.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_best-practices/naming-conventions.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/onboard-scaffold_suggested-tools.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/best_practices.html</loc>
+    <lastmod>2024-08-22T17:44:22.822Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/sci-comp-definition.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/onboard-scaffold_other-materials.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/wg-setup.html</loc>
+    <lastmod>2024-08-22T17:44:23.014Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_wg-onboarding/infrastructure-server.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_tutorials/googledrive-fxns.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_tutorials/quarto-website_new-proj.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_tutorials/github-connect.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/modules_tutorials/quarto-website_deploy-prep.html</loc>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://lter.github.io/scicomp/tutorials.html</loc>
+    <lastmod>2024-08-22T17:44:23.014Z</lastmod>
   </url>
   <url>
     <loc>https://lter.github.io/scicomp/portfolio.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
   </url>
   <url>
     <loc>https://lter.github.io/scicomp/wg_team-coding.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
+    <lastmod>2024-08-22T17:44:23.014Z</lastmod>
   </url>
   <url>
     <loc>https://lter.github.io/scicomp/shiny-server.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
   </url>
   <url>
     <loc>https://lter.github.io/scicomp/onboard-scaffold_infrastructure.html</loc>
-    <lastmod>2024-08-22T17:32:43.223Z</lastmod>
+    <lastmod>2024-08-22T17:44:23.010Z</lastmod>
   </url>
 </urlset>
