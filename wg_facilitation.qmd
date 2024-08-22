@@ -1,9 +1,11 @@
 ---
-title: "Other Resources"
+title: "Meeting Facilitation & Santa Barbara tips"
 ---
 
+Facilitating a working group meeting is both hugely rewarding and a significant effort. NCEAS and the LTER Network have gathered some guiding resources that may prove to be helpful to your meeting. See the sub-sections below for more details.
+
 <p align="center">
-<img src="images/lter-photos/notes.jpg" width="100%"/>
+<img src="images/lter-photos/notes.jpg" alt="Photo of a person wearing a hat sitting on the forest floor with datasheets spread across their lap" width="100%"/>
 <figcaption>REU Student Organizing Data Sheets, Harvard Forest - Photographer: Jocelyn Fahlen</figcaption>
 </p>
 
@@ -17,7 +19,7 @@ The [LTER Code of Conduct](https://lternet.edu/lter-meetings-code-of-conduct/) i
 
 NCEAS hosts many working groups and so has drawn from its wealth of experience to assemble a set of useful information on its [Resources for Working Groups page](https://www.nceas.ucsb.edu/working-group-resources).
 
-In particular, *we recommend checking out the documents nested in the "How to Run a Working Group" dropdown menu.* Your group may also want to check out the "Reimbursement Forms" dropdown after your meetings in Santa Barbara to ensure that your eligible expenses get reimbursed!
+In particular, _we recommend checking out the documents nested in the "How to Run a Working Group" dropdown menu._ Your group may also want to check out the "Reimbursement Forms" dropdown after your meetings in Santa Barbara to ensure that your eligible expenses get reimbursed!
 
 ## Diversity, Equity, and Inclusion
 
