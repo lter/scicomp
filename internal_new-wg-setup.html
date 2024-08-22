@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sci Comp Team Onboarding – LTER Scientific Computing Team</title>
+<title>Working Group Setup Checklist – LTER Scientific Computing Team</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta name="twitter:title" content="Sci Comp Team Onboarding – LTER Scientific Computing Team">
+<meta name="twitter:title" content="Working Group Setup Checklist – LTER Scientific Computing Team">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -130,48 +130,48 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Server Tutorial</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./data-acquisition.html">
+ <span class="dropdown-text">Data Acquisition</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./tutorials.html">
  <span class="dropdown-text">Tutorials</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./best_practices.html">
+ <span class="dropdown-text">Coding Tips</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./best_practices.html"> 
-<span class="menu-text">Coding Tips</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./portfolio.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-our-team" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Our Team</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-our-team">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-our-team">    
         <li>
     <a class="dropdown-item" href="./staff.html">
  <span class="dropdown-text">People</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data-acquisition.html">
- <span class="dropdown-text">Data Acquisition</span></a>
+    <a class="dropdown-item" href="./internal_team-onboard.html">
+ <span class="dropdown-text">Internal: Team Onboarding</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./team-onboarding.html">
- <span class="dropdown-text">Internal - Team Onboarding</span></a>
+    <a class="dropdown-item" href="./internal_new-wg-setup.html">
+ <span class="dropdown-text">Internal: WG Setup</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./wg-setup.html">
- <span class="dropdown-text">Internal - Group Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./shiny-server.html">
- <span class="dropdown-text">Internal - Deploy Shiny Apps</span></a>
+    <a class="dropdown-item" href="./internal_deploy-shiny.html">
+ <span class="dropdown-text">Internal: Deploy Shiny Apps</span></a>
   </li>  
     </ul>
   </li>
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/lter/scicomp"> <i class="bi bi-github" role="img">
 </i> 
@@ -194,25 +194,15 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#welcome-to-the-team" id="toc-welcome-to-the-team" class="nav-link active" data-scroll-target="#welcome-to-the-team">Welcome to the Team!</a></li>
-  <li><a href="#background-reading-material" id="toc-background-reading-material" class="nav-link" data-scroll-target="#background-reading-material">Background Reading Material</a></li>
-  <li><a href="#programs-resources" id="toc-programs-resources" class="nav-link" data-scroll-target="#programs-resources">Programs &amp; Resources</a>
+  <li><a href="#shared-google-drive" id="toc-shared-google-drive" class="nav-link active" data-scroll-target="#shared-google-drive">Shared Google Drive</a>
   <ul class="collapse">
-  <li><a href="#github-tutorial" id="toc-github-tutorial" class="nav-link" data-scroll-target="#github-tutorial">GitHub Tutorial</a></li>
-  <li><a href="#lter-github-organization" id="toc-lter-github-organization" class="nav-link" data-scroll-target="#lter-github-organization">LTER GitHub Organization</a></li>
-  <li><a href="#nceas-github-enterprise-organization" id="toc-nceas-github-enterprise-organization" class="nav-link" data-scroll-target="#nceas-github-enterprise-organization">NCEAS GitHub Enterprise Organization</a></li>
-  <li><a href="#slack" id="toc-slack" class="nav-link" data-scroll-target="#slack">Slack</a></li>
-  <li><a href="#nceas-server-aurora" id="toc-nceas-server-aurora" class="nav-link" data-scroll-target="#nceas-server-aurora">NCEAS Server: Aurora</a></li>
+  <li><a href="#creating-the-shared-drive" id="toc-creating-the-shared-drive" class="nav-link" data-scroll-target="#creating-the-shared-drive">Creating the Shared Drive</a></li>
+  <li><a href="#adding-users" id="toc-adding-users" class="nav-link" data-scroll-target="#adding-users">Adding Users</a></li>
+  <li><a href="#content-creation" id="toc-content-creation" class="nav-link" data-scroll-target="#content-creation">Content Creation</a></li>
   </ul></li>
-  <li><a href="#recurring-nceas-meetings" id="toc-recurring-nceas-meetings" class="nav-link" data-scroll-target="#recurring-nceas-meetings">Recurring NCEAS Meetings</a></li>
-  <li><a href="#data-science-background-and-tutorials" id="toc-data-science-background-and-tutorials" class="nav-link" data-scroll-target="#data-science-background-and-tutorials">Data Science Background and Tutorials</a>
+  <li><a href="#github-repository" id="toc-github-repository" class="nav-link" data-scroll-target="#github-repository">GitHub Repository</a>
   <ul class="collapse">
-  <li><a href="#r-self-assessment" id="toc-r-self-assessment" class="nav-link" data-scroll-target="#r-self-assessment">R Self-Assessment</a></li>
-  </ul></li>
-  <li><a href="#hr-related-resources" id="toc-hr-related-resources" class="nav-link" data-scroll-target="#hr-related-resources">HR-related Resources</a>
-  <ul class="collapse">
-  <li><a href="#reporting-hours-kronos" id="toc-reporting-hours-kronos" class="nav-link" data-scroll-target="#reporting-hours-kronos">Reporting Hours &amp; Kronos</a></li>
-  <li><a href="#uc-path" id="toc-uc-path" class="nav-link" data-scroll-target="#uc-path">UC Path</a></li>
+  <li><a href="#initialize-repository" id="toc-initialize-repository" class="nav-link" data-scroll-target="#initialize-repository">Initialize Repository</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -224,7 +214,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sci Comp Team Onboarding</h1>
+<h1 class="title">Working Group Setup Checklist</h1>
 </div>
 
 
@@ -241,73 +231,73 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome-to-the-team" class="level3">
-<h3 class="anchored" data-anchor-id="welcome-to-the-team">Welcome to the Team!</h3>
-<p>This page contains a quick, cookbook-style set of instructions for new staff on the Scientific Computing Support Team. We are so excited to have you join us and we hope that these instructions are clear and easy-to-follow. Please don’t hesitate to reach out if you run into any issues (see the “Our Team” tab of this site) or <a href="https://github.com/NCEAS/scicomp.github.io/issues">post a GitHub issue yourself</a> on this website’s repository!</p>
-<p>Listed below are a mix of references and tutorials on concepts we aim to promote to researchers who we support, as well as tools and workflows we use in our team. The goal is to give context about open and reproducible science principles NCEAS is promoting to the scientific community. You will also find information on getting access to the tools that you will need and some general information about working at NCEAS.</p>
-<hr>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please note that the following checklist of working group setup steps is meant to serve as internal documentation <em>only!</em> Our team will be taking these steps on your behalf when you are funded so none of these steps are things you (a working member/PI) need to handle.</p>
+<p>Feel free to <a href="https://lter.github.io/scicomp/staff.html">contact us</a> if you find these instructions useful and want to apply them to non-working group contexts!</p>
+</div>
+</div>
+<p>When new working groups are funded, our team takes a number of setup steps to create some of the infrastructure that past groups have requested/found useful. This is mainly an attempt to help the group avoid spending their precious in-person meeting time doing relatively dry technical steps that we can easily accomplish early-on. Some of these steps also set a useful ‘tone’ in terms of facilitating groups’ adherence to reproducibility best practices.</p>
+<section id="shared-google-drive" class="level2">
+<h2 class="anchored" data-anchor-id="shared-google-drive">Shared Google Drive</h2>
+<p>Many groups gravitate towards using Google Drive for storing data, relevant scientific literature, and (eventually) manuscript drafts. One advantage of a true Shared Drive over simply creating a folder and sharing that is that the distributed ownership of the Shared Drive makes it very difficult to accidentally delete/lose important files.</p>
+<p>Some groups have experience serious heartbreak when one member’s Google identity gets closed by their institution and all files/folders created by that member vanish. A Shared Drive makes this horror story an impossibility.</p>
+<section id="creating-the-shared-drive" class="level3">
+<h3 class="anchored" data-anchor-id="creating-the-shared-drive">Creating the Shared Drive</h3>
+<p>Our <code>@nceas.ucsb.edu</code> email addresses are empowered to create Shared Drives. Navigate to your Google Drive, then in the left sidebar click “Shared drives”. Once there you can click the “+ New” button to create a brand new Shared Drive.</p>
+<p>The naming convention you should use is <code>LTER-WG_&lt;WG-Abbreviation&gt;</code> or <code>LTER-SPARC_WG-Abbreviation</code> for full synthesis working groups and SPARC groups respectively.</p>
+<p>Note that for groups with longer names you will want to abbreviate so that the Shared Drive name doesn’t get ambiguously cropped in a default browser window.</p>
 </section>
-<section id="background-reading-material" class="level2">
-<h2 class="anchored" data-anchor-id="background-reading-material">Background Reading Material</h2>
+<section id="adding-users" class="level3">
+<h3 class="anchored" data-anchor-id="adding-users">Adding Users</h3>
+<p>Once the Shared Drive exists, add the following people as “Content Managers”:</p>
 <ul>
-<li><p>Hampton et al 2015. <a href="https://doi.org/10.1890/ES14-00402.1">“The Tao of open science for ecology”</a></p></li>
-<li><p>Borer et al 2009. <a href="https://doi.org/10.1890/0012-9623-90.2.205">“Effective Data Management”</a></p></li>
-<li><p>Fegraus et al 2005. <a href="https://doi.org/10.1890/0012-9623%282005%2986%5B158:MTVOED%5D2.0.CO;2">“Maximizing the Value of Ecological Data with Structured Metadata:”</a></p></li>
-<li><p>Heidborn 2008. <a href="http://doi.org/10.1353/lib.0.0036">“Shedding Light on the Dark Data in the Long Tail of Science”</a></p></li>
+<li><u>All</u> members of the Scientific Computing team</li>
+<li>Marty Downs (LTER Network Office Director)</li>
+<li>Thomas Hetmank (NCEAS Programmer/Analyst)</li>
 </ul>
+<p>When you reach out to the working groups you can also make a note of their emails and add them as well though you may want to first tell them about the Shared Drive before sending them a semi-random Shared Drive invite.</p>
 </section>
-<section id="programs-resources" class="level2">
-<h2 class="anchored" data-anchor-id="programs-resources">Programs &amp; Resources</h2>
-<section id="github-tutorial" class="level3">
-<h3 class="anchored" data-anchor-id="github-tutorial">GitHub Tutorial</h3>
-<p>We rely heavily on <a href="https://github.com/">GitHub</a> for collaboration, and there are a few things you must do to get set up. First, complete the NCEAS GitHub Tutorial <a href="https://nceas.github.io/training-git-intro/getting-started-with-git-rstudio.html">here</a>. This tutorial will help you with getting started with <code>git</code> and GitHub using RStudio.</p>
-</section>
-<section id="lter-github-organization" class="level3">
-<h3 class="anchored" data-anchor-id="lter-github-organization">LTER GitHub Organization</h3>
-<p>Register (if you have not already) for a personal GitHub account and send your username to Marty to be added to the <a href="https://github.com/LTER">LTER GitHub</a>. This GitHub Organization “owns” the working groups repositories that you will be directly working with so being added to this organization will give you access to needed repositories.</p>
-</section>
-<section id="nceas-github-enterprise-organization" class="level3">
-<h3 class="anchored" data-anchor-id="nceas-github-enterprise-organization">NCEAS GitHub Enterprise Organization</h3>
-<p>We use a GitHub Enterprise account to keep track of tasks for the Scientific Computing Support of LTER working groups. To be added to the account you must create an NCEAS account.</p>
-<p>Follow the directions outlined <a href="https://docs.google.com/document/d/1eoR1oDrCrczgbYHPZU_1szB_2fhzu7EUHnh5nFI3eSg/edit">here</a> and send your username to Marty Downs (not the email outlined in the Google Doc).</p>
-<p>After you have been added, you will be able to access the <a href="https://github.nceas.ucsb.edu/LTER/lter-wg-scicomp/issues">Issues tab of the lter-wg-scicomp GitHub repository</a>. We use issues on this repository to keep track of tasks and projects as well as who is primarily responsible for a given task and which working group gave us the task initially.</p>
-</section>
-<section id="slack" class="level3">
-<h3 class="anchored" data-anchor-id="slack">Slack</h3>
-<p>We use Slack to communicate with one another throughout the day. To be added to the NCEAS Slack group, register <a href="https://slack.nceas.ucsb.edu/">here</a>. If you already have a slack account, be sure to use the email address you used to register.</p>
-<p>Find and join our <code>#scicomp</code> channel by clicking the plus sign next to the Channels section. Feel free to join any other channels that you might find interesting! Popular channels include <code>#diversity</code>, <code>#nceas</code>, and <code>#social</code>.</p>
-<p>Finally, complete <a href="https://pages.github.nceas.ucsb.edu/NCEAS/help/chat_room_setup.html">this short tutorial</a> on using Slack.</p>
-</section>
-<section id="nceas-server-aurora" class="level3">
-<h3 class="anchored" data-anchor-id="nceas-server-aurora">NCEAS Server: Aurora</h3>
-<p>We use the Aurora server (located at aurora.nceas.ucsb.edu) when working with RStudio or JupyterHub. Send an email to help@nceas.ucsb.edu requesting an account mentioning you are working with Marty. Thomas Hetmank or Nick Outin will contact you with directions for setting up an account.</p>
+<section id="content-creation" class="level3">
+<h3 class="anchored" data-anchor-id="content-creation">Content Creation</h3>
+<p>We want to use as light a touch as possible here to make sure that groups feel empowered to make their Shared Drive whatever they need it to be but there are a few things we can do.</p>
+<p>Copy the template Google Sheets we’ve created (found in <a href="https://drive.google.com/drive/folders/1g9n1A7XgCeYduB3LdO1JGDktrvu-rWj0?usp=sharing">this Drive folder</a>) and move the copies into their Shared Drive.</p>
 </section>
 </section>
-<section id="recurring-nceas-meetings" class="level2">
-<h2 class="anchored" data-anchor-id="recurring-nceas-meetings">Recurring NCEAS Meetings</h2>
-<p>There are a number of recurring meetings that you are encouraged to attend. At your hiring, you should receive an invitation to the NCEAS Google Calendar which has links to all the meeting information. These include Coffee Klatch (a coffee social), Hacky Hours, and Data Science Chats (to name a few).</p>
-<p>We also have a team Google Calendar to manage team events. Marty will add you if you have not been already.</p>
-</section>
-<section id="data-science-background-and-tutorials" class="level2">
-<h2 class="anchored" data-anchor-id="data-science-background-and-tutorials">Data Science Background and Tutorials</h2>
-<p>For good background information on the tools that we use, read through and practice examples of the following chapters from a training we did for postdocs in early 2020: https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/index.html</p>
-<p>Chapters <a href="https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/working-on-a-remote-machine.html">3</a>, <a href="https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/introduction-to-r-and-rmarkdown.html">5</a>, <a href="https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/linux-and-the-command-line.html">8</a> are a good background about the tools we use.</p>
-<p>Chapters <a href="https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/data-modeling-tidy-data.html">9</a>, <a href="https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/data-cleaning-and-manipulation.html">10</a> are a good introduction to data modeling.</p>
-<section id="r-self-assessment" class="level3">
-<h3 class="anchored" data-anchor-id="r-self-assessment">R Self-Assessment</h3>
-<p>Finally, please complete this <a href="https://cosima.nceas.ucsb.edu/r-self-assessment/">R Training Assessment</a> to self-assess your skills in R.</p>
-<p>Schedule a session with the rest of the team to debrief on your experience.</p>
-</section>
-</section>
-<section id="hr-related-resources" class="level2">
-<h2 class="anchored" data-anchor-id="hr-related-resources">HR-related Resources</h2>
-<section id="reporting-hours-kronos" class="level3">
-<h3 class="anchored" data-anchor-id="reporting-hours-kronos">Reporting Hours &amp; Kronos</h3>
-<p>We submit vacation and sick day hours online through <a href="https://ucsb.kronos.net/wfc/navigator/logonWithUID">Kronos</a>. You should receive an email at the start of your employment adding you to an email listserv that will send reminders on when to approve each month’s timesheet.</p>
-</section>
-<section id="uc-path" class="level3">
-<h3 class="anchored" data-anchor-id="uc-path">UC Path</h3>
-<p><a href="https://www.ucpath.ucsb.edu/">UC Path</a> is the online HR portal and can be accessed with your UCSB Net ID. It is where you can access things like your paycheck, next date of paycheck, and benefits (if applicable).</p>
+<section id="github-repository" class="level2">
+<h2 class="anchored" data-anchor-id="github-repository">GitHub Repository</h2>
+<p>We encourage all groups to engage with GitHub for–at minimum–storing their final code products. We have found that creating a GitHub repository at this stage tends to increase adoption of GitHub and is therefore very much worthwhile even if no group members use it at the time that their group gets funded.</p>
+<section id="initialize-repository" class="level3">
+<h3 class="anchored" data-anchor-id="initialize-repository">Initialize Repository</h3>
+<p>Make a repository in the <a href="https://github.com/lter">LTER GitHub Organization</a> with the following information:</p>
+<ol type="1">
+<li>Begin with the <a href="https://github.com/lter/lterwg-template">working group template repository</a>
+<ul>
+<li>When you make a new repo it’ll provides an option for whether you want to use a template</li>
+</ul></li>
+<li>Create a name that fits one of the following naming conventions
+<ul>
+<li>For full working groups (3-4 meetings): “lterwg-<code>abbreviated-group-name</code>”</li>
+<li>For SPARC groups (1 meeting): “lter-sparc-<code>abbreviated-group-name</code>”</li>
+</ul></li>
+<li>Set the “Description” to the title of the working group
+<ul>
+<li>As indicated on <a href="https://lternet.edu/current-working-groups/">the LTER Network Office website</a></li>
+</ul></li>
+<li>Add a README</li>
+<li>Create a <code>.gitignore</code> <u>using the R template</u>
+<ul>
+<li>R is the most common working group language and the <code>.gitignore</code> is easily changed in the event the group is primarily using a different language</li>
+</ul></li>
+</ol>
 
 
 </section>

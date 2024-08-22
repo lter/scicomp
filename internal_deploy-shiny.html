@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Working Group Setup Checklist – LTER Scientific Computing Team</title>
+<title>Deploy Shiny Apps – LTER Scientific Computing Team</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -71,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta name="twitter:title" content="Working Group Setup Checklist – LTER Scientific Computing Team">
+<meta name="twitter:title" content="Deploy Shiny Apps – LTER Scientific Computing Team">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -130,48 +164,48 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Server Tutorial</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./data-acquisition.html">
+ <span class="dropdown-text">Data Acquisition</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./tutorials.html">
  <span class="dropdown-text">Tutorials</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./best_practices.html">
+ <span class="dropdown-text">Coding Tips</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./best_practices.html"> 
-<span class="menu-text">Coding Tips</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./portfolio.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-our-team" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Our Team</span>
     </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-our-team">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-our-team">    
         <li>
     <a class="dropdown-item" href="./staff.html">
  <span class="dropdown-text">People</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./data-acquisition.html">
- <span class="dropdown-text">Data Acquisition</span></a>
+    <a class="dropdown-item" href="./internal_team-onboard.html">
+ <span class="dropdown-text">Internal: Team Onboarding</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./team-onboarding.html">
- <span class="dropdown-text">Internal - Team Onboarding</span></a>
+    <a class="dropdown-item" href="./internal_new-wg-setup.html">
+ <span class="dropdown-text">Internal: WG Setup</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./wg-setup.html">
- <span class="dropdown-text">Internal - Group Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./shiny-server.html">
- <span class="dropdown-text">Internal - Deploy Shiny Apps</span></a>
+    <a class="dropdown-item" href="./internal_deploy-shiny.html">
+ <span class="dropdown-text">Internal: Deploy Shiny Apps</span></a>
   </li>  
     </ul>
   </li>
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/lter/scicomp"> <i class="bi bi-github" role="img">
 </i> 
@@ -194,20 +228,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#google-shared-drive" id="toc-google-shared-drive" class="nav-link active" data-scroll-target="#google-shared-drive">Google Shared Drive</a>
+  <li><a href="#log-in" id="toc-log-in" class="nav-link active" data-scroll-target="#log-in">Log In</a></li>
+  <li><a href="#set-up-proper-permissions" id="toc-set-up-proper-permissions" class="nav-link" data-scroll-target="#set-up-proper-permissions">Set Up Proper Permissions</a>
   <ul class="collapse">
-  <li><a href="#creating-the-shared-drive" id="toc-creating-the-shared-drive" class="nav-link" data-scroll-target="#creating-the-shared-drive">Creating the Shared Drive</a></li>
-  <li><a href="#adding-users" id="toc-adding-users" class="nav-link" data-scroll-target="#adding-users">Adding Users</a></li>
-  <li><a href="#content-creation" id="toc-content-creation" class="nav-link" data-scroll-target="#content-creation">Content Creation</a></li>
+  <li><a href="#join-shiny-apps" id="toc-join-shiny-apps" class="nav-link" data-scroll-target="#join-shiny-apps">Join <code>shiny-apps</code></a></li>
+  <li><a href="#allow-access-to-your-home-directory" id="toc-allow-access-to-your-home-directory" class="nav-link" data-scroll-target="#allow-access-to-your-home-directory">Allow Access to Your Home Directory</a></li>
   </ul></li>
-  <li><a href="#github-repository" id="toc-github-repository" class="nav-link" data-scroll-target="#github-repository">GitHub Repository</a>
+  <li><a href="#tell-git-who-you-are" id="toc-tell-git-who-you-are" class="nav-link" data-scroll-target="#tell-git-who-you-are">Tell <code>git</code> Who You Are</a></li>
+  <li><a href="#copy-your-app-to-the-server" id="toc-copy-your-app-to-the-server" class="nav-link" data-scroll-target="#copy-your-app-to-the-server">Copy Your App to the Server</a></li>
+  <li><a href="#install-necessary-r-packages" id="toc-install-necessary-r-packages" class="nav-link" data-scroll-target="#install-necessary-r-packages">Install Necessary R Packages</a>
   <ul class="collapse">
-  <li><a href="#initialize-repository" id="toc-initialize-repository" class="nav-link" data-scroll-target="#initialize-repository">Initialize Repository</a></li>
-  <li><a href="#edit-readme" id="toc-edit-readme" class="nav-link" data-scroll-target="#edit-readme">Edit README</a></li>
-  <li><a href="#edit-.gitignore" id="toc-edit-.gitignore" class="nav-link" data-scroll-target="#edit-.gitignore">Edit <code>.gitignore</code></a></li>
+  <li><a href="#missing-dependencies" id="toc-missing-dependencies" class="nav-link" data-scroll-target="#missing-dependencies">Missing Dependencies?</a></li>
   </ul></li>
-  <li><a href="#nceas-server" id="toc-nceas-server" class="nav-link" data-scroll-target="#nceas-server">NCEAS’ Server</a></li>
-  <li><a href="#google-group" id="toc-google-group" class="nav-link" data-scroll-target="#google-group">Google Group</a></li>
+  <li><a href="#symlink-to-deployed-folder" id="toc-symlink-to-deployed-folder" class="nav-link" data-scroll-target="#symlink-to-deployed-folder">Symlink to Deployed Folder</a></li>
+  <li><a href="#debug-app-and-check-its-live-link" id="toc-debug-app-and-check-its-live-link" class="nav-link" data-scroll-target="#debug-app-and-check-its-live-link">Debug App and Check its Live Link</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -218,7 +252,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Working Group Setup Checklist</h1>
+<h1 class="title">Deploy Shiny Apps</h1>
 </div>
 
 
@@ -245,107 +279,141 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Please note that the following checklist of working group setup steps is meant to serve as internal documentation <em>only</em>! Our team will be taking these steps on your behalf when you are funded so none of these steps are things you (a working member/PI) need to handle.</p>
-<p>Feel free to <a href="https://nceas.github.io/scicomp.github.io/staff.html">contact us</a> if you find these instructions useful and want to apply them to non-working group contexts!</p>
+<p>Please note that the following instructions for deploying Shiny apps are meant to serve as internal documentation and will only work if you have <code>sudo</code> power on the SciComp team’s Shiny server.</p>
+<p>Feel free to <a href="https://lter.github.io/scicomp/staff.html">contact us</a> if you have a LTER-related Shiny app that you would like to deploy on our server!</p>
 </div>
 </div>
-<p>When new working groups are funded, our team takes a number of setup steps to create some of the infrastructure that past groups have requested/found useful. This is mainly an attempt to help the group avoid spending their precious in-person meeting time doing relatively dry technical steps that we can easily accomplish early-on. Some of these steps also set a useful ‘tone’ in terms of facilitating groups’ adherence to reproducibility best practices.</p>
-<section id="google-shared-drive" class="level2">
-<h2 class="anchored" data-anchor-id="google-shared-drive">Google Shared Drive</h2>
-<p>Many groups gravitate towards using Google Drive for storing data, relevant scientific literature, and (eventually) manuscript drafts. One advantage of a true Shared Drive over simply creating a folder and sharing that is that the distributed ownership of the Shared Drive makes it very difficult to accidentally delete/lose important files.</p>
-<p>Some groups have experience serious heartbreak when one member’s Google identity gets closed by their institution and all files/folders created by that member vanish. A Shared Drive makes this horror story an impossibility.</p>
-<section id="creating-the-shared-drive" class="level3">
-<h3 class="anchored" data-anchor-id="creating-the-shared-drive">Creating the Shared Drive</h3>
-<p>Our <code>@nceas.ucsb.edu</code> email addresses are empowered to create Shared Drives. Navigate to your Google Drive, then in the left sidebar click “Shared drives”. Once there you can click the “+ New” button to create a brand new Shared Drive.</p>
-<p>The naming convention you should use is: LTER-WG_<code>WG-NAME</code></p>
-<p>Note that for groups with longer names you will want to abbreviate so that the Shared Drive name doesn’t get ambiguously cropped in a default browser window.</p>
+<p>SciComp team members can deploy LTER-related Shiny apps on our server at: <a href="https://shiny.lternet.edu/">https://shiny.lternet.edu/</a></p>
+<p>To deploy your working app, first make sure that all the files live at a GitHub repository. Once our sysadmin Nick Outin has made you an account on the server, you can log in via SSH.</p>
+<section id="log-in" class="level2">
+<h2 class="anchored" data-anchor-id="log-in">Log In</h2>
+<p>For Mac users, open the Terminal app and type the following command, replacing <code>&lt;YOUR-USERNAME&gt;</code> with your own username.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="op">&lt;</span>YOUR-USERNAME<span class="op">&gt;</span>@shiny.lternet.edu</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Windows users can log in with <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/">PuTTY</a>, using shiny.lternet.edu as the host name.</p>
+<p>Check out <a href="https://help.nceas.ucsb.edu/NCEAS/Computing/connecting_to_linux_using_ssh">NCEAS’ guide to using SSH</a> for additional help.</p>
 </section>
-<section id="adding-users" class="level3">
-<h3 class="anchored" data-anchor-id="adding-users">Adding Users</h3>
-<p>Once the Shared Drive exists, add the following people as “Content Managers”:</p>
-<ul>
-<li><u>All</u> members of the NCEAS Scientific Computing team</li>
-<li>Marty Downs (LTER Network Office Director)</li>
-<li>Thomas Hetmank (NCEAS Programmer/Analyst)</li>
-</ul>
-<p>When you reach out to the working groups you can also make a note of their emails and add them as well though you may want to first tell them about the Shared Drive before sending them a semi-random Shared Drive invite.</p>
+<section id="set-up-proper-permissions" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-proper-permissions">Set Up Proper Permissions</h2>
+<section id="join-shiny-apps" class="level3">
+<h3 class="anchored" data-anchor-id="join-shiny-apps">Join <code>shiny-apps</code></h3>
+<p>A <code>shiny-apps</code> user group has been created in this server. Set up the proper permissions for your account by adding yourself to this group with this command.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> usermod <span class="at">-aG</span> shiny-apps <span class="op">&lt;</span>YOUR-USERNAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To decipher this command a bit: <code>sudo</code> will enable you to run commands as a user with full control and privileges. The <code>usermod</code> command is used to modify user account details. The basic syntax is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">usermod</span> <span class="pp">[</span><span class="ss">OPTIONS</span><span class="pp">]</span> <span class="op">&lt;</span>YOUR-USERNAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <code>-G</code> option will add the user to a supplementary group. The <code>-aG</code> combined options will add the user to the new supplementary group while also leaving them in the other supplementary group(s) they were already a part of.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As an FYI, the apps on the server will run as the user <code>shiny</code>, so <code>shiny</code> is also in the <code>shiny-apps</code> user group.</p>
+</div>
+</div>
 </section>
-<section id="content-creation" class="level3">
-<h3 class="anchored" data-anchor-id="content-creation">Content Creation</h3>
-<p>We want to use as light a touch as possible here to make sure that groups feel empowered to make their Shared Drive whatever they need it to be but there are a few things we can do.</p>
-<ol type="1">
-<li>Make a “Data” folder</li>
-<li>Add a <a href="https://docs.google.com/spreadsheets/d/1WOH_EPUF0XL9qutkLgia--YANieXFFX8Goic8LGcVgI/edit#gid=0">data log template GoogleSheet</a> to the Data folder</li>
-</ol>
-<p>In the past we have also added a <a href="https://docs.google.com/document/d/1q6ajgYjvfiaPH2PFsbybOxCWP5JX64nRMRMc7ABzagc/edit#heading=h.kyp2vjxt438v">README GoogleDoc</a> but it is unclear to what extent this is used by groups. We may want to look into whether this is useful and–if not–how we can improve it.</p>
-</section>
-</section>
-<section id="github-repository" class="level2">
-<h2 class="anchored" data-anchor-id="github-repository">GitHub Repository</h2>
-<p>We encourage all groups to engage with GitHub for–at minimum–storing their final code products. We have found that creating a GitHub repository at this stage tends to increase adoption of GitHub and is therefore very much worthwhile even if no group members use it at the time that their group gets funded.</p>
-<section id="initialize-repository" class="level3">
-<h3 class="anchored" data-anchor-id="initialize-repository">Initialize Repository</h3>
-<p>Make a repository in the <a href="https://github.com/lter">LTER GitHub Organization</a> with the following information:</p>
-<ol type="1">
-<li>Create a name that fits one of the following naming conventions
-<ul>
-<li>For full working groups (3-4 meetings): “lterwg-<code>abbreviated-group-name</code>”</li>
-<li>For SPARC groups (1 meeting): “lter-sparc-<code>abbreviated-group-name</code>”</li>
-</ul></li>
-<li>Set the “Description” to the title of the working group
-<ul>
-<li>As indicated on <a href="https://lternet.edu/current-working-groups/">the LTER Network Office website</a></li>
-</ul></li>
-<li>Add a README</li>
-<li>Create a <code>.gitignore</code> <u>using the R template</u>
-<ul>
-<li>R is the most common working group language and the <code>.gitignore</code> is easily changed in the event the group is primarily using a different language</li>
-</ul></li>
-</ol>
-</section>
-<section id="edit-readme" class="level3">
-<h3 class="anchored" data-anchor-id="edit-readme">Edit README</h3>
-<p>Edit the default README with the following content:</p>
-<ul>
-<li>Make a top level markdown heading (i.e., one <code>#</code>) with the title of the group</li>
-<li>Make a second level markdown heading (<code>##</code>) called “Project Summary”
-<ul>
-<li>Include a link to the group-specific page on <a href="https://lternet.edu/current-working-groups/">the LTER Network Office website</a></li>
-</ul></li>
-<li>Make a second level markdown heading called “Supplementary Resources”
-<ul>
-<li>Add a link to <a href="https://nceas.github.io/scicomp.github.io/">the home page</a> of the NCEAS Scientific Computing team (i.e., the home page of <em>this</em> website!)</li>
-</ul></li>
-</ul>
-<p>Note that you can make these edits directly from GitHub so you don’t need to worry about cloning at this stage!</p>
-</section>
-<section id="edit-.gitignore" class="level3">
-<h3 class="anchored" data-anchor-id="edit-.gitignore">Edit <code>.gitignore</code></h3>
-<p>If you used the R template then this is basically ready to go but we can make two small edits that are convenient for many groups (and easily undone for those groups that decide to do so).</p>
-<ol type="1">
-<li>Add <code>.DS_Store</code></li>
-</ol>
-<p>This file type (short for “Desktop Services Store”) is created by the Apple macOS operating system that stores visual information (e.g., icon positions, view options, etc.). In other words, it is a file that is completely irrelevant to reproducibility in a coding context and there will be one in <em>every</em> folder for Mac users. By ignoring it when we create the GitHub repository we can guarantee that no group members accidentally commit these useless (in this context) files and in so doing add clutter to their repository.</p>
-<ol start="2" type="1">
-<li>Add a wildcard <code>*.Rproj</code></li>
-</ol>
-<p>There is some debate about whether to ignore the .Rproj (see <a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/git_ignore.html#should-you-ignore-the-.rproj-file">our summary of this discussion</a> from our GitHub workshop materials) but for working groups <em>the default position is that we should ignore it</em>. There are two reasons to do this. <strong>First</strong>, working group members may change the name of the project on their local computer and then commit their uniquely-named .Rproj file. Taken to an extreme this means that there may be one .Rproj / user which can be confusing to some users and is not (in our opinion) very aesthetically pleasing. <strong>Second</strong> if groups commit a .Rproj and then later delete it, anyone who pulls that change will delete their cloned repository automatically (similar to a snake eating its own tail). By ignoring the .Rproj from the outset we can avoid this possisbility entirely.</p>
+<section id="allow-access-to-your-home-directory" class="level3">
+<h3 class="anchored" data-anchor-id="allow-access-to-your-home-directory">Allow Access to Your Home Directory</h3>
+<p>Additionally, you need to allow <code>shiny</code> access to your user home directory by running:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> chmod a+x /home/<span class="op">&lt;</span>YOUR-USERNAME<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This <code>chmod</code> (change mode) command is used to control file permissions. Basic syntax:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> <span class="pp">[</span><span class="ss">OPTIONS</span><span class="pp">]</span> MODE FILE/DIRECTORY</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>There are two “modes” that you can use to set permissions: Symbolic and Octal mode. The Symbolic mode uses operators and letters. For example, the <code>a</code> option denotes all the owner/groups the file/directory belongs to. The <code>+</code> operator grants the permission, and the letter <code>x</code> stands for the execute permission.</p>
 </section>
 </section>
-<section id="nceas-server" class="level2">
-<h2 class="anchored" data-anchor-id="nceas-server">NCEAS’ Server</h2>
-<p>Some groups wind up doing computationally-intense work (e.g., machine learning, spatial data wrangling, etc.). Such groups often find it useful to get set up on NCEAS’ server “Aurora” to leverage the greater computing power to do these heavy operations relatively quickly. However, because adoption/need for this is somewhat mixed we <em>do not</em> recommend creating a server group for every group before they request one.</p>
-<p>Instead, gage group interest and need and when it becomes relevant we can do the setup steps listed below. Note that we have a nice <a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/server.html">group-facing server tutorial</a> in our GitHub workshop materials.</p>
-<ol type="1">
-<li>Reach out to Thomas Hetmank / Nick Outin to get a group made on the server for this working group</li>
-<li>Make sure that NCEAS Scientific Computing team staff are added as members</li>
-<li>Make a folder in the “shares” folder for this group</li>
-<li>Gather emails from all interested working group members and get them added to the Aurora group</li>
-</ol>
+<section id="tell-git-who-you-are" class="level2">
+<h2 class="anchored" data-anchor-id="tell-git-who-you-are">Tell <code>git</code> Who You Are</h2>
+<p>Now that your account has the proper permissions, use the <code>git config</code> commands to tell <code>git</code> who you are.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.name <span class="st">"&lt;YOUR-GITHUB-USERNAME&gt;"</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> config <span class="at">--global</span> user.email <span class="st">"&lt;YOUR-GITHUB-EMAIL&gt;"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Replace <code>&lt;YOUR-GITHUB-USERNAME&gt;</code> and <code>&lt;YOUR-GITHUB-EMAIL&gt;</code> with your own credentials. You can check to see if you entered your details correctly by entering <code>git config --list</code>.</p>
 </section>
-<section id="google-group" class="level2">
-<h2 class="anchored" data-anchor-id="google-group">Google Group</h2>
-<p>There is ongoing discussion within the larger NCEAS administration that this task may become something handled by NCEAS’ IT team so we will leave out our setup instructions at this time.</p>
+<section id="copy-your-app-to-the-server" class="level2">
+<h2 class="anchored" data-anchor-id="copy-your-app-to-the-server">Copy Your App to the Server</h2>
+<p>The easiest way to get all the files for your app to the server is by <code>git clone</code>.</p>
+<p>If you like, you can create a folder named “github” to store all your future apps. For example, in the screenshot below, I created a “github” folder using the <code>mkdir</code> command in my home directory.</p>
+<p>To check that the folder was created, I can list all the files/folders in my current directory with <code>ls</code>. Since I want my app to be inside the “github” folder, I used the <code>cd</code> command to change into that directory.</p>
+<p>Finally, <code>git clone</code> the GitHub repo that has all the files for your app. Here, I am cloning the <a href="https://github.com/lter/lterpalettefinder-shiny"><code>lterpalettefinder-shiny</code></a> repo to my local directory on the virtual machine as <code>lterpalettefinder</code>.</p>
+<p><img src="images/shiny-server/shiny-server-1.png" align="center" width="100%"></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can go one level above the current directory by typing <code>cd ..</code></p>
+</div>
+</div>
+</section>
+<section id="install-necessary-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="install-necessary-r-packages">Install Necessary R Packages</h2>
+<p>After you cloned the repository for your app, you can start installing the necessary R packages! To make these packages available for all users, you will want to execute commands with the <code>root</code> user’s privileges by typing the <code>sudo -i</code> command. Then open R by simply typing “R” and install packages with the usual <code>install.packages()</code> function.</p>
+<p><img src="images/shiny-server/shiny-server-2.png" align="center" width="100%"></p>
+<section id="missing-dependencies" class="level3">
+<h3 class="anchored" data-anchor-id="missing-dependencies">Missing Dependencies?</h3>
+<p>If you run into an error installing a R package, it’s likely because the server does not have the required dependencies installed yet.</p>
+<p>For example, I wanted to install the <code>lterpalettefinder</code> R package, but I got lots of errors on missing dependencies instead.</p>
+<p><img src="images/shiny-server/shiny-server-3.png" align="center" width="100%"></p>
+<p>I saw that the <code>curl</code> dependency was missing, so I attempted to install that. However, R gives me another error.</p>
+<p><img src="images/shiny-server/shiny-server-4.png" align="center" width="100%"></p>
+<p>Looking closer, it asks me to install <code>libcurl4-openssl-dev</code> first. To install this Ubuntu package, I exited R with <code>q()</code> and logged off <code>root</code> with <code>exit</code>. Once I’m back in my own user profile, I can use the <code>sudo apt install</code> command to install <code>libcurl4-openssl-dev</code>.</p>
+<p><img src="images/shiny-server/shiny-server-5.png" align="center" width="100%"></p>
+<p>If you get these prompts to restart services, you can tap Return/Enter to continue the installation.</p>
+<p><img src="images/shiny-server/shiny-server-6.png" align="center" width="100%"></p>
+<p><img src="images/shiny-server/shiny-server-7.png" align="center" width="100%"></p>
+<p>Afterwards, <code>libcurl4-openssl-dev</code> installed successfully, and then I can finally install the missing <code>curl</code> dependency in R!</p>
+<p><img src="images/shiny-server/shiny-server-8.png" align="center" width="100%"></p>
+<p>You can repeat a similar process to find and install the rest of the required dependencies before you are able to install certain R packages.</p>
+</section>
+</section>
+<section id="symlink-to-deployed-folder" class="level2">
+<h2 class="anchored" data-anchor-id="symlink-to-deployed-folder">Symlink to Deployed Folder</h2>
+<p>Since all the Shiny apps are located under <strong><span style="color:blue">/srv/shiny-server/</span></strong>, how can we deploy the app we have in our local directory? We can create a symlink (symbolic link) between the local directory and <strong><span style="color:blue">/srv/shiny-server/</span></strong>. A symlink is essentially a pointer to other folders.</p>
+<p>Create the link by running this command:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> ln <span class="at">-s</span> <span class="op">&lt;</span>LOCAL-DIRECTORY-OF-APP<span class="op">&gt;</span> <span class="op">&lt;</span>SHINY-SERVER-DIRECTORY-OF-APP<span class="op">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Replace <code>&lt;LOCAL-DIRECTORY-OF-APP&gt;</code> with your own directory and replace <code>&lt;SHINY-SERVER-DIRECTORY-OF-APP&gt;</code> with the file path of where you would like your app to deploy.</p>
+<p>For example, the actual <code>lterpalettefinder</code> app lives under my home directory, but it needs to be deployed under <strong><span style="color:blue">/srv/shiny-server/</span></strong>, so I ran this command to link the two:</p>
+<p><img src="images/shiny-server/shiny-server-9.png" align="center" width="100%"></p>
+<p>Now <strong><span style="color:blue">/srv/shiny-server/lterpalettefinder</span></strong> points to <strong><span style="color:blue">/home/anchen/github/lterpalettefinder</span></strong>!</p>
+<p>You can check the current symlinks by navigating to <strong><span style="color:blue">/srv/shiny-server/</span></strong> and typing <code>ls -l</code>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The name of the deployed folder corresponds to the URL: https://shiny.lternet.edu/&lt;YOUR-APP&gt;/</p>
+</div>
+</div>
+</section>
+<section id="debug-app-and-check-its-live-link" class="level2">
+<h2 class="anchored" data-anchor-id="debug-app-and-check-its-live-link">Debug App and Check its Live Link</h2>
+<p>If everything goes right, your app will be live at https://shiny.lternet.edu/&lt;YOUR-APP&gt;/! If not, don’t worry and try troubleshooting what went wrong. Remember to check file paths and required R packages.</p>
 
 
 </section>
