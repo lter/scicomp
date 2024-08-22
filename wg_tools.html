@@ -107,17 +107,14 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Support Services</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./sci-comp-definition.html">
- <span class="dropdown-text">What is Scientific Computing?</span></a>
+    <a class="dropdown-item" href="./wg_sci-comp-def.html">
+ <span class="dropdown-text">Scientific Computing Definition</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./onboard-scaffold_infrastructure.html">
- <span class="dropdown-text">Computing Infrastructure</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="./onboard-scaffold_suggested-tools.html">
+    <a class="dropdown-item" href="./wg_tools.html">
  <span class="dropdown-text">Suggested Tools</span></a>
   </li>  
+        <li class="dropdown-header">onboard-scaffold_suggested-tools.qmd</li>
         <li>
     <a class="dropdown-item" href="./onboard-scaffold_other-materials.html">
  <span class="dropdown-text">Other Resources</span></a>
@@ -240,24 +237,24 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>We primarily work on <em>collaborative projects where we synthesize existing data to draw larger inferences than any single data set would allow.</em> Because of this, we strongly recommend that each tool used by a team accomplish as many purposes as possible to avoid a project accruing endless “one off” tools that fit a specific purpose but do not accomplish any other tasks. <strong>Streamlining your workflow to just a few broadly useful programs also helps reduce the barrier to entry to training new team members and ensures that within team protocols are clear and concise to follow.</strong></p>
+<p>We primarily work on <em>collaborative projects where we synthesize existing data to draw larger inferences than any single data set would allow.</em> Because of this, we strongly recommend that each tool used by a team accomplish as many purposes as possible to avoid a project accruing endless “one off” tools that fit a specific purpose but do not accomplish any other tasks. <strong>Streamlining your workflow to just a few broadly useful programs also helps reduce the barrier to entry</strong> to training new team members and ensures that within team protocols are clear and concise to follow.</p>
 <p>The analytical software options available at NCEAS follow directly from this ethos. Although occasionally providing specialty programs (upon request), we have otherwise carefully assembled a powerful lineup of <em>scripted</em>, <em>cross-platform</em>, <em>scalable</em> applications that are <em>well-supported</em>, generate <em>robust results</em>, and permit <em>batch processing</em>. Although these packages require an initial time investment to learn, and may seem intimidating to scientists familiar with only “point-and-click” software, we strongly argue that the long-term payoff is well worth the time investment at the start.</p>
 <p>We recommend the following programs, websites, and platforms:</p>
 <section id="collaborative-tools" class="level2">
 <h2 class="anchored" data-anchor-id="collaborative-tools">Collaborative Tools</h2>
 <section id="video-conferencing" class="level3">
 <h3 class="anchored" data-anchor-id="video-conferencing">Video Conferencing</h3>
-<p><img src="images/wg-onboarding/zoom_logo.png" width="15%" align="right"></p>
+<p><img src="images/logos/zoom.png" alt="Zoom logo" width="15%" align="right"></p>
 <p>Between your in-person meetings at NCEAS (and during them if you have remote participants!) we recommend that you use <a href="https://zoom.us/">Zoom</a>. During the COVID-19 pandemic, Zoom became–arguably–<em>the</em> video chatting program and the value of your group’s familiarity with this program should not be underestimated.</p>
 </section>
 <section id="messaging" class="level3">
 <h3 class="anchored" data-anchor-id="messaging">Messaging</h3>
-<p><img src="images/wg-onboarding/slack_logo.png" width="25%" align="right"></p>
-<p>Your group will be doing <em>a lot</em> of written communication so we recommend creating a <a href="https://slack.com/">Slack community</a>. <strong>The advantage of Slack over email is that you can have faster real-time conversations among multiple people without crowding your inbox.</strong> Slack also supports attaching files and “pinning” posts to make it easier to find them later. You can also create “channels” for sub-topics within your group (e.g., “paper 1”, “analysis”, etc.) that will allow your group members to track only the subtopics that are relevant to them. You can <a href="https://slack.com/download">download the Slack desktop app here</a>. The NCEAS Computing team has created <a href="https://help.nceas.ucsb.edu/NCEAS/Computing/chat_room_setup.html">this guide</a> for getting set up on Slack.</p>
+<p><img src="images/logos/slack.png" alt="Slack logo" width="25%" align="right"></p>
+<p>Your group will be doing <em>a lot</em> of written communication so we recommend creating a <a href="https://slack.com/">Slack community</a>. <strong>The advantage of Slack over email is that you can have faster real-time conversations among multiple people without crowding your inbox.</strong> Slack also supports attaching files and “pinning” posts to make it easier to find them later. You can also create “channels” for sub-topics within your group (e.g., <code>#paper 1</code>, <code>#analysis</code>, etc.) that will allow your group members to track only the subtopics that are relevant to them. You can <a href="https://slack.com/download">download the Slack desktop app here</a>. Another team at NCEAS has created <a href="https://help.nceas.ucsb.edu/NCEAS/Computing/chat_room_setup.html">this guide</a> for getting set up on Slack.</p>
 </section>
 <section id="document-sharing" class="level3">
 <h3 class="anchored" data-anchor-id="document-sharing">Document Sharing</h3>
-<p><img src="images/wg-onboarding/drive_logo.png" width="25%" align="right"></p>
+<p><img src="images/logos/google-drive.png" alt="Google Drive logo" width="25%" align="right"></p>
 <p>We recommend that you share documents among your group using Google Drive to help you centralize your information. Our team will set up a Shared Google Drive for every working group. This drive can also be used as a staging area for your data during the data collection and exploration phases of your project. This is in part because many people are already at least somewhat familiar with Google Drive. In addition, there is an R package called <code>googledrive</code> that will allow you to directly connect any R scripts to Google Drive files and folders. This can be great for ensuring that all scripts use the same raw data and can be useful for exporting synthesized data products to a given Drive folder.</p>
 <p>For the more analytical intensive phase of your project, NCEAS also has several analytical servers that can be used to store large data that need to be processed frequently. We’ll discuss NCEAS’ servers in greater detail further on in the onboarding process.</p>
 </section>
@@ -266,19 +263,19 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="computing-tools">Computing Tools</h2>
 <section id="analysis" class="level3">
 <h3 class="anchored" data-anchor-id="analysis">Analysis</h3>
-<p><img src="images/wg-onboarding/r_logo.png" width="15%" align="right"></p>
+<p><img src="images/logos/r.png" alt="Logo for the R programming language" width="15%" align="right"></p>
 <p>Our team is most well-versed in <a href="https://cran.r-project.org/">R</a> and many data synthesis ends can be accomplished in this language. R’s primary advantage is its amazing user community! R users have developed all kinds of custom functions and packages so even when what you want to do is not supported by an R package on CRAN, chances are that you can find the tools you need online!</p>
-<p><img src="images/wg-onboarding/rstudio_logo.png" width="25%" align="right"></p>
-<p><strong>We strongly recommend using R through <a href="https://www.rstudio.com/">RStudio</a></strong> as the RStudio interface allows several ‘quality of life’ improvements that you will grow to greatly appreciate if you’re not already an RStudio user. RStudio enables an easier connection to <code>git</code> (see below), facilitates use of the command line, and allows you to generate PDF or HTML reports with embedded code chunks for easy sharing in and outside of your group.</p>
-<p><img src="images/wg-onboarding/python_logo.png" width="30%" align="right"></p>
+<p><img src="images/logos/rstudio.png" alt="RStudio logo" width="25%" align="right"></p>
+<p><strong>We strongly recommend using R through <a href="https://www.rstudio.com/">RStudio</a></strong> as the RStudio interface allows several ‘quality of life’ improvements that you will grow to greatly appreciate if you’re not already an RStudio user. RStudio enables an easier connection to Git (see below), facilitates use of the command line, and allows you to generate PDF or HTML reports with embedded code chunks for easy sharing in and outside of your group.</p>
+<p><img src="images/logos/python.png" alt="Python logo" width="30%" align="right"></p>
 <p>If your group is working with genomes or other large data files, you may find R’s memory limit to be a serious hindrance. If this is the case (or if you prefer to not use R!) we suggest <a href="https://www.python.org/">Python</a> as an alternative. Python works better with larger files and is also a well-respected programming language.</p>
 </section>
 <section id="code-storage-versioning" class="level3">
 <h3 class="anchored" data-anchor-id="code-storage-versioning">Code Storage &amp; Versioning</h3>
-<p><img src="images/wg-onboarding/git_logo.png" width="20%" align="right"></p>
-<p><code>git</code> is a great program to use for tracking changes to your code as your project grows and evolves. <code>git</code> is one type of “version control” software which is specifically built to track changes to code in an informative and useful way. It is analogous to using “track changes” in Microsoft Word but is built in a more seamless way. You can <a href="https://happygitwithr.com/install-git.html">install <code>git</code> following the instructions here</a>.</p>
-<p><img src="images/wg-onboarding/github_logo.png" width="15%" align="right"></p>
-<p>Similarly to R versus RStudio, <strong>we recommend that you create an account with <a href="https://github.com/">GitHub</a></strong> so that the changes you track with <code>git</code> can be viewed and interacted with in a straightforward way. GitHub is the industry standard for tracking changes to code and is a great way of making code for a specific project publicly-accessible once you are at a stage where that feels appropriate. We offer an introductory <a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/">workshop on <code>git</code> and GitHub</a> that we are happy to offer to your group if that is of interest!</p>
+<p><img src="images/logos/git.png" alt="Git logo" width="20%" align="right"></p>
+<p>Git is a great program to use for tracking changes to your code as your project grows and evolves. Git is one type of “version control” software which is specifically built to track changes to code in an informative and useful way. It is analogous to using “track changes” in Microsoft Word but is built in a more seamless way and is purpose-built for working with code. You can install Git following the instructions <a href="https://lter.github.io/workshop-github/#install-git">here</a>.</p>
+<p><img src="images/logos/github.png" alt="GitHub logo" width="15%" align="right"></p>
+<p>Similarly to R versus RStudio, <strong>we recommend that you create an account with <a href="https://github.com/">GitHub</a></strong> so that the changes you track with Git can be viewed and interacted with in a straightforward way. GitHub is the industry standard for tracking changes to code and is a great way of making code for a specific project publicly-accessible once you are at a stage where that feels appropriate. We offer an introductory <a href="https://lter.github.io/workshop-github/">workshop on Git and GitHub</a> that we are happy to offer to your group if that is of interest!</p>
 
 
 </section>
