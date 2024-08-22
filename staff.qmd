@@ -2,13 +2,13 @@
 title: "Our Team"
 ---
 
-Because we live in an era where we may only meet in person sporadically, we felt it would be nice to introduce ourselves here to help you put a face to the emails / Slack messages / GitHub issues we exchange going forward! If you would like to email the whole team as one send your questions to **scicomp@nceas.ucsb.edu**
+Because we live in an era where we may only meet in person sporadically, we felt it would be nice to introduce ourselves here to help you put a face to the emails / Slack messages / GitHub issues we exchange going forward! If you would like to email the whole team as one send your questions to **scicomp \[at\] nceas.ucsb.edu**
 
 ### Angel Chen
 
 [angelchen7.github.io](https://angelchen7.github.io/) -- {{< fa brands github >}} [angelchen7](https://github.com/angelchen7) -- **anchen@nceas.ucsb.edu**
 
-<img src="images/achen.jpeg" align="right" width="25%"/>
+<img src="images/staff/achen.jpeg" align="right" width="25%"/>
 
 Angel supports working groups by developing data pipelines and reproducible analytical workflows to integrate various sources of data. Angel previously worked as a data curator for the Arctic Data Center, helping researchers archive and store their data. Angel recently completed a B.S. in statistics & data science at the University of California, Santa Barbara.
 
@@ -16,7 +16,7 @@ Angel supports working groups by developing data pipelines and reproducible anal
 
 [njlyon0.github.io](https://njlyon0.github.io/) -- {{< fa brands github >}} [njlyon0](https://github.com/njlyon0) -- **lyon@nceas.ucsb.edu**
 
-<img src="images/nlyon.png" align="right" width="25%"/>
+<img src="images/staff/nlyon.png" align="right" width="25%"/>
 
 Nick focuses on supporting working groups in the data acquisition and management prerequisite to analysis and visualization. They are a trained restoration ecologist who specialized on interacting communities of plants and insects. Nick has extensive experience taking "raw", field-collected data and readying it for hypothesis testing in a rigorous, transparent way. Nick completed their M.S. in Ecology and Evolutionary Biology at Iowa State University
 
@@ -28,6 +28,6 @@ We have been privileged to work with the following teammates who have since gone
 
 [brunj7.github.io](https://brunj7.github.io/) -- {{< fa brands github >}} [brunj7](https://github.com/brunj7) -- {{< fa brands twitter >}} [\@brunj7](https://twitter.com/brunj7)
 
-<img src="images/jbrun.jpeg" align="right" width="25%"/>
+<img src="images/staff/jbrun.jpeg" align="right" width="25%"/>
 
 Julien was responsible for mentoring the other members of the scientific computing support team as well as advising researchers on how best to address their data challenges with scripted, reproducible solutions. Julien now works for the [UCSB Library team](https://www.library.ucsb.edu/our-team) as a research facilitator in the earth and environmental sciences. Julien is also a Lecturer in the [Master in Environmental Data Science](https://bren.ucsb.edu/masters-programs/master-environmental-data-science) program at Bren School of Environmental Science and Management at UC Santa Barbara, where he teaches "good enough" practices in reproducible and collaborative data science.
