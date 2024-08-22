@@ -25,7 +25,6 @@ website:
             href: wg_sci-comp-def.qmd
           - text: "Suggested Tools"
             href: wg_tools.qmd
-          - onboard-scaffold_suggested-tools.qmd
           - onboard-scaffold_other-materials.qmd
       - text: "Trainings"
         menu:
