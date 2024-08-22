@@ -37,11 +37,11 @@ For your group we can (if desired):
     - Quarto also offers a new "visual editor" that lets you format text as you would in any word processor (i.e., Microsoft Word, Pages, etc.)
 - Maintain the website **OR** help *you* to maintain it
     - Quarto is written entirely in "Markdown syntax" which makes it easily maintained by either our team or yours depending on your preference
-    - We have also created a [tutorial on making websites with Quarto](https://nceas.github.io/scicomp.github.io/tutorials.html#building-a-website-with-quarto) that you are welcome to explore!
+    - We have also created a [tutorial on making websites with Quarto](https://lter.github.io/scicomp/tutorials.html#building-a-website-with-quarto) that you are welcome to explore!
 
 ## R Packages
 
-<img src = "images/scicomptools_hex.png" align = "right" width = "20%" />
+<img src="images/logos/hex_scicomptools.png" alt="Hex logo for the 'scicomptools' R package" align="right" width="20%" />
 
 #### `scicomptools`
 
@@ -59,7 +59,7 @@ To install the package in R, use the following:
 install.packages("scicomptools")
 ```
 
-<img src = "images/HERON_hex.png" align = "right" width = "17%" />
+<img src="images/logos/hex_heron.png" align="right" width="17%" />
 
 #### `HERON`
 
@@ -78,9 +78,9 @@ To install the package in R, use the following:
 devtools::install_github("lter/HERON")
 ```
 
-## R Shiny Apps
+## Shiny Apps
 
-<img src = "images/lterpalettefinder_hex.png" align = "right" width = "17%" />
+<img src="images/logos/hex_lterpalettefinder.png" alt="Hex logo for the 'lterpalettefinder' R package" align="right" width="17%" />
 
 Our team created another R package--`lterpalettefinder`--to extract color palettes from user-supplied photos. To help non-R users still explore this package and have fun pulling color palettes from photos, we created [this standalone Shiny app](https://cosima.nceas.ucsb.edu/lterpalettefinder-shiny/). This app lets anyone interact with `lterpalettefinder` via their browser with no R experience required!
 
