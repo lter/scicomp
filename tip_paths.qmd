@@ -1,9 +1,14 @@
+---
+title: "Reproducible File Paths"
+---
 
-This section contains our recommendations for handling **file paths**. When you code collaboratively (e.g., with GitHub), accounting for the difference between your folder structure and those of your colleagues becomes critical. Ideally your code should be completely agnostic about (1) the operating system of the computer it is running on (i.e., Windows vs. Mac) and (2) the folder structure of the computer. We can--fortunately--handle these two considerations relatively simply.
+## Overview
 
-This may seem somewhat dry but it is worth mentioning that failing to use relative file paths is a significant hindrance to reproducibility (see [Trisovic et al. 2022](https://www.nature.com/articles/s41597-022-01143-6)).
+This section contains our recommendations for handling file paths. When you code collaboratively (e.g., with GitHub), accounting for the difference between your folder structure and those of your colleagues becomes critical. **Ideally your code should be completely agnostic about (1) the operating system of the computer it is running on (i.e., Windows vs. Mac) and (2) the folder structure of the computer**. We can--fortunately--handle these two considerations relatively simply. This may seem somewhat dry but it is worth mentioning that failing to use relative file paths is a significant hindrance to reproducibility (see [Trisovic _et al._ 2022](https://www.nature.com/articles/s41597-022-01143-6)).
 
-### 1. Preserve File Paths as Objects Using `file.path`
+You may also find our [tutorial on storing user-specific information](https://lter.github.io/scicomp/tutorial_json.html) valuable in this context.
+
+## 1. Preserve File Paths as Objects
 
 Depending on the operating system of the computer, the slashes between folder names are different (`\` versus `/`). The `file.path` function automatically detects the computer operating system and inserts the correct slash. We recommend using this function and assigning your file path to an object.
 
@@ -22,7 +27,7 @@ my_raw_data <- read.csv(file = file.path(my_path, "raw_data.csv"))
 write.csv(x = data_object, file = file.path(my_path, "tidy_data.csv"))
 ```
 
-### 2. Create Necessary Sub-Folders in the Code with `dir.create`
+## 2. Create Necessary Sub-Folders in the Code
 
 Using `file.path` guarantees that your code will work regardless of the upstream folder structure but what about the folders that you need to export or import things to/from? For example, say your `graphs.R` script saves a couple of useful exploratory graphs to the "Plots" folder, how would you guarantee that everyone running `graphs.R` *has* a "Plots folder"? You can use the `dir.create` function to create the folder in the code (and include your path object from step 1!).
 
@@ -36,8 +41,10 @@ ggplot2::ggsave(filename = file.path(my_path, "Plots", "my_plot.png"))
 
 The `showWarnings` argument of `dir.create` simply warns you if the folder you're creating already exists or not. There is no negative to "creating" a folder that already exists (nothing is overwritten!!) but the warning can be confusing so we can silence it ahead of time.
 
-### File Paths Summary
+## File Paths Summary
 
 We strongly recommend following these guidelines so that your scripts work regardless of (1) the operating system, (2) folders "upstream" of the working directory, and (3) folders within the project. This will help your code by flexible and reproducible when others are attempting to re-run your scripts!
 
-Also, for more information on how to read files in cloud storage locations such as Google Drive, Box, Dropbox, etc., please refer to our [Other Tutorials](https://nceas.github.io/scicomp.github.io/tutorials.html).
+<p align="center">
+<img src="images/lter-photos/penguins.jpg" alt="Photo of two penguins swimming in icy water" width="80%"/>
+</p>
