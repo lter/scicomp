@@ -1,0 +1,29 @@
+---
+title: "Computing Infrastructure"
+---
+
+NCEAS offers an array of helpful computing infrastructure for your group. These resources are purely optional but can be a significant aid to your projects' progression both when you're in-person in Santa Barbara and between those meetings! Our team is ready and willing to explain these in greater detail or help your group build them into your workflow so don't hesitate to reach out!
+
+## Analytical Servers
+
+Working groups have access to several high-performance computers at NCEAS, which provide advanced analytical, web, and database capabilities that far exceed the capabilities of desktop computers. We are available to set up and instruct you in the use of these Linux/Unix systems for demanding scientific analyses and modeling runs that benefit from lots of memory or storage, or access to multiple CPU’s.
+
+<img src="images/lter-photos/nceas-server.jpg" alt="Photo of the physical equipment housing a computer server" align="right" width="50%"/>
+
+Our [most powerful system](https://help.nceas.ucsb.edu/NCEAS/Computing/high_performance_computing) (pictured) currently offers 384GB of RAM memory, along with 44 cores (CPUs), and several terabytes of fast storage. Several scientific software packages – such as R/RStudio, Python, Matlab, and QGIS – are already installed. Ask us if you need us to install any specific analytical libraries or packages.
+
+**We can also set up shared storage space on our server to facilitate data sharing within your working group.** This is particularly valuable for large files that would take up a significant amount of your group's cloud storage system (e.g., Google Drive, Dropbox, etc.)
+
+To request access to the NCEAS analytical server, please coordinate with your PIs and contact us with your request.
+
+## Data Preservation
+
+While we know that you are just getting started, *it is never too early to start thinking about where you are going to store the data your group will collate and synthesize!* NCEAS is committed to practicing and promoting open science, making scientific research and its supporting data and information accessible to all levels of society. Therefore, we recommend that any input data used for your synthesis work be well documented and preserved in a long-term data repository.
+
+<img src="images/logos/edi.png" alt="Environmental Data Initiative (EDI) logo" align="right" width="15%" />
+
+It is required to document and preserve any products resulting from working group activities in a long-term data repository, such as the [Environmental Data Initiative](https://edirepository.org/) (EDI) data repository or the NCEAS-supported [KNB Data Repository](https://knb.ecoinformatics.org/), which are part of the [Data Observation Network for Earth](https://www.dataone.org/) (DataONE).
+
+<img src="images/wg-onboarding/data-one_logo.png" alt="Data One logo" align="right" width="25%" /> 
+
+We are happy to discuss which of these options might fit your group best though we recognize this discussion can probably be left alone until your group has amassed a substantial amount of data. 

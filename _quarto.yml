@@ -27,6 +27,8 @@ website:
             href: wg_tools.qmd
           - text: "Facilitation"
             href: wg_facilitation.qmd
+          - text: "Infrastructure"
+            href: wg_infrastructure.qmd
       - text: "Trainings"
         menu:
          - workshops.qmd
