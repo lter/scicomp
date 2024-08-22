@@ -40,3 +40,8 @@ To avoid this, we recommend instead that you **store your raw data files in the 
 ## 5. Meta-Document
 
 Documenting every individual script is important, but it's also well worth the time and effort to **document the big picture of your workflow**. As you continue to build on your workflow, it can be hard to keep track of each script's role and how they relate to each other. You might need to update a script upstream and then try to figure out what other scripts downstream need to be updated next in order to account for the new edits. If you're not using a workflow management software, then it's best to thoroughly document how each script fits into the larger workflow. The README is a great place to document each step along the way.
+
+<p align="center">
+<img src="images/lter-photos/regal-fritillary.jpg" alt="Photo of an orange-and-black butterfly nectaring on a pink milkweed flower" width="100%"/>
+<figcaption>Regal Fritillary on Milkweed, Konza Prairie Biological Station - Photographer: Jill Haukos</figcaption>
+</p>
