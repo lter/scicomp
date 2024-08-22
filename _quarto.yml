@@ -31,8 +31,6 @@ website:
            href: workshops.qmd
          - text: "Server Tutorial"
            href: tutorial_server.qmd
-         - text: "Data Acquisition"
-           href: data-acquisition.qmd
          - text: "Tutorials"
            href: tutorials.qmd
          - text: "Coding Tips"
@@ -48,6 +46,8 @@ website:
             href: internal_team-onboard.qmd
           - text: "Internal: WG Setup"
             href: internal_new-wg-setup.qmd
+          - text: "Internal: Data Portals"
+            href: internal_get-data.qmd
           - text: "Internal: Deploy Shiny Apps"
             href: internal_deploy-shiny.qmd
       - icon: github
