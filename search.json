@@ -487,7 +487,7 @@
     "href": "tutorials.html",
     "title": "Other Tutorials",
     "section": "",
-    "text": "Some of the content that we produce is not as detailed as our full workshops but has a wider scope than the content included in our Coding Tips suggestions. This information can broadly be defined as “tutorials” though their depth and scope can vary significantly depending on the topic being tutorialized. As with our Coding Tips, this page is under constant development so please post an issue if you have an idea for a tutorial that you’d like to suggest that we create."
+    "text": "Some of the content that we produce is not as detailed as our full workshops but has a wider scope than the content included in our Coding Tips suggestions. This information can broadly be defined as “tutorials” though their depth and scope can vary significantly depending on the topic being tutorialized. As with our code tips, this page is under constant development so please post an issue if you have an idea for a tutorial that you’d like to suggest that we create."
   },
   {
     "objectID": "tutorials.html#storing-user-specific-information",
@@ -619,8 +619,8 @@
     "objectID": "workshops.html#coding-in-the-tidyverse",
     "href": "workshops.html#coding-in-the-tidyverse",
     "title": "Workshops",
-    "section": "Coding in the tidyverse",
-    "text": "Coding in the tidyverse\n\nWorkshop Website\n\nFor teams that code using the R programming language, the most familiar tools are often part of “base R” meaning that those functions and packages come pre-loaded when R is installed. Relatively recently the tidyverse has emerged as a comprehensive suite of packages that can complement base R or serve as an alternative for some tasks. This includes packages like dplyr and tidyr as well as the perhaps infamous pipe operator (%&gt;%) among many other tools. This workshop is aimed at helping participants use the tidyverse equivalents of fundamental data wrangling tasks that learners may be used to performing with base R.\nThe GitHub  repository for the workshop can be found here."
+    "section": "Coding in the Tidyverse",
+    "text": "Coding in the Tidyverse\n\nWorkshop Website\n\nFor teams that code using the R programming language, the most familiar tools are often part of “base R” meaning that those functions and packages come pre-loaded when R is installed. Relatively recently the Tidyverse has emerged as a comprehensive suite of packages that can complement base R or serve as an alternative for some tasks. This includes packages like dplyr and tidyr as well as the perhaps infamous pipe operator (%&gt;%) among many other tools. This workshop is aimed at helping participants use the Tidyverse equivalents of fundamental data wrangling tasks that learners may be used to performing with base R.\nThe GitHub  repository for the workshop can be found here."
   },
   {
     "objectID": "workshops.html#r-shiny-apps-for-sharing-science",
