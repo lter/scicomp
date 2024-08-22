@@ -116,10 +116,25 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="./workshops.html"> 
-<span class="menu-text">Workshops</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-workshops" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Workshops</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-workshops">    
+        <li>
+    <a class="dropdown-item" href="https://lter.github.io/workshop-github/">
+ <span class="dropdown-text">Collaborative Coding with GitHub</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="https://lter.github.io/workshop-tidyverse/">
+ <span class="dropdown-text">Coding in the Tidyverse</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://njlyon0.github.io/asm-2022_shiny-workshop/">
+ <span class="dropdown-text">Shiny Apps for Sharing Science</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Tutorials</span>
@@ -224,7 +239,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tasks" id="toc-tasks" class="nav-link active" data-scroll-target="#tasks">Tasks</a></li>
   <li><a href="#analytical-sprints" id="toc-analytical-sprints" class="nav-link" data-scroll-target="#analytical-sprints">Analytical Sprints</a></li>
   <li><a href="#weekly-office-hours" id="toc-weekly-office-hours" class="nav-link" data-scroll-target="#weekly-office-hours">Weekly Office Hours</a></li>
-  <li><a href="#workshops-trainings" id="toc-workshops-trainings" class="nav-link" data-scroll-target="#workshops-trainings">Workshops &amp; Trainings</a></li>
+  <li><a href="#trainings" id="toc-trainings" class="nav-link" data-scroll-target="#trainings">Trainings</a>
+  <ul class="collapse">
+  <li><a href="#workshops" id="toc-workshops" class="nav-link" data-scroll-target="#workshops">Workshops</a></li>
+  <li><a href="#tutorials" id="toc-tutorials" class="nav-link" data-scroll-target="#tutorials">Tutorials</a></li>
+  <li><a href="#tips" id="toc-tips" class="nav-link" data-scroll-target="#tips">Tips</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -262,7 +282,7 @@ Field Work With a View, Arctic LTER - Photographer: Nicole Williamson
 <p></p>
 <section id="tasks" class="level2">
 <h2 class="anchored" data-anchor-id="tasks">Tasks</h2>
-<p><strong>This level of collaboration is the core of our value to working groups!</strong> When your group identifies a data-related need (e.g., designing an analytical workflow, creating a website, writing an R Shiny app, etc.), you reach out to <a href="https://lter.github.io/scicomp/staff.html">our team</a> and get the conversation started. During that time we will work closely with you to define the scope of the work and get a clear picture of what “success” looks like in this context.</p>
+<p><strong>This level of collaboration is the core of our value to working groups!</strong> When your group identifies a data-related need (e.g., designing an analytical workflow, creating a website, writing an R Shiny app, etc.), you reach out to our team and get the conversation started. During that time we will work closely with you to define the scope of the work and get a clear picture of what “success” looks like in this context.</p>
 <p>Once the task is appropriately defined, the conversation moves on to how independently you’d like us to work. This varies dramatically between tasks even within a single working group and <em>there is no single right answer!</em> For some tasks, we are capable of working completely independently and returning to your team with a finished product in hand for review but we are equally comfortable working closely with you throughout the life-cycle of a task.</p>
 </section>
 <section id="analytical-sprints" class="level2">
@@ -272,16 +292,26 @@ Field Work With a View, Arctic LTER - Photographer: Nicole Williamson
 </section>
 <section id="weekly-office-hours" class="level2">
 <h2 class="anchored" data-anchor-id="weekly-office-hours">Weekly Office Hours</h2>
-<p>Each of <a href="https://lter.github.io/scicomp/staff.html">our staff members</a> offers a one-hour block weekly as a standing office hour each week. This is a great time to join us with small hurdles or obstacles you’re experiencing in a given week. For example, previous office hours have dealt with topics like refreshing on Git/GitHub vocabulary, authenticating the <code>googledrive</code> R package, or solving a specific error in a new R script.</p>
+<p>Each of our staff members offers a one-hour block weekly as a standing office hour each week. This is a great time to join us with small hurdles or obstacles you’re experiencing in a given week. For example, previous office hours have dealt with topics like refreshing on Git/GitHub vocabulary, authenticating the <code>googledrive</code> R package, or solving a specific error in a new R script.</p>
 </section>
-<section id="workshops-trainings" class="level2">
-<h2 class="anchored" data-anchor-id="workshops-trainings">Workshops &amp; Trainings</h2>
-<p>With those workshops, our team aims to help your group further develop skills in reproducible data science to enable your team to better collaborate and efficiently tackle data and analytical challenges. It is sometimes the case that your working group wants to become more familiar (or get a refresher) on a tool you’d like to include in your group’s workflow. To that end <strong>we can offer workshops on a selection of data science tools.</strong></p>
-<p>For our current workshop catalog, see <a href="https://lter.github.io/scicomp/workshops.html">here</a>.</p>
-<p>We are also happy to offer new workshops if your group wants training on something within our knowledge base for which we haven’t (yet) built a workshop. These workshops are typically done remotely (we can also accommodate time during one of your meetings if desired) and last 2-3 hours but we can be flexible with that timing depending on your group’s needs.</p>
-<p>Similarly, we also have been creating more <strong>‘go at your own pace’-style tutorials</strong> that can be accessed <a href="https://lter.github.io/scicomp/tutorials.html">here</a>. These tutorials are usually smaller in scope than workshops but are still built to maximize value to your group either as review or first contact with a given subject. As with the workshops, we are happy to create new tutorials if something comes up for your team so please reach out and we can discuss further!</p>
+<section id="trainings" class="level2">
+<h2 class="anchored" data-anchor-id="trainings">Trainings</h2>
+<p>We have three primary methods for helping your group further develop skills in reproducible data science to enable your team to better collaborate and efficiently tackle data and analytical challenges. <strong>To access a category of our skill development content, click the corresponding dropdown menu in the navbar at the top of this website.</strong></p>
+<p>We are also happy to design new workshops, tutorials, or tips if your group wants training on something within our knowledge base for which we haven’t yet built something.</p>
+<section id="workshops" class="level3">
+<h3 class="anchored" data-anchor-id="workshops">Workshops</h3>
+<p>Workshops are typically done remotely and last 2-3 hours but we can be flexible with that timing depending on your group’s needs. We can also accommodate time during one of your meetings if desired.</p>
+</section>
+<section id="tutorials" class="level3">
+<h3 class="anchored" data-anchor-id="tutorials">Tutorials</h3>
+<p>The tutorials tend to be smaller in scope than the full workshops and more ‘go at your own pace’-style. Despite that, they are still built to maximize value to your group either as review or first contact with a given subject.</p>
+</section>
+<section id="tips" class="level3">
+<h3 class="anchored" data-anchor-id="tips">Tips</h3>
+<p>Finally, we’ve also curated a set of ‘code tips’ that are even smaller in scale than the tutorials. These are often just a short summary of our team’s opinion on a given subject.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
