@@ -44,3 +44,17 @@ The tutorials tend to be smaller in scope than the full workshops and more 'go a
 ### Tips
 
 Finally, we've also curated a set of 'code tips' that are even smaller in scale than the tutorials. These are often just a short summary of our team's opinion on a given subject.
+
+## Selected Portfolio Items
+
+We thought it might be nice to highlight a few representative products that have come out of our support in order to make our services a little more tangible. 
+
+- Data harmonization & wrangling -- [{{< fa brands github >}}](https://github.com/lter/lter-sparc-soil-p/blob/main/1_harmonize.R) | [{{< fa brands github >}}](https://github.com/lter/lterwg-marine-cnd)
+- Spatial data processing -- [{{< fa brands github >}}](https://github.com/lter/lter-sparc-fire-arid-streams/tree/main/spatial_covars) | [{{< fa brands github >}}](https://github.com/lter/lterwg-silica-spatial)
+- Creating a website for your working group to showcase products -- [{{< fa globe >}}](https://lter.github.io/som-website)
+- Advice on project structure and file naming conventions -- [{{< fa brands github >}}](https://github.com/lter/lterwg-flux-gradient)
+- Designing standalone GitHub repositories for particular papers -- [{{< fa brands github >}}](https://github.com/lter/lterwg-plant-repro-synchrony) | [{{< fa brands github >}}](https://github.com/njlyon0/lter_silica-high-latitude)
+- Creating an R package for frequently used tools -- [{{< fa globe >}}](https://lter.github.io/HERON/) | [{{< fa globe >}}](https://lter.github.io/ltertools/)
+- Writing & deploying interactive Shiny apps -- [{{< fa globe >}}](https://cosima.nceas.ucsb.edu/lterpalettefinder-shiny/)
+
+If desired, we are also happy to write parts of the Methods and/or Results sections of manuscripts being prepared for publication. **We do not require you to add members of our team as co-authors on _any_ product**. That said, many groups offer authorship if we meet the criteria they set out for their other collaborators.

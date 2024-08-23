@@ -2,7 +2,7 @@ project:
   type: website
   execute-dir: project
   output-dir: docs
-  
+
 execute:
   freeze: auto
 
@@ -51,8 +51,6 @@ website:
             href: tip_paths.qmd
           - text: "Package Loading"
             href: tip_packages.qmd
-      - text: "Portfolio"
-        href: portfolio.qmd
     right:
       - text: "Our Team"
         menu:
