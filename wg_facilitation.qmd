@@ -21,6 +21,8 @@ NCEAS hosts many working groups and so has drawn from its wealth of experience t
 
 In particular, _we recommend checking out the documents nested in the "How to Run a Working Group" dropdown menu._ Your group may also want to check out the "Reimbursement Forms" dropdown after your meetings in Santa Barbara to ensure that your eligible expenses get reimbursed!
 
+As of fall 2024, NCEAS has also begun developing a [working group training series](https://learning.nceas.ucsb.edu/2024-working-groups/) which contains a _ton_ of valuable information both on facilitation best practices and on data management and reproducibility.
+
 ## Diversity, Equity, and Inclusion
 
 The LTER Network and NCEAS are committed to improving diversity and inclusion in science. For the LTER Network Office's diversity, equity and inclusion resources see [here](https://lternet.edu/network-organization/diversity-resources/). For more information on NCEAS' commitment to this mission--and related links--please visit NCEAS' [DEIJ page](https://www.nceas.ucsb.edu/DEIJ).
