@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Reproducible File Paths – LTER Scientific Computing Team</title>
+<title>contributing – LTER Scientific Computing Team</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -105,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<meta name="twitter:title" content="Reproducible File Paths – LTER Scientific Computing Team">
+<meta name="twitter:title" content="LTER Scientific Computing Team">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -262,10 +228,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#preserve-file-paths-as-objects" id="toc-preserve-file-paths-as-objects" class="nav-link" data-scroll-target="#preserve-file-paths-as-objects">1. Preserve File Paths as Objects</a></li>
-  <li><a href="#create-necessary-sub-folders-in-the-code" id="toc-create-necessary-sub-folders-in-the-code" class="nav-link" data-scroll-target="#create-necessary-sub-folders-in-the-code">2. Create Necessary Sub-Folders in the Code</a></li>
-  <li><a href="#file-paths-summary" id="toc-file-paths-summary" class="nav-link" data-scroll-target="#file-paths-summary">File Paths Summary</a></li>
+  <li><a href="#lter-scientific-computing-contributing-guidelines" id="toc-lter-scientific-computing-contributing-guidelines" class="nav-link active" data-scroll-target="#lter-scientific-computing-contributing-guidelines">LTER Scientific Computing Contributing Guidelines</a>
+  <ul class="collapse">
+  <li><a href="#version-control-github" id="toc-version-control-github" class="nav-link" data-scroll-target="#version-control-github">Version Control &amp; GitHub</a></li>
+  <li><a href="#style-guide" id="toc-style-guide" class="nav-link" data-scroll-target="#style-guide">Style Guide</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -274,69 +241,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Reproducible File Paths</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This section contains our recommendations for handling file paths. When you code collaboratively (e.g., with GitHub), accounting for the difference between your folder structure and those of your colleagues becomes critical. <strong>Ideally your code should be completely agnostic about (1) the operating system of the computer it is running on (i.e., Windows vs.&nbsp;Mac) and (2) the folder structure of the computer</strong>. We can–fortunately–handle these two considerations relatively simply. This may seem somewhat dry but it is worth mentioning that failing to use relative file paths is a significant hindrance to reproducibility (see <a href="https://www.nature.com/articles/s41597-022-01143-6">Trisovic <em>et al.</em> 2022</a>).</p>
-<p>You may also find our <a href="https://lter.github.io/scicomp/tutorial_json.html">tutorial on storing user-specific information</a> valuable in this context.</p>
+<section id="lter-scientific-computing-contributing-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="lter-scientific-computing-contributing-guidelines">LTER Scientific Computing Contributing Guidelines</h2>
+<p>This document is meant to focus primarily on our <em>internal</em> processes for contributing. If you’re not a member of this team, we hope you find this document valuable as-is but you should also feel free to make any modifications you feel are necessary if you choose to use our guidelines as a starting place.</p>
+<section id="version-control-github" class="level3">
+<h3 class="anchored" data-anchor-id="version-control-github">Version Control &amp; GitHub</h3>
+<p>As much as possible, use the style of “<a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a>” in your commit messages. See <a href="https://njlyon0.github.io/tips/commits.html">here</a> for a nice summary of the highlights of that approach.</p>
+<p>For <strong>minor changes</strong>, (1) communicate with the team to avoid merge conflicts and (2) make commits directly to <code>main</code></p>
+<p>For <strong><em>major</em> changes</strong>, (1) communicate with the team to avoid merge conflicts, (2) open a branch with an intuitive but concise name, and (3) open a pull request when you are confident your edits are largely complete. (4) Request a review from a teammate, (5) make any edits they suggest, (6) merge the PR, and (7) delete the branch.</p>
 </section>
-<section id="preserve-file-paths-as-objects" class="level2">
-<h2 class="anchored" data-anchor-id="preserve-file-paths-as-objects">1. Preserve File Paths as Objects</h2>
-<p>Depending on the operating system of the computer, the slashes between folder names are different (<code>\</code> versus <code>/</code>). The <code>file.path</code> function automatically detects the computer operating system and inserts the correct slash. We recommend using this function and assigning your file path to an object.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">"path"</span>, <span class="st">"to"</span>, <span class="st">"my"</span>, <span class="st">"file"</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>my_path</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "path/to/my/file"</code></pre>
-</div>
-</div>
-<p>Once you have that path object, you can use it everywhere you import or export information to/from the code (with another use of <code>file.path</code> to get the right type of slash!).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>my_raw_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="fu">file.path</span>(my_path, <span class="st">"raw_data.csv"</span>))</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Export</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">write.csv</span>(<span class="at">x =</span> data_object, <span class="at">file =</span> <span class="fu">file.path</span>(my_path, <span class="st">"tidy_data.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="create-necessary-sub-folders-in-the-code" class="level2">
-<h2 class="anchored" data-anchor-id="create-necessary-sub-folders-in-the-code">2. Create Necessary Sub-Folders in the Code</h2>
-<p>Using <code>file.path</code> guarantees that your code will work regardless of the upstream folder structure but what about the folders that you need to export or import things to/from? For example, say your <code>graphs.R</code> script saves a couple of useful exploratory graphs to the “Plots” folder, how would you guarantee that everyone running <code>graphs.R</code> <em>has</em> a “Plots folder”? You can use the <code>dir.create</code> function to create the folder in the code (and include your path object from step 1!).</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create needed folder</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(<span class="at">path =</span> <span class="fu">file.path</span>(my_path, <span class="st">"Plots"</span>), <span class="at">showWarnings =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Then export to that folder</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>ggplot2<span class="sc">::</span><span class="fu">ggsave</span>(<span class="at">filename =</span> <span class="fu">file.path</span>(my_path, <span class="st">"Plots"</span>, <span class="st">"my_plot.png"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>The <code>showWarnings</code> argument of <code>dir.create</code> simply warns you if the folder you’re creating already exists or not. There is no negative to “creating” a folder that already exists (nothing is overwritten!!) but the warning can be confusing so we can silence it ahead of time.</p>
-</section>
-<section id="file-paths-summary" class="level2">
-<h2 class="anchored" data-anchor-id="file-paths-summary">File Paths Summary</h2>
-<p>We strongly recommend following these guidelines so that your scripts work regardless of (1) the operating system, (2) folders “upstream” of the working directory, and (3) folders within the project. This will help your code by flexible and reproducible when others are attempting to re-run your scripts!</p>
-<p align="center">
-<img src="images/lter-photos/penguins.jpg" alt="Photo of two penguins swimming in icy water" width="80%">
-</p>
+<section id="style-guide" class="level3">
+<h3 class="anchored" data-anchor-id="style-guide">Style Guide</h3>
+<p>For folder/file names and in code, please follow the following style tips:</p>
+<ul>
+<li>Use all lowercase</li>
+<li>Related files/objects should have a shared file prefix (e.g., <code>wrangle_...</code>)
+<ul>
+<li>For files that have an inherent order, use zero-padded numbers as the prefix (e.g., <code>01_</code>, <code>02_</code>, etc.)</li>
+</ul></li>
+<li>Use underscores (<code>_</code>) for separating major pieces of information and hyphens (<code>-</code>) in lieu of spaces (e.g., <code>01_find-area.R</code>, <code>harmonize_spp-rich-info.py</code>, etc.)</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
