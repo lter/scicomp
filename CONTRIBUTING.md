@@ -9,3 +9,12 @@ As much as possible, use the style of "[Conventional Commits](https://www.conven
 For **minor changes**, (1) communicate with the team to avoid merge conflicts and (2) make commits directly to `main`
 
 For **_major_ changes**, (1) communicate with the team to avoid merge conflicts, (2) open a branch with an intuitive but concise name, and (3) open a pull request when you are confident your edits are largely complete. (4) Request a review from a teammate, (5) make any edits they suggest, (6) merge the PR, and (7) delete the branch.
+
+### Style Guide
+
+For folder/file names and in code, please follow the following style tips:
+
+- Use all lowercase
+- Related files/objects should have a shared file prefix (e.g., `wrangle_...`)
+    - For files that have an inherent order, use zero-padded numbers as the prefix (e.g., `01_`, `02_`, etc.)
+- Use underscores (`_`) for separating major pieces of information and hyphens (`-`) in lieu of spaces (e.g., `01_find-area.R`, `harmonize_spp-rich-info.py`, etc.)
