@@ -18,3 +18,11 @@ For folder/file names and in code, please follow the following style tips:
 - Related files/objects should have a shared file prefix (e.g., `wrangle_...`)
     - For files that have an inherent order, use zero-padded numbers as the prefix (e.g., `01_`, `02_`, etc.)
 - Use underscores (`_`) for separating major pieces of information and hyphens (`-`) in lieu of spaces (e.g., `01_find-area.R`, `harmonize_spp-rich-info.py`, etc.)
+
+### File Paths
+
+When we write code--for ourselves or for working groups--we use **operating system (OS) agnostic file paths**.
+
+In R, this means using the `file.path()` function (from base R) to stitch together elements (e.g., `file.path("data", "raw_2024.csv")`). In Python it means using the `join` function from the `path` module of the `os` library (e.g., `os.path.join("data", "raw_2024.csv")`).
+
+If you plan on re-using a file path, assign it to an object/variable (R/Python) to avoid typos/errors when re-using the file path.
