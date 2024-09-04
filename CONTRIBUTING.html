@@ -232,6 +232,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#version-control-github" id="toc-version-control-github" class="nav-link" data-scroll-target="#version-control-github">Version Control &amp; GitHub</a></li>
   <li><a href="#style-guide" id="toc-style-guide" class="nav-link" data-scroll-target="#style-guide">Style Guide</a></li>
+  <li><a href="#file-paths" id="toc-file-paths" class="nav-link" data-scroll-target="#file-paths">File Paths</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -264,6 +265,12 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li>Use underscores (<code>_</code>) for separating major pieces of information and hyphens (<code>-</code>) in lieu of spaces (e.g., <code>01_find-area.R</code>, <code>harmonize_spp-rich-info.py</code>, etc.)</li>
 </ul>
+</section>
+<section id="file-paths" class="level3">
+<h3 class="anchored" data-anchor-id="file-paths">File Paths</h3>
+<p>When we write code–for ourselves or for working groups–we use <strong>operating system (OS) agnostic file paths</strong>.</p>
+<p>In R, this means using the <code>file.path()</code> function (from base R) to stitch together elements (e.g., <code>file.path("data", "raw_2024.csv")</code>). In Python it means using the <code>join</code> function from the <code>path</code> module of the <code>os</code> library (e.g., <code>os.path.join("data", "raw_2024.csv")</code>).</p>
+<p>If you plan on re-using a file path, assign it to an object/variable (R/Python) to avoid typos/errors when re-using the file path.</p>
 
 
 </section>
