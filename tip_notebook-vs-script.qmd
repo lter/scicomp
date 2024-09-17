@@ -10,7 +10,7 @@ When writing code, either scripts (e.g., `.R`, `.py`, `.sh`, etc.) or notebook f
 
 ### Strengths
 
-**The greatest strength of scripts is their flexibility**. They allow you to format a file in whatever way is most intuitive to you. Additionally, scripts can be cleaner for iterative operations (i.e., `for` loops) insofar as they need not be concerned with staying within a given code chunk (as would be the case for a notebook file). Developing a new workflow can be swiftly accomplished in a script as some or all of the code in a script can be run by simply selecting the desired lines rather than manually running the desired chunks in a .Rmd file. Finally, scripts can also be a better home for custom functions that can be `source`d by another file (even by a notebook!) for making repeated operations simpler to read.
+**The greatest strength of scripts is their flexibility**. They allow you to format a file in whatever way is most intuitive to you. Additionally, scripts can be cleaner for iterative operations (i.e., `for` loops) insofar as they need not be concerned with staying within a given code chunk (as would be the case for a notebook file). Developing a new workflow can be swiftly accomplished in a script as some or all of the code in a script can be run by simply selecting the desired lines rather than manually running the desired chunks in a notebook file. Finally, scripts can also be a better home for custom functions that can be `source`d by another file (even by a notebook!) for making repeated operations simpler to read.
 
 ### Potential Weaknesses
 
