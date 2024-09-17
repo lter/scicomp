@@ -232,17 +232,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-scripts" id="toc-r-scripts" class="nav-link active" data-scroll-target="#r-scripts">R Scripts</a>
-  <ul class="collapse">
-  <li><a href="#positives" id="toc-positives" class="nav-link" data-scroll-target="#positives">Positives</a></li>
-  <li><a href="#potential-weaknesses" id="toc-potential-weaknesses" class="nav-link" data-scroll-target="#potential-weaknesses">Potential Weaknesses</a></li>
-  </ul></li>
-  <li><a href="#r-markdowns" id="toc-r-markdowns" class="nav-link" data-scroll-target="#r-markdowns">R Markdowns</a>
-  <ul class="collapse">
-  <li><a href="#positives-1" id="toc-positives-1" class="nav-link" data-scroll-target="#positives-1">Positives</a></li>
-  <li><a href="#potential-weaknesses-1" id="toc-potential-weaknesses-1" class="nav-link" data-scroll-target="#potential-weaknesses-1">Potential Weaknesses</a></li>
-  </ul></li>
-  <li><a href="#script-vs.-markdown-summary" id="toc-script-vs.-markdown-summary" class="nav-link" data-scroll-target="#script-vs.-markdown-summary">Script vs.&nbsp;Markdown Summary</a></li>
+  <li><a href="#scripts" id="toc-scripts" class="nav-link active" data-scroll-target="#scripts">Scripts</a></li>
+  <li><a href="#notebooks" id="toc-notebooks" class="nav-link" data-scroll-target="#notebooks">Notebooks</a></li>
+  <li><a href="#script-vs.-notebook-summary" id="toc-script-vs.-notebook-summary" class="nav-link" data-scroll-target="#script-vs.-notebook-summary">Script vs.&nbsp;Notebook Summary</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -270,32 +262,38 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>When coding in R, either R scripts (.R files) or R markdowns (.Rmd files) are viable options but they have different advantages and disadvantages that we will cover below.</p>
-<section id="r-scripts" class="level2">
-<h2 class="anchored" data-anchor-id="r-scripts">R Scripts</h2>
-<section id="positives" class="level3">
-<h3 class="anchored" data-anchor-id="positives">Positives</h3>
-<p>R scripts’ greatest strength is their flexibility. They allow you to format a file in whatever way is most intuitive to you. Additionally, R scripts can be cleaner for <code>for</code> loops insofar as they need not be concerned with staying within a given code chunk (as would be the case for a .Rmd). Developing a new workflow can be swiftly accomplished in an R script as some or all of the code in a script can be run by simply selecting the desired lines rather than manually running the desired chunks in a .Rmd file. Finally, R scripts can also be a better home for custom functions that can be <code>source</code>d by another file (even a .Rmd!) for making repeated operations simpler to read.</p>
+<p>When writing code, either scripts (e.g., <code>.R</code>, <code>.py</code>, <code>.sh</code>, etc.) or notebook files (e.g., <code>.Rmd</code>, <code>.ipynb</code>, <code>.qmd</code>, etc.) can be viable options but they have different advantages and disadvantages that we will cover below.</p>
+<section id="scripts" class="level2">
+<h2 class="anchored" data-anchor-id="scripts">Scripts</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Strengths</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Potential Weaknesses</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><strong>The greatest strength of scripts is their flexibility</strong>. They allow you to format a file in whatever way is most intuitive to you. Additionally, scripts can be cleaner for iterative operations (i.e., <code>for</code> loops) insofar as they need not be concerned with staying within a given code chunk (as would be the case for a notebook file). Developing a new workflow can be swiftly accomplished in a script as some or all of the code in a script can be run by simply selecting the desired lines rather than manually running the desired chunks in a .Rmd file. Finally, scripts can also be a better home for custom functions that can be <code>source</code>d by another file (even by a notebook!) for making repeated operations simpler to read.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>The benefit of extreme flexibility in scripts can sometimes be a disadvantage however. We’ve all seen (and written) scripts that have few or no comments or where lines of code are densely packed without spacing or blank lines to help someone new to the code understand what is being done. Scripts can certainly be written in a way that is accessible to those without prior knowledge of what the script accomplishes but they do not <em>enforce</em> such structure. This can make it easy–especially when we’re feeling pressed for time–to exclude structure that helps our code remain reproducible and understandable.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="potential-weaknesses" class="level3">
-<h3 class="anchored" data-anchor-id="potential-weaknesses">Potential Weaknesses</h3>
-<p>The benefit of extreme flexibility in R scripts can sometimes be a disadvantage however. We’ve all seen (and written) R scripts that have few or no comments or where lines of code are densely packed without spacing or blank lines to help someone new to the code understand what is being done. R scripts can certainly be written in a way that is accessible to those without prior knowledge of what the script accomplishes but they do not <em>enforce</em> such structure. This can make it easy, especially when we’re feeling pressed for time, to exclude structure that helps our code remain reproducible and understandable.</p>
+<section id="notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="notebooks">Notebooks</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Strengths</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Potential Weaknesses</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Notebook files’ ability to “knit” or “rendered” as HTML or PDF documents makes them <strong>extremely useful in creating outward-facing reports</strong>. This is particularly the case when the specific code is less important to communicate than visualizations and/or analyses of the data but notebook files do facilitate <code>echo</code>ing the code so that report readers can see how background operations were accomplished. The code chunk structure of these files can also nudge users towards including valuable comments (both between chunks and within them) though of course notebook files do not enforce such non-code content.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Notebook files can fail to knit/render due to issues even when the code within the chunks works as desired. Duplicate code chunk names or a failure to install LaTeX (or related support software) can be a frustrating hurdle to overcome between functioning code and a rendered output file. When code must be re-run repeatedly (as is often the case when developing a new workflow) the stop-and-start nature of running each code chunk separately can also be a small irritation.</p>
+</div>
+</div>
+</div>
 </section>
-</section>
-<section id="r-markdowns" class="level2">
-<h2 class="anchored" data-anchor-id="r-markdowns">R Markdowns</h2>
-<section id="positives-1" class="level3">
-<h3 class="anchored" data-anchor-id="positives-1">Positives</h3>
-<p>R markdown files’ ability to “knit” as HTML or PDF documents makes them extremely useful in creating outward-facing reports. This is particularly the case when the specific code is less important to communicate than visualizations and/or analyses of the data but .Rmd files do facilitate <code>echo</code>ing the code so that report readers can see how background operations were accomplished. The code chunk structure of these files can also nudge users towards including valuable comments (both between chunks and within them) though of course .Rmd files do not enforce such non-code content.</p>
-</section>
-<section id="potential-weaknesses-1" class="level3">
-<h3 class="anchored" data-anchor-id="potential-weaknesses-1">Potential Weaknesses</h3>
-<p>R markdowns can fail to knit due to issues even when the code within the chunks works as desired. Duplicate code chunk names or a failure to install LaTeX can be a frustrating hurdle to overcome between functioning code and a knit output file. When code must be re-run repeatedly (as is often the case when developing a new workflow) the stop-and-start nature of running each code chunk separately can also be a small irritation.</p>
-</section>
-</section>
-<section id="script-vs.-markdown-summary" class="level2">
-<h2 class="anchored" data-anchor-id="script-vs.-markdown-summary">Script vs.&nbsp;Markdown Summary</h2>
-<p>Taken together, both R scripts and R markdown files can empower users to write reproducible, transparent code. However, both file types have some key limitations that should be taken into consideration when choosing which to use as you set out to create a new code product.</p>
+<section id="script-vs.-notebook-summary" class="level2">
+<h2 class="anchored" data-anchor-id="script-vs.-notebook-summary">Script vs.&nbsp;Notebook Summary</h2>
+<p>Taken together, <strong>both scripts and notebooks can empower users to write reproducible, transparent code</strong>. However, both file types have some key limitations that should be taken into consideration when choosing which to use as you set out to create a new code product.</p>
 <p align="center">
 <img src="images/lter-photos/patches.jpg" alt="Photo of people walking sampling insects at a farm where a wildflower strip has been planted between two row-cropped areas" width="100%">
 </p>
