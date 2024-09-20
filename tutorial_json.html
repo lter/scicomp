@@ -76,8 +76,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -271,10 +269,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
   <ul class="collapse">
   <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a></li>
-  <li><a href="#create-the-json" id="toc-create-the-json" class="nav-link" data-scroll-target="#create-the-json">1. Create the JSON</a></li>
-  <li><a href="#save-the-json-with-a-consistent-name" id="toc-save-the-json-with-a-consistent-name" class="nav-link" data-scroll-target="#save-the-json-with-a-consistent-name">2. Save the JSON with a Consistent Name</a></li>
-  <li><a href="#tell-git-to-ignore-the-json" id="toc-tell-git-to-ignore-the-json" class="nav-link" data-scroll-target="#tell-git-to-ignore-the-json">3. Tell Git to Ignore the JSON</a></li>
-  <li><a href="#benefit-from-the-json" id="toc-benefit-from-the-json" class="nav-link" data-scroll-target="#benefit-from-the-json">4. Benefit from the JSON!</a></li>
+  <li><a href="#discuss-with-your-group" id="toc-discuss-with-your-group" class="nav-link" data-scroll-target="#discuss-with-your-group">1. Discuss with Your Group</a></li>
+  <li><a href="#create-the-json" id="toc-create-the-json" class="nav-link" data-scroll-target="#create-the-json">2. Create the JSON</a></li>
+  <li><a href="#benefit-from-the-json" id="toc-benefit-from-the-json" class="nav-link" data-scroll-target="#benefit-from-the-json">3. Benefit from the JSON!</a></li>
+  <li><a href="#bonus-help-with-finding-file-paths" id="toc-bonus-help-with-finding-file-paths" class="nav-link" data-scroll-target="#bonus-help-with-finding-file-paths">Bonus: Help with Finding File Paths</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -306,67 +304,88 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>Working groups sometimes need to handle user-specific information in their code. For example, if your group stores your data in the cloud (e.g., in Box, in Dropbox, etc.) each user will have a different “absolute file path” to the synced version of the data folder on their personal computer. Similarly, groups may find it valuable to use their email address in the code. While you <em>could</em> simply have each group member add their information (file path, email, etc.) and comment out all but one of them when you work in that script, there is a better option: user-specific JSON files!</p>
-<p>The main advantage of this method is that you and your group members <u>do not have to manually change <em>any user-specific information</em> in scripts</u> just because a different person runs them!</p>
+<p>The main advantage of this method is that <u>you and your group members do not have to manually change <em>any user-specific information</em> in scripts</u> just because a different person runs them!</p>
 <section id="prerequisites" class="level3">
 <h3 class="anchored" data-anchor-id="prerequisites">Prerequisites</h3>
 <p>To follow along with this tutorial you will need to take the following steps:</p>
 <ul>
 <li>Download <a href="https://cran.r-project.org/">R</a></li>
 <li>Download <a href="https://posit.co/downloads/">RStudio</a></li>
-<li>Install the <code>jsonlite</code> R package</li>
+<li>Install the <code>ltertools</code> and <code>RJSONIO</code> R packages</li>
 </ul>
 <p>Feel free to skip any steps that you have already completed!</p>
 </section>
+<section id="discuss-with-your-group" class="level3">
+<h3 class="anchored" data-anchor-id="discuss-with-your-group">1. Discuss with Your Group</h3>
+<p>As in so many facets of collaborative work, the first step is to discuss with your group. While JSONs are useful for storing user-specific information, <strong>you and your group still need to agree on two pieces of information</strong>:</p>
+<ol type="1">
+<li><u>What is the name of the JSON file that each person will have?</u>
+<ul>
+<li>A consistent file name lets all scripts expect the same file even though the <em>contents</em> of that file differ for each user</li>
+</ul></li>
+<li><u>What are the ‘column names’ that contain the information your group wants to store?</u>
+<ul>
+<li>Consistent ‘column names’ allow scripts to find the user-specific content they need under a predictable subheading</li>
+</ul></li>
+</ol>
+<p>We recommend keeping it simple so <strong>consider naming the file “user.json”</strong>. Similarly, <strong>for the ‘column names’ consider short, all-lowercase names that are succinct and clear</strong> (e.g., <code>dropbox_path</code> for each user’s path to a local Dropbox sync, <code>email</code> for each user’s email address, etc.).</p>
+</section>
 <section id="create-the-json" class="level3">
-<h3 class="anchored" data-anchor-id="create-the-json">1. Create the JSON</h3>
-<p>First, you’ll need to use RStudio to create your JSON file by creating a new text file (in the top left of RStudio click “File” <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> “New File” <i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i> “Text File”). In the new text file, add content that looks like this:</p>
+<h3 class="anchored" data-anchor-id="create-the-json">2. Create the JSON</h3>
+<p>We have developed the <a href="https://github.com/lter/ltertools"><code>ltertools</code> R package</a>–in part–to store content that is useful to collaborative teams. Among the functions included in that package is one called <code>make_json</code> that will make the JSON for each user. It accepts a “named” vector which is straightforward to create.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>{</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"email"</span><span class="sc">:</span><span class="st">"my_email@gmail.com"</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dropbox_path"</span><span class="sc">:</span><span class="st">"path/to/dropbox-sync/for/me"</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the named vector</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>my_info <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"dropbox_path"</span> <span class="ot">=</span> <span class="st">"~/Users/lyon/Dropbox/LTER Data/"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>             <span class="st">"email"</span> <span class="ot">=</span> <span class="st">"lyon@nceas.ucsb.edu"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Look at it</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>my_info</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                     dropbox_path                             email 
+"~/Users/lyon/Dropbox/LTER Data/"             "lyon@nceas.ucsb.edu" </code></pre>
 </div>
-<p>Replace the content on the <em>right</em> of the colon with your actual information. If desired, you can add as many other pieces of user-specific information as you’d like! Simply follow the <code>"info name":"info content"</code> format and make sure that each piece of information is on its own line.</p>
-<p>One small note here for when you work with your group: <u>all group members need to use <em>exactly the same name</em> to the left of each colon</u>.</p>
-<p>You’ll see later when we show an example of this but you can think of the information on the left of the colon as comparable with a column name. It doesn’t matter that the text in the “rows” will differ between users as long as the script has a consistent “column” in which to look for that text.</p>
-</section>
-<section id="save-the-json-with-a-consistent-name" class="level3">
-<h3 class="anchored" data-anchor-id="save-the-json-with-a-consistent-name">2. Save the JSON with a Consistent Name</h3>
-<p>This may seem self-evident but <u>all group members need to use the same file name for this new JSON file</u>. We recommend <code>user.json</code> if you are undecided. This will let scripts that refer to the JSON use the same file name regardless of which user is running the code (same spirit as using consistent names for each piece of information in the file.)</p>
-</section>
-<section id="tell-git-to-ignore-the-json" class="level3">
-<h3 class="anchored" data-anchor-id="tell-git-to-ignore-the-json">3. Tell Git to Ignore the JSON</h3>
-<p>If you’re using version control for your project (which we strongly recommend!), you’ll want Git to ignore the fact that this file differs for each user. Navigate to the <code>.gitignore</code> file of your project and put in the name of your JSON file as one of the files to ignore. We don’t want to push the JSON to GitHub since each person’s file will look different (that is our intent after all) and you wouldn’t want to accidentally overwrite your teammate’s user-specific information or cause a merge conflict.</p>
-<p>For a deeper dive into the <code>.gitignore</code> check out <a href="https://nceas.github.io/scicomp-workshop-collaborative-coding/git_ignore.html">that module</a> of our “Collaborative Coding with GitHub” workshop!</p>
+</div>
+<p>Once you have that vector prepared, it’s time to use <code>make_json</code> to actually create the file that stores user-specific information. If you are working in GitHub, we recommend setting the <code>git_ignore</code> argument to <code>TRUE</code> so that the JSON you create is automatically ignored by Git. This will prevent someone from accidentally sending sensitive (or at least user-specific) information to GitHub. For a deeper dive on this topic, see our GitHub workshop <a href="https://lter.github.io/workshop-github/git_ignore.html">here</a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load package</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ltertools)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Make JSON</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="fu">make_json</span>(<span class="at">x =</span> my_info, <span class="at">file =</span> <span class="st">"user.json"</span>, <span class="at">git_ignore =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="benefit-from-the-json" class="level3">
-<h3 class="anchored" data-anchor-id="benefit-from-the-json">4. Benefit from the JSON!</h3>
-<p>If you’ve made it through the preceding steps, you can now use the information you stored in the JSON file. You’ll need to use the <code>jsonlite</code> R package to read in your file but once you’ve done that, you can access the information inside of it in classic R fashion.</p>
+<h3 class="anchored" data-anchor-id="benefit-from-the-json">3. Benefit from the JSON!</h3>
+<p>Now that all group members have made a JSON with the same internal components, all that is left is to reap the rewards of your forward thinking!</p>
 <p>See an example below:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load needed library</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(jsonlite)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the JSON file</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>user_info <span class="ot">&lt;-</span> jsonlite<span class="sc">::</span><span class="fu">read_json</span>(<span class="st">"user.json"</span>)</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Grab the file path out of it</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>dropbox <span class="ot">&lt;-</span> user_info<span class="sc">$</span>dropbox_path</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Use it as you would any other file path</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="fu">file.path</span>(dropbox, <span class="st">"2024_data.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load needed library</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(RJSONIO)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the JSON file</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>user_info <span class="ot">&lt;-</span> RJSONIO<span class="sc">::</span><span class="fu">fromJSON</span>(<span class="at">content =</span> <span class="st">"user.json"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Use its contents!</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>my_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="fu">file.path</span>(user_info<span class="sc">$</span>dropbox_path, <span class="st">"2024_data.csv"</span>))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Syntax is just like how you'd access a column in a dataframe</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>googledrive<span class="sc">::</span><span class="fu">drive_auth</span>(<span class="at">email =</span> user_info<span class="sc">$</span>email)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now everyone in your group can use the same script because their personal file paths are readily accessible without needing to be hard-coded! The same theory applies to any other piece of information your group finds it valuable to store in the JSON.</p>
-<section id="help-with-absolute-file-paths" class="level4">
-<h4 class="anchored" data-anchor-id="help-with-absolute-file-paths">Help with Absolute File Paths</h4>
-<p>Identifying and manually writing out an absolute file path can be cumbersome so we’ve found a nice work-around (at least for Mac users) that you may find useful. First, in Finder, navigate to the last folder in the file path you’d like to preserve. In the row of folder names in the bottom of the Finder window, right-click the folder name and select “Copy ‘&lt;folder name&gt;’ as Pathname”.</p>
-<p>Once you’ve done that, you can simply paste the file path into your JSON file.</p>
+</section>
+<section id="bonus-help-with-finding-file-paths" class="level3">
+<h3 class="anchored" data-anchor-id="bonus-help-with-finding-file-paths">Bonus: Help with Finding File Paths</h3>
+<p>Identifying and manually writing out the file path you want to preserve in a JSON can be cumbersome so we’ve found a nice work-around (at least for Mac users) that you may find useful.</p>
+<ol type="1">
+<li>Open Finder and navigate to the last folder in the file path (i.e., the most nested one)</li>
+<li>In the row of folder names in the bottom of the Finder window, right-click the folder name and select “Copy ‘&lt;folder name&gt;’ as Pathname”</li>
+<li>Paste this into the vector you plan on giving to <code>make_json</code></li>
+</ol>
 <p align="center">
-<img src="images/tutorial_jsonlite/jsonlite-1.png" width="75%">
+<img src="images/tutorial_jsonlite/jsonlite-1.png" alt="Demonstration of how to copy the full file path for a specified folder in Mac's Finder. Simply a visual representation of the numbered steps directly above this image" width="75%">
 </p>
 
 
-</section>
 </section>
 </section>
 
