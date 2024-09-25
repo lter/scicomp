@@ -1,12 +1,13 @@
 ---
 title: "Storing User-Specific Information with JSONs"
+code-overflow: wrap
 ---
 
 ## Overview 
 
 Working groups sometimes need to handle user-specific information in their code. For example, if your group stores your data in the cloud (e.g., in Box, in Dropbox, etc.) each user will have a different "absolute file path" to the synced version of the data folder on their personal computer. Similarly, groups may find it valuable to use their email address in the code. While you _could_ simply have each group member add their information (file path, email, etc.) and comment out all but one of them when you work in that script, there is a better option: user-specific JSON files!
 
-The main advantage of this method is that you and your group members <u>do not have to manually change _any user-specific information_ in scripts</u> just because a different person runs them!
+The main advantage of this method is that <u>you and your group members do not have to manually change _any user-specific information_ in scripts</u> just because a different person runs them!
 
 ### Prerequisites
 
@@ -14,42 +15,49 @@ To follow along with this tutorial you will need to take the following steps:
 
 - Download [R](https://cran.r-project.org/)
 - Download [RStudio](https://posit.co/downloads/)
-- Install the `jsonlite` R package
+- Install the `ltertools` and `RJSONIO` R packages
 
 Feel free to skip any steps that you have already completed!
 
-### 1. Create the JSON
+### 1. Discuss with Your Group
 
-First, you'll need to use RStudio to create your JSON file by creating a new text file (in the top left of RStudio click "File" {{< fa arrow-right >}} "New File" {{< fa arrow-right >}} "Text File"). In the new text file, add content that looks like this:
+As in so many facets of collaborative work, the first step is to discuss with your group. While JSONs are useful for storing user-specific information, **you and your group still need to agree on two pieces of information**:
 
-```{r create-json}
-#| eval: false
+1. <u>What is the name of the JSON file that each person will have?</u>
+    - A consistent file name lets all scripts expect the same file even though the _contents_ of that file differ for each user
+2. <u>What are the 'column names' that contain the information your group wants to store?</u>
+    - Consistent 'column names' allow scripts to find the user-specific content they need under a predictable subheading
 
-{
-  "email":"my_email@gmail.com"
-  "dropbox_path":"path/to/dropbox-sync/for/me"
-}
+We recommend keeping it simple so **consider naming the file "user.json"**. Similarly, **for the 'column names' consider short, all-lowercase names that are succinct and clear** (e.g., `dropbox_path` for each user's path to a local Dropbox sync, `email` for each user's email address, etc.).
+
+### 2. Create the JSON
+
+We have developed the [`ltertools` R package](https://github.com/lter/ltertools)--in part--to store content that is useful to collaborative teams. Among the functions included in that package is one called `make_json` that will make the JSON for each user. It accepts a "named" vector which is straightforward to create.
+
+```{r make-json-1}
+# Create the named vector
+my_info <- c("dropbox_path" = "~/Users/lyon/Dropbox/LTER Data/", 
+             "email" = "lyon@nceas.ucsb.edu")
+
+# Look at it
+my_info
 ```
 
-Replace the content on the _right_ of the colon with your actual information. If desired, you can add as many other pieces of user-specific information as you'd like! Simply follow the `"info name":"info content"` format and make sure that each piece of information is on its own line.
+Once you have that vector prepared, it's time to use `make_json` to actually create the file that stores user-specific information. If you are working in GitHub, we recommend setting the `git_ignore` argument to `TRUE` so that the JSON you create is automatically ignored by Git. This will prevent someone from accidentally sending sensitive (or at least user-specific) information to GitHub. For a deeper dive on this topic, see our GitHub workshop [here](https://lter.github.io/workshop-github/git_ignore.html)
 
-One small note here for when you work with your group: <u>all group members need to use _exactly the same name_ to the left of each colon</u>.
+```{r make-json-2}
+#| eval: false
 
-You'll see later when we show an example of this but you can think of the information on the left of the colon as comparable with a column name. It doesn't matter that the text in the "rows" will differ between users as long as the script has a consistent "column" in which to look for that text.
+# Load package
+library(ltertools)
 
-### 2. Save the JSON with a Consistent Name
+# Make JSON
+make_json(x = my_info, file = "user.json", git_ignore = TRUE)
+```
 
-This may seem self-evident but <u>all group members need to use the same file name for this new JSON file</u>. We recommend `user.json` if you are undecided. This will let scripts that refer to the JSON use the same file name regardless of which user is running the code (same spirit as using consistent names for each piece of information in the file.)
+### 3. Benefit from the JSON!
 
-### 3. Tell Git to Ignore the JSON
-
-If you're using version control for your project (which we strongly recommend!), you'll want Git to ignore the fact that this file differs for each user. Navigate to the `.gitignore` file of your project and put in the name of your JSON file as one of the files to ignore. We don't want to push the JSON to GitHub since each person's file will look different (that is our intent after all) and you wouldn't want to accidentally overwrite your teammate's user-specific information or cause a merge conflict.
-
-For a deeper dive into the `.gitignore` check out [that module](https://nceas.github.io/scicomp-workshop-collaborative-coding/git_ignore.html) of our "Collaborative Coding with GitHub" workshop!
-
-### 4. Benefit from the JSON!
-
-If you've made it through the preceding steps, you can now use the information you stored in the JSON file. You'll need to use the `jsonlite` R package to read in your file but once you've done that, you can access the information inside of it in classic R fashion.
+Now that all group members have made a JSON with the same internal components, all that is left is to reap the rewards of your forward thinking!
 
 See an example below:
 
@@ -57,26 +65,28 @@ See an example below:
 #| eval: false
 
 # Load needed library
-library(jsonlite)
+library(RJSONIO)
 
 # Read in the JSON file
-user_info <- jsonlite::read_json("user.json")
+user_info <- RJSONIO::fromJSON(content = "user.json")
 
-# Grab the file path out of it
-dropbox <- user_info$dropbox_path
+# Use its contents!
+my_data <- read.csv(file = file.path(user_info$dropbox_path, "2024_data.csv"))
 
-# Use it as you would any other file path
-my_data <- read.csv(file = file.path(dropbox, "2024_data.csv"))
+# Syntax is just like how you'd access a column in a dataframe
+googledrive::drive_auth(email = user_info$email)
 ```
 
 Now everyone in your group can use the same script because their personal file paths are readily accessible without needing to be hard-coded! The same theory applies to any other piece of information your group finds it valuable to store in the JSON.
 
-#### Help with Absolute File Paths
+### Bonus: Help with Finding File Paths
 
-Identifying and manually writing out an absolute file path can be cumbersome so we've found a nice work-around (at least for Mac users) that you may find useful. First, in Finder, navigate to the last folder in the file path you'd like to preserve. In the row of folder names in the bottom of the Finder window, right-click the folder name and select "Copy '\<folder name\>' as Pathname".
+Identifying and manually writing out the file path you want to preserve in a JSON can be cumbersome so we've found a nice work-around (at least for Mac users) that you may find useful. 
 
-Once you've done that, you can simply paste the file path into your JSON file.
+1. Open Finder and navigate to the last folder in the file path (i.e.,  the most nested one)
+2. In the row of folder names in the bottom of the Finder window, right-click the folder name and select "Copy '\<folder name\>' as Pathname"
+3. Paste this into the vector you plan on giving to `make_json`
 
 <p align="center">
-<img src="images/tutorial_jsonlite/jsonlite-1.png" width = "75%" />
+<img src="images/tutorial_jsonlite/jsonlite-1.png" alt = "Demonstration of how to copy the full file path for a specified folder in Mac's Finder. Simply a visual representation of the numbered steps directly above this image" width = "75%"/>
 </p>
