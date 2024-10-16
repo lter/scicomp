@@ -1,6 +1,90 @@
 ---
-title: "Using GitHub for Multiple Publications"
+title: "Using GitHub for Multiple Products"
 ---
 
 ## Overview
 
+Working groups typically begin by harmonizing and wrangling a sizable synthesis database that they can then use to answer their scientific questions. While that effort often takes the entire group, once it is done, smaller groups are then capable of pursuing research questions separately. For groups that store their work in GitHub, this raises the question: how do we keep working together in GitHub as we pursue multiple semi-independent products?
+
+Continue reading this page for some methods that the Scientific Computing team has seen work for past working groups.
+
+## Option 1: Multiple GitHub Repositories
+
+If you know you're pursuing multiple separate products, it can sometimes be simplest to use multiple GitHub repositories! There's nothing inherently wrong with this approach despite the fact that it may feel like an overly simple solution.
+
+:::{.panel-tabset}
+### Strengths
+
+**More clarity about where specific files should be stored**
+
+Any given file should be stored in the respective GitHub repository for that product. If a file touches multiple products (e.g., extracting spatial covariates for all sites in the synthesis database), a new repository for support scripts can be created
+
+**Pairs well with the GitHub-Zenodo connection**
+
+GitHub and Zenodo have a really nice integration that allows particular repositories to be cited (with a DOI!) on Zenodo. GitHub has [nice documentation](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) on this but essentially this means that when a given product is nearly complete, you could get a formal citation for the corresponding GitHub repository and cite / publicize _only the code that supports that specific product_.
+
+**Don't need to reorganize first repository**
+
+If subsequent products get their own repositories you won't need to mess with the structure or content of your first repository. If you needed to be clear about which product a given file supports but all files lived in the same repository you'd likely have to change some facets of your approach to make sure it was clear to 'future you' and people outside of your team.
+
+**Chance to let particular team members shine**
+
+Anyone in your team could be the owner of the repository for a particular product so if you use separate repos for separate products you could use the fact of that ownership to maximize the professional benefits of each product for each team member. For instance, if a member of your group is an early career scientist, it might be a nice accolade to be the owner of a very active, collaborative, and reproducible GitHub repository.
+
+### Potential Weaknesses
+
+**Reduced findability**
+
+Unless you take steps to prevent it, creating multiple repositories can make it difficult to find a particular repository (especially if different users/organizations own each).
+
+**Managing access becomes more difficult**
+
+Generally, users must be invited separately to each repository. This invite expires after 48 hours if not accepted and then must be re-sent. Also, typically only the repository owner (or a sufficiently empowered collaborator) can send that invite in the first place. There is a notable exception when all repositories are owned by the same organization (see [GitHub's documentation on "teams"](https://docs.github.com/en/organizations/organizing-members-into-teams/about-teams)) but that requires an organization and some amount of preparation with an organization administrator.
+
+### Examples
+
+The [Silica Synthesis working group](https://lternet.edu/working-groups/from-poles-to-tropics-a-multi-biome-synthesis-investigating-the-controls-on-river-si-exports/) (2020) adopted this 'multiple repositories' approach to great success. They began with a single giant repository before deciding that was sufficiently unweildy that the benefits of reorganization outweighed the time cost of that pivot.
+
+They then created a standalone 'data' repository for all of their data harmonization and wrangling (see [lter / lterwg-silica-data](https://github.com/lter/lterwg-silica-data)) and then created a satellite of repositories owned by various users / organizations where each was dedicated to a particular product (typically peer-reviewed publications).
+
+To make sure that these would remain findable, they added a small section to the end of each GitHub README that linked to all of the other repositories. See one such README [here](https://github.com/njlyon0/lter_silica-high-latitude#readme) and <u>scroll to the bottom</u>.
+
+:::
+
+## Option 2: One Repository to Rule Them All
+
+If you're worried about decentralization, you can also live in a single GitHub repository and make extensive use of sub-folders to silo separate products.
+
+:::{.panel-tabset}
+### Strengths
+
+**All work is centralized and findable**
+
+If you bookmark (or "[star](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars)") the GitHub repository for your group, you know that link will direct you to where all of your group's content lives.
+
+**Managing access is straightforward**
+
+Again, if all of your group's content lives in one place, it straightforward to modify access to that repository. Note however that granting or removing access then becomes 'all or nothing' which may be a drawback in some contexts.
+
+### Potential Weaknesses
+
+**Difficult to manage content**
+
+Placing all content in the same repository means that you need to be very careful about separating files that support a particular product--or at least indicating which product(s) they support. GitHub _will not_ require any architecture on this front so it will be up to your team to create and maintain sufficient documentation to silo content.
+
+**Must publicize _all_ project files to share any**
+
+If you want to cite or otherwise publicize code for one product, you'll need to share the code for everything. At its coarsest level, this means your entire repository must be public (which is not necessarily a bad thing!) for you to cite anything. Additionally, if you cite code in a paper you'd need to direct interested readers to the appropriate part of your repository to find just the files that support that product.
+
+**Likely need to reorganize the first repository**
+
+This may not necessarily be the case but if you develop the first repository as if it is a standalone project (e.g., limited use of sub-folders, generic naming convention, etc.) you will likely need to reorganize all of those files--and any related documentation--so that you can create the structure you'll need to support multiple products.
+
+### Examples
+
+The [Marine Consumer Nutrient Dynamics working group](https://lternet.edu/working-groups/marine-consumer-nutrient-dynamics/) (2023) started with this approach for their data harmonization scripts. In their first repository (see [lter / lterwg-marine-cnd](https://github.com/lter/lterwg-marine-cnd)), they created a folder titled "scripts-harmonization" and placed all scripts related to the creation of their synthesis dataset there. This was in preparation for additional sub-folders dedicated to other, specific products.
+
+However, after using the [GitHub-Zenodo integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content) to cite their code, they realized that (1) citing their code for specific products would be difficult and (2) using separate repositories would enable them to give more credit to early career members of their group (by letting those individuals own subsequent repositories).
+
+Subsequently they have used separate repositories for separate products but the structure of their first repo gives insight into what a centralized repo might look like at its simplest.
+:::
