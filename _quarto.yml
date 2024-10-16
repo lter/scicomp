@@ -51,6 +51,8 @@ website:
             href: tip_paths.qmd
           - text: "Package Loading"
             href: tip_packages.qmd
+          - text: "GitHub & Multiple Products"
+            href: tip_github-multi-prods.qmd
     right:
       - text: "Our Team"
         menu:
