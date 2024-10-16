@@ -64,7 +64,7 @@ If you bookmark (or "[star](https://docs.github.com/en/get-started/exploring-pro
 
 **Managing access is straightforward**
 
-Again, if all of your group's content lives in one place, it straightforward to modify access to that repository. Note however that granting or removing access then becomes 'all or nothing' which may be a drawback in some contexts.
+Again, if all of your group's content lives in one place, it is straightforward to modify access to that repository. Note however that granting or removing access then becomes 'all or nothing' which may be a drawback in some contexts.
 
 ### Potential Weaknesses
 
