@@ -43,6 +43,8 @@ website:
            href: tutorial_googledrive-pkg.qmd
       - text: "Tips"
         menu: 
+          - text: "Organization"
+            href: tip_organize.qmd
           - text: "Notebooks vs. Scripts"
             href: tip_notebook-vs-script.qmd
           - text: "File Names"
