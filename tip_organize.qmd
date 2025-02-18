@@ -4,11 +4,11 @@ title: "Project Organization"
 
 ## Overview
 
-Project organization is one of those topics that is--maybe--not exciting but is absolutely critical to the success of synthesis working groups. In individual projects conducted over short timescales, a lack of an overarching strategy for organization can be survivable but in a project that will last for several years and have many actively contributing colleagues this lack quickly becomes an insurmountable hurdle.
+Project organization is one of those topics that is--maybe--not exciting but is absolutely _critical_ to the success of synthesis working groups. In individual projects conducted over short timescales, an absence of an overarching strategy for organization can be survivable but in a project that will last for several years and will have many actively contributing colleagues this lack quickly becomes an insurmountable hurdle.
 
 ## When Should We Plan?
 
-**It is never too early to draft your organization plan!** The longer you wait to discuss an organization strategy and decide on a system the worse it will be to go back and retroactively sort the content your group has produced into the structure you build. If you make a plan early on it should be clear where a given file should 'live' as it is created which completely removes the labor-intensive reorganization that is inherent to organizing plans made later in a project's lifecycle.
+**It is never too early to draft your organization plan!** The longer you wait to discuss an organization strategy and decide on a system the worse it will be to go back and retroactively sort the content your group has produced into the structure you agree upon. If you make a plan early on it should be clear where a given file should 'live' as it is created which completely removes the labor-intensive reorganization that is inherent to organizing plans made later in a project's lifecycle.
 
 ## Broad Considerations
 
@@ -59,6 +59,7 @@ _SciComp Suggested Project Structure:_
 &nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa file-code >}} 02_quality-control.R  
 &nbsp;|--&nbsp;{{< fa folder >}} data  
 &nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-lines >}} README.md  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-csv >}} data-log.csv  
 &nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa folder >}} raw  
 &nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa folder >}} tidy  
 &nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-csv >}} 01_data-harmonized.csv  
@@ -76,9 +77,9 @@ _SciComp Suggested Project Structure:_
 
 ## GitHub versus Google Drive
 
-Ideally your chosen organization system will work for all platforms that your group uses. For many groups, this includes--at a minimumm--a GitHub repository and a Shared Google Drive. While the same generaly organization schema will work in both locations, there are some slight differences.
+Ideally your chosen organization system will work for all platforms that your group uses. For many groups, this includes--at a minimum--a GitHub repository and a Shared Google Drive. While the same general organizing structure will work in both locations, there are some slight differences.
 
-**GitHub should not track the "data" folder** (see [our tutorial on using the ".gitignore" file](https://lter.github.io/workshop-github/git_ignore.html) to regulate what Git will/won't track) and likely the facets of your project that are not related to data/code (e.g., "notes", etc.) won't be stored in GitHub either.
+**GitHub should not track the "data" folder** (see [our tutorial on using the ".gitignore" file](https://lter.github.io/workshop-github/git_ignore.html) to regulate what Git will/won't track) and likely the facets of your project that are not directly related to data/code (e.g., "notes", etc.) won't be stored in GitHub either.
 
 Similarly, **you should not store your code in the Drive.** Trust that GitHub does a better job of tracking code files than Drive can and also remember that storing duplicate code files is often a recipe for heartache as there is no "single source of truth" upon which to depend.
 
