@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>contributing – LTER Scientific Computing Team</title>
+<title>Project Organization – LTER Scientific Computing Team</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,12 +36,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-2a303cd2b3c770e20e83d4d4d16ba8bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-44dcff1fec71665e48bece7d4cab4751.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta name="twitter:title" content="LTER Scientific Computing Team">
+<meta name="twitter:title" content="Project Organization – LTER Scientific Computing Team">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -160,6 +162,10 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tips">    
         <li>
+    <a class="dropdown-item" href="./tip_organize.html">
+ <span class="dropdown-text">Organization</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./tip_notebook-vs-script.html">
  <span class="dropdown-text">Notebooks vs.&nbsp;Scripts</span></a>
   </li>  
@@ -236,12 +242,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lter-scientific-computing-contributing-guidelines" id="toc-lter-scientific-computing-contributing-guidelines" class="nav-link active" data-scroll-target="#lter-scientific-computing-contributing-guidelines">LTER Scientific Computing Contributing Guidelines</a>
-  <ul class="collapse">
-  <li><a href="#version-control-github" id="toc-version-control-github" class="nav-link" data-scroll-target="#version-control-github">Version Control &amp; GitHub</a></li>
-  <li><a href="#style-guide" id="toc-style-guide" class="nav-link" data-scroll-target="#style-guide">Style Guide</a></li>
-  <li><a href="#file-paths" id="toc-file-paths" class="nav-link" data-scroll-target="#file-paths">File Paths</a></li>
-  </ul></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#when-should-we-plan" id="toc-when-should-we-plan" class="nav-link" data-scroll-target="#when-should-we-plan">When Should We Plan?</a></li>
+  <li><a href="#broad-considerations" id="toc-broad-considerations" class="nav-link" data-scroll-target="#broad-considerations">Broad Considerations</a></li>
+  <li><a href="#scicomp-recommendation-example" id="toc-scicomp-recommendation-example" class="nav-link" data-scroll-target="#scicomp-recommendation-example">SciComp Recommendation Example</a></li>
+  <li><a href="#github-versus-google-drive" id="toc-github-versus-google-drive" class="nav-link" data-scroll-target="#github-versus-google-drive">GitHub versus Google Drive</a></li>
+  <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -250,38 +256,117 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project Organization</h1>
+</div>
 
 
 
-<section id="lter-scientific-computing-contributing-guidelines" class="level2">
-<h2 class="anchored" data-anchor-id="lter-scientific-computing-contributing-guidelines">LTER Scientific Computing Contributing Guidelines</h2>
-<p>This document is meant to focus primarily on our <em>internal</em> processes for contributing. If you’re not a member of this team, we hope you find this document valuable as-is but you should also feel free to make any modifications you feel are necessary if you choose to use our guidelines as a starting place.</p>
-<section id="version-control-github" class="level3">
-<h3 class="anchored" data-anchor-id="version-control-github">Version Control &amp; GitHub</h3>
-<p>As much as possible, use the style of “<a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a>” in your commit messages. See <a href="https://njlyon0.github.io/tips/commits.html">here</a> for a nice summary of the highlights of that approach.</p>
-<p>For <strong>minor changes</strong>, (1) communicate with the team to avoid merge conflicts and (2) make commits directly to <code>main</code></p>
-<p>For <strong><em>major</em> changes</strong>, (1) communicate with the team to avoid merge conflicts, (2) open a branch with an intuitive but concise name, and (3) open a pull request when you are confident your edits are largely complete. (4) Request a review from a teammate, (5) make any edits they suggest, (6) merge the PR, and (7) delete the branch.</p>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Project organization is one of those topics that is–maybe–not exciting but is absolutely <em>critical</em> to the success of synthesis working groups. In individual projects conducted over short timescales, an absence of an overarching strategy for organization can be survivable but in a project that will last for several years and will have many actively contributing colleagues this lack quickly becomes an insurmountable hurdle.</p>
 </section>
-<section id="style-guide" class="level3">
-<h3 class="anchored" data-anchor-id="style-guide">Style Guide</h3>
-<p>For folder/file names and in code, please follow the following style tips:</p>
+<section id="when-should-we-plan" class="level2">
+<h2 class="anchored" data-anchor-id="when-should-we-plan">When Should We Plan?</h2>
+<p><strong>It is never too early to draft your organization plan!</strong> The longer you wait to discuss an organization strategy and decide on a system the worse it will be to go back and retroactively sort the content your group has produced into the structure you agree upon. If you make a plan early on it should be clear where a given file should ‘live’ as it is created which completely removes the labor-intensive reorganization that is inherent to organizing plans made later in a project’s lifecycle.</p>
+</section>
+<section id="broad-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="broad-considerations">Broad Considerations</h2>
+<p>There is no single “best” mode of organizing a project. However, there are some decision points that most groups consider even if not all groups reach the same conclusions at those junctures. Here are some guiding questions that might prove helpful as your group discusses your organizing plan:</p>
 <ul>
-<li>Use all lowercase</li>
-<li>Related files/objects should have a shared file prefix (e.g., <code>wrangle_...</code>)
+<li><strong>What “modules” or “silos” are likely to be necessary for your project?</strong>
 <ul>
-<li>For files that have an inherent order, use zero-padded numbers as the prefix (e.g., <code>01_</code>, <code>02_</code>, etc.)</li>
+<li>Semi-discrete subcomponents of the project are likely to exist and should (probably) be separated into different folders</li>
+<li>For example, groups almost always have at least the following four major folders: “data”, “notes”, “publications”, and “presentations”</li>
 </ul></li>
-<li>Use underscores (<code>_</code>) for separating major pieces of information and hyphens (<code>-</code>) in lieu of spaces (e.g., <code>01_find-area.R</code>, <code>harmonize_spp-rich-info.py</code>, etc.)</li>
+<li><strong>What level of organization can your group <em>easily</em> maintain for 2-4 years?</strong>
+<ul>
+<li>Ideally your chosen structure will require little to no maintenance after it is initially set-up</li>
+</ul></li>
+<li><strong>How hard will it be to onboard new members to navigate your chosen system?</strong>
+<ul>
+<li>Your group will likely need to onboard new members and if they don’t know where they should add their contributions they may add files in incorrect places or refrain from contributing at all–either outcome would be a sad loss for your group</li>
+<li>Note this question also applies to ‘future you’ if you focus on other work for a time and then need to remind yourself how to navigate this project</li>
+</ul></li>
 </ul>
 </section>
-<section id="file-paths" class="level3">
-<h3 class="anchored" data-anchor-id="file-paths">File Paths</h3>
-<p>When we write code–for ourselves or for working groups–we use <strong>operating system (OS) agnostic file paths</strong>.</p>
-<p>In R, this means using the <code>file.path()</code> function (from base R) to stitch together elements (e.g., <code>file.path("data", "raw_2024.csv")</code>). In Python it means using the <code>join</code> function from the <code>path</code> module of the <code>os</code> library (e.g., <code>os.path.join("data", "raw_2024.csv")</code>).</p>
-<p>If you plan on re-using a file path, assign it to an object/variable (R/Python) to avoid typos/errors when re-using the file path.</p>
+<section id="scicomp-recommendation-example" class="level2">
+<h2 class="anchored" data-anchor-id="scicomp-recommendation-example">SciComp Recommendation Example</h2>
+<p>While there is no “one size fits all” solution, <strong>our team has identified a structure that has worked quite well for past groups because it is relatively simple to maintain and easily extensible as project questions evolve.</strong> In addition, it avoids an overly nested folder structure which makes it easier for new members (or ‘future you’) to become familiar with the overall schema.</p>
+<div class="columns">
+<div class="column" style="width:55%;">
+<p>Key properties of this structure:</p>
+<ul>
+<li>Everything nested within a project-wide folder</li>
+<li><em>Limited</em> use of sub-folders</li>
+<li>Dedicated “README” files containing high-level information about each folder</li>
+<li>Consistent folder/file naming conventions
+<ul>
+<li>Good names should be be both human and machine-readable</li>
+<li>Avoid spaces and special characters</li>
+<li>Consistent use of delimeters (e.g., “-”, “_“, etc.)</li>
+</ul></li>
+<li>Shared file prefix (a.k.a. “slug”) connecting code files with files they create
+<ul>
+<li>Allows for easy tracing of errors because the file with issues has an explicit tie to the script that likely introduced that error</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:5%;">
 
-
+</div><div class="column" style="width:40%;">
+<div style="font-size:0.9em;">
+<p><em>SciComp Suggested Project Structure:</em></p>
+<p><i class="fa-solid fa-folder" aria-label="folder"></i> synthesis_project<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> code<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-code" aria-label="file-code"></i> 01_harmonize.R<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> 02_quality-control.R<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> data<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-csv" aria-label="file-csv"></i> data-log.csv<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> raw<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> tidy<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-csv" aria-label="file-csv"></i> 01_data-harmonized.csv<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-file-csv" aria-label="file-csv"></i> 02_data-wrangled.csv<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> notes<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> presentations<br>
+&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> publications<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> community-composition<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> biogeochemistry</p>
+</div>
+</div>
+</div>
 </section>
+<section id="github-versus-google-drive" class="level2">
+<h2 class="anchored" data-anchor-id="github-versus-google-drive">GitHub versus Google Drive</h2>
+<p>Ideally your chosen organization system will work for all platforms that your group uses. For many groups, this includes–at a minimum–a GitHub repository and a Shared Google Drive. While the same general organizing structure will work in both locations, there are some slight differences.</p>
+<p><strong>GitHub should not track the “data” folder</strong> (see <a href="https://lter.github.io/workshop-github/git_ignore.html">our tutorial on using the “.gitignore” file</a> to regulate what Git will/won’t track) and likely the facets of your project that are not directly related to data/code (e.g., “notes”, etc.) won’t be stored in GitHub either.</p>
+<p>Similarly, <strong>you should not store your code in the Drive.</strong> Trust that GitHub does a better job of tracking code files than Drive can and also remember that storing duplicate code files is often a recipe for heartache as there is no “single source of truth” upon which to depend.</p>
+</section>
+<section id="additional-resources" class="level2">
+<h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
+<p>If you’d like more resources on project organization and reproducibility in general, check out the following:</p>
+<ul>
+<li>LTER’s Synthesis Skills for Early Career Researchers (SSECR) <a href="https://lter.github.io/ssecr/mod_reproducibility.html">Reproducibility module</a></li>
+<li>LTER Scientific Computing Team’s <a href="https://lter.github.io/scicomp/tip_names.html">Tips for File Naming</a></li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -511,8 +596,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -628,7 +711,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
