@@ -37,7 +37,7 @@ website:
             href: https://njlyon0.github.io/asm-2022_shiny-workshop/
       - text: "Tutorials"
         menu:
-         - text: "Create a Website"
+         - text: "Create a Quarto Website"
            href: tutorial_quarto-website.qmd
          - text: "Store User-Specific Info"
            href: tutorial_json.qmd
