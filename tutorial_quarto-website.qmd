@@ -10,7 +10,7 @@ title: "Making a Website with Quarto"
 
 To follow along with this tutorial you will need to take the following steps:
 
-### 1. Prepare to use GitHub via RStudio.
+### 1. Prepare to use GitHub via RStudio
 
 This involves doing all of the [pre-workshop steps](https://lter.github.io/workshop-github/#workshop-preparation) relevant to our "Collaborative Coding with GitHub" workshop.
 
@@ -25,6 +25,35 @@ This involves doing all of the [pre-workshop steps](https://lter.github.io/works
 
 Before you can make a website with Quarto you will need to install it! This program seamlessly ties into RStudio so you won't need to learn how to navigate a new program.
 
+## Make a New GitHub Repository
+
+{{< include /modules_tutorials/github-create.qmd >}}
+
+## Clone that Repository
+
+{{< include /modules_tutorials/rstudio-clone.qmd >}}
+
+## Create the Website Skeleton
+
+Now we can create the critical website architecture.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+# BASEMENT
+
 ## Create a Quarto Website R Project
 
 {{< include /modules_tutorials/quarto-website_new-proj.qmd >}}
@@ -32,10 +61,6 @@ Before you can make a website with Quarto you will need to install it! This prog
 ## Preparing Project for Web Deployment
 
 {{< include /modules_tutorials/quarto-website_deploy-prep.qmd >}}
-
-## Make a New GitHub Repository
-
-{{< include /modules_tutorials/github-create.qmd >}}
 
 ## Adding your Project to GitHub
 
