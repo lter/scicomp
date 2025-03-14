@@ -6,14 +6,24 @@ title: "Making a Website with Quarto"
 
 [Quarto](https://quarto.org/) is a new tool developed by RStudio (the company, not the program) to create a more 'what you see is what you get' editor for creating markdown files and products (e.g., books, websites, etc.). Additionally, it includes a visual editor that allows users to insert headings and embed figures via buttons that are intuitively labeled rather than through somewhat arcane HTML text or symbols. While Quarto is still in its infancy, it is rapidly gathering a following due to the aforementioned visual editor and for the ease with which quarto documents and websites can be created.
 
-### Prerequisites
+## Tutorial Preparation
 
 To follow along with this tutorial you will need to take the following steps:
 
-- Do all of the [pre-workshop steps](https://lter.github.io/workshop-github/#workshop-preparation) relevant to our "Collaborative Coding with GitHub" workshop
-- [Download Quarto](https://quarto.org/docs/get-started/)
+### 1. Prepare to use GitHub via RStudio.
 
-Feel free to skip any steps that you have already completed!
+This involves doing all of the [pre-workshop steps](https://lter.github.io/workshop-github/#workshop-preparation) relevant to our "Collaborative Coding with GitHub" workshop.
+
+- Install R
+- Install RStudio
+- Install Git
+- Make a GitHub account
+- Connect Git and GitHub
+- Celebrate!
+
+### 2. Install [Quarto](https://quarto.org/docs/get-started/)
+
+Before you can make a website with Quarto you will need to install it! This program seamlessly ties into RStudio so you won't need to learn how to navigate a new program.
 
 ## Create a Quarto Website R Project
 
