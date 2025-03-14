@@ -40,8 +40,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2a303cd2b3c770e20e83d4d4d16ba8bc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-44dcff1fec71665e48bece7d4cab4751.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-3f89b3508ef137f0102e9db68d706afc.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-ad4af221ab8d12cbcda36743286f6593.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -74,6 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <meta name="twitter:title" content="LTER Scientific Computing Team">
 <meta name="twitter:description" content="">
 <meta name="twitter:image" content="https://lter.github.io/scicomp/modules_tutorials/images/tutorial_github-modules/new-github-1.png">
+<meta name="twitter:image:alt" content="Screen capture of top bit of 'Repositories' tab of a GitHub user's profile">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -127,6 +128,10 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Collaborative Coding with GitHub</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="https://lter.github.io/workshop-quarto/">
+ <span class="dropdown-text">Creating Websites with Quarto</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="https://lter.github.io/workshop-tidyverse/">
  <span class="dropdown-text">Coding in the Tidyverse</span></a>
   </li>  
@@ -141,10 +146,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Tutorials</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
-        <li>
-    <a class="dropdown-item" href="../tutorial_quarto-website.html">
- <span class="dropdown-text">Create a Website</span></a>
-  </li>  
         <li>
     <a class="dropdown-item" href="../tutorial_json.html">
  <span class="dropdown-text">Store User-Specific Info</span></a>
@@ -247,21 +248,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>From your GitHub <strong>“Repositories”</strong> tab, click the <strong><span style="color:green"> green </span> “New”</strong> button.</p>
-<p><img src="images/tutorial_github-modules/new-github-1.png" width="100%"></p>
-<p><strong>Add a title</strong> to your repository and <strong>add a description.</strong> Once you’ve added these two things, scroll down and click the <strong><span style="color:green"> green </span> “Create repository” button.</strong></p>
+<p>From your GitHub <strong>“Repositories”</strong> tab, click the <strong>“New”</strong> button. It may be either <strong><span style="color:blue">blue</span></strong> or <strong><span style="color:green">green</span></strong> depending on your GitHub settings.</p>
+<p><img src="images/tutorial_github-modules/new-github-1.png" alt="Screen capture of top bit of 'Repositories' tab of a GitHub user's profile" width="100%"></p>
+<p><strong>Add a title</strong> to your repository and <strong>add a description.</strong></p>
 <p align="center">
-<img src="images/tutorial_github-modules/new-github-2.png" width="60%">
+<img src="images/tutorial_github-modules/new-github-2.png" alt="Screen capture of the top half of the Github page where new repositories are created" width="60%">
 </p>
-<p>Be sure that you <strong>do not add a README</strong>, <strong>do not add a gitignore</strong>, and <strong>do not add a license.</strong> Adding any of these three will cause a merge conflict when we link the project that you just created with the GitHub repository that you are in the process of creating.</p>
+<p>Once that is done, scroll down and decide whether to add (1) a README, (2) a <code>.gitignore</code>, and (3) a license. For Quarto websites, <strong>you will want a README and a <code>.gitignore</code></strong> but a license is not <em>required</em>. If you are an RStudio user, <strong>you should pick the “R” template for your <code>.gitignore</code></strong>. For more information on READMEs see <a href="https://lter.github.io/workshop-github/readmes.html">here</a>; for more information on the <code>.gitignore</code> see <a href="https://lter.github.io/workshop-github/git_ignore.html">here</a>.</p>
 <p align="center">
-<img src="images/tutorial_github-modules/new-github-3.png" width="60%">
+<img src="images/tutorial_github-modules/new-github-3.png" alt="Screen capture of the bottom half of the Github page where new repositories are created" width="60%">
 </p>
-<p>After a few seconds you should be placed on your new repository’s landing page which will look like the below image because there isn’t anything in your repository (yet).</p>
-<p>Copy the link in the field and go back to your RStudio session.</p>
-<p align="center">
-<img src="images/tutorial_github-modules/new-github-4.png" width="100%">
-</p>
+<p>Once you’ve added these two things, scroll down and click the <strong>“Create repository” button.</strong> Again, this may be either <strong><span style="color:blue">blue</span></strong> or <strong><span style="color:green">green</span></strong>.</p>
+<p>After a few seconds you should be placed on your new repository’s landing page.</p>
 
 
 
