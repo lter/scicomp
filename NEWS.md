@@ -10,6 +10,8 @@ This is the development version of the website. Changes are identified as they a
 - New pages
     - Tip "GitHub for Multiple Products" page created
     - Tip "Project Organization" page created
+- New pages
+    - Replaced 'make websites with Quarto' tutorial with the link to a full, standalone workshop
 
 ## Version 1.0
 
