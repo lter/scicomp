@@ -31,14 +31,14 @@ website:
         menu:
           - text: "Collaborative Coding with GitHub"
             href: https://lter.github.io/workshop-github/
+          - text: "Creating Websites with Quarto"
+            href: https://lter.github.io/workshop-quarto/
           - text: "Coding in the Tidyverse"
             href: https://lter.github.io/workshop-tidyverse/
           - text: "Shiny Apps for Sharing Science"
             href: https://njlyon0.github.io/asm-2022_shiny-workshop/
       - text: "Tutorials"
         menu:
-         - text: "Create a Quarto Website"
-           href: tutorial_quarto-website.qmd
          - text: "Store User-Specific Info"
            href: tutorial_json.qmd
          - text: "Connect Google Drive + R"
