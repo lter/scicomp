@@ -2,6 +2,12 @@
 
 This is the development version of the website. Changes are identified as they are made.
 
+- No changes (yet!)
+
+## Version 2.0
+
+Changes from the preceding version are as follows:
+
 - Added contributing guidelines (see "CONTRIBUTING.md")
 - Added issue templates
 - Modified pages
