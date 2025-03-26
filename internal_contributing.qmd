@@ -1,5 +1,5 @@
 ---
-title: "SciComp Team Contributing Guidlines"
+title: "SciComp Team Contributing Guidelines"
 engine: knitr
 ---
 
