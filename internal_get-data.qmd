@@ -40,7 +40,7 @@ The list of all trait IDs is [here](https://www.try-db.org/TryWeb/Prop023.php). 
 
 ### **4. Select Species**
 
-Next, you will be prompted to select the species you want data for. Each species is associated with a numeric ID, so enter the desired IDs in the field below. For example, 29 represents Abies alba and 56 represents Abies lasiocarpa. 
+Next, you will be prompted to select the species you want data for. Each species is associated with a numeric ID, so enter the desired IDs in the field below. For example, 29 represents _Abies alba_ and 56 represents _Abies lasiocarpa_. 
 
 The list of all plant IDs is [here](https://www.try-db.org/dnld/TryAccSpecies.txt). Again, you also have the option to download a .txt file of all the plant species in case you wish to get the IDs programmatically. 
 
@@ -72,7 +72,7 @@ Add any relevant coauthors to your request before proceeding. It's a good idea t
 
 ### **8. Finish Request and Wait**
 
-Your request is now complete! You will receive an email from TRY notifiying you that they have received your request. Wait for a subsequent email from them to get the actual download link to the data. 
+Your request is now complete! You will receive an email from TRY notifying you that they have received your request. Wait for a subsequent email from them to get the actual download link to the data. 
 
 <img src="images/data-acquisition-TRY/TRY-12.png" align="center" width="100%"/>
 

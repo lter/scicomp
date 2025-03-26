@@ -1,9 +1,11 @@
 {
-  "hash": "40758e5eb4ebe614077eba815c943c8e",
+  "hash": "948b2f0416ccb51e8bc29ff0034970d0",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"SciComp Team Contributing Guidlines\"\nengine: knitr\n---\n\n\n\n\nWhile our team is composed of members from different backgrounds, we strive to adhere to a shared set of contributing and style guidelines. This ensures a consistent \"feel\" of our team's products, regardless of which team member took the lead on a particular task.\n\nStandard convention in GitHub is to house such information in a \"CONTRIBUTING.md\" file in the top-level of the relevant repository. We have done that in the repository underpinning this website but you can also quickly jump to that file by clicking [here](https://github.com/lter/scicomp/blob/main/CONTRIBUTING.md).\n\nNote that these are only required for Scientific Computing team members but you may find some of this guidance helpful even if you're not a part of our team.\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"SciComp Team Contributing Guidelines\"\nengine: knitr\n---\n\n\n\n\nWhile our team is composed of members from different backgrounds, we strive to adhere to a shared set of contributing and style guidelines. This ensures a consistent \"feel\" of our team's products, regardless of which team member took the lead on a particular task.\n\nStandard convention in GitHub is to house such information in a \"CONTRIBUTING.md\" file in the top-level of the relevant repository. We have done that in the repository underpinning this website but you can also quickly jump to that file by clicking [here](https://github.com/lter/scicomp/blob/main/CONTRIBUTING.md).\n\nNote that these are only required for Scientific Computing team members but you may find some of this guidance helpful even if you're not a part of our team.\n",
+    "supporting": [
+      "internal_contributing_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

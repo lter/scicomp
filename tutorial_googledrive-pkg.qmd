@@ -1,5 +1,5 @@
 ---
-title: "Conecting R & Google Drive"
+title: "Connecting R & Google Drive"
 ---
 
 ## Overview

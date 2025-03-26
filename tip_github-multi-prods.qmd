@@ -43,7 +43,7 @@ Generally, users must be invited separately to each repository. This invite expi
 
 ### Examples
 
-The [Silica Synthesis working group](https://lternet.edu/working-groups/from-poles-to-tropics-a-multi-biome-synthesis-investigating-the-controls-on-river-si-exports/) (2020) adopted this 'multiple repositories' approach to great success. They began with a single giant repository before deciding that was sufficiently unweildy that the benefits of reorganization outweighed the time cost of that pivot.
+The [Silica Synthesis working group](https://lternet.edu/working-groups/from-poles-to-tropics-a-multi-biome-synthesis-investigating-the-controls-on-river-si-exports/) (2020) adopted this 'multiple repositories' approach to great success. They began with a single giant repository before deciding that was sufficiently unwieldy that the benefits of reorganization outweighed the time cost of that pivot.
 
 They then created a standalone 'data' repository for all of their data harmonization and wrangling (see [lter / lterwg-silica-data](https://github.com/lter/lterwg-silica-data)) and then created a satellite of repositories owned by various users / organizations where each was dedicated to a particular product (typically peer-reviewed publications).
 

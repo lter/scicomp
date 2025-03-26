@@ -36,7 +36,7 @@ git remote add origin GITHUB_URL
 git remote -v
 ```
 
-Finally, **push your commited changes** to the repostory that you set as the remote in the preceding two steps.
+Finally, **push your committed changes** to the repository that you set as the remote in the preceding two steps.
 
 ```{r push, eval = F}
 # Push all of the content to the main branch
