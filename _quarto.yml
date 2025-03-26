@@ -40,7 +40,7 @@ website:
       - text: "Tutorials"
         menu:
          - text: "Store User-Specific Info"
-           href: tutorial_json.qmd
+           href: tutorial_user-info.qmd
          - text: "Connect Google Drive + R"
            href: tutorial_googledrive-pkg.qmd
       - text: "Tips"
