@@ -2,7 +2,8 @@
 
 This is the development version of the website. Changes are identified as they are made.
 
-- No changes (yet!)
+- Modified pages
+    - Tutorial "User Specific Info" page uses CSV instead of JSON (`make_json` was removed from `ltertools` due to dependency issues)
 
 ## Version 2.0
 
