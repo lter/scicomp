@@ -10,51 +10,57 @@ Feel free to [contact us](https://lter.github.io/scicomp/staff.html) if you find
 
 When new working groups are funded, our team takes a number of setup steps to create some of the infrastructure that past groups have requested/found useful. This is mainly an attempt to help the group avoid spending their precious in-person meeting time doing relatively dry technical steps that we can easily accomplish early-on. Some of these steps also set a useful 'tone' in terms of facilitating groups' adherence to reproducibility best practices.
 
-## Shared Google Drive
+## 1. Attend LTER Network Office 'New Group Onboarding' Meeting
 
-Many groups gravitate towards using Google Drive for storing data, relevant scientific literature, and (eventually) manuscript drafts. One advantage of a true Shared Drive over simply creating a folder and sharing that is that the distributed ownership of the Shared Drive makes it very difficult to accidentally delete/lose important files.
+Once the decision is made for which group(s) to fund, Marty Downs will schedule an onboarding meeting for group PIs to talk about NCEAS / LTER Network Office resources. A SciComp team member needs to be there to give a brief introduction and pitch for the kinds of support that our team can offer.
 
-Some groups have experience serious heartbreak when one member's Google identity gets closed by their institution and all files/folders created by that member vanish. A Shared Drive makes this horror story an impossibility.
+## 2. Create the Infrastructure for the Group
 
-### Creating the Shared Drive
+:::{.panel-tabset}
+### Google Group
 
-Our `@nceas.ucsb.edu` email addresses are empowered to create Shared Drives. Navigate to your Google Drive, then in the left sidebar click "Shared drives". Once there you can click the "+ New" button to create a brand new Shared Drive.
+**Rationale:** Google Groups centralize all group members' Google identities. This makes sharing access to a piece of the Google ecosystem with an entire team really simple.
 
-The naming convention you should use is `LTER-WG_<WG-Abbreviation>` or `LTER-SPARC_WG-Abbreviation` for full synthesis working groups and SPARC groups respectively.
+**Naming Convention:** 
 
-Note that for groups with longer names you will want to abbreviate so that the Shared Drive name doesn't get ambiguously cropped in a default browser window.
+- "LTER-WG_\<Abbreviated-Group-Name\>"
+- "LTER-SPARC_\<Abbreviated-Group-Name\>"
 
-### Adding Users
+Note that the group abbreviation should be title case (e.g., "Ecological-Synthesis")
 
-Once the Shared Drive exists, add the following people as "Content Managers":
+### Shared Drive
 
-- <u>All</u> members of the Scientific Computing team
-- Marty Downs (LTER Network Office Director)
-- Thomas Hetmank (NCEAS Programmer/Analyst)
+**Rationale:** A Shared Google Drive is a great place to store raw data as well as preserve documentation and script outputs. A true Shared Drive also distributes ownership in a way that makes it safe even when individual Google accounts get deactivated (as is the case when someone changes institutions).
 
-When you reach out to the working groups you can also make a note of their emails and add them as well though you may want to first tell them about the Shared Drive before sending them a semi-random Shared Drive invite.
+**Naming Convention:** Same as the Google Group!
 
-### Content Creation
+**Other Notes:** Add the Google Group as 'maintainers' and add Marty Downs and Thomas Hetmank as 'administrators'. Also, move copies of [the critical LTER template Google files](https://drive.google.com/drive/folders/1g9n1A7XgCeYduB3LdO1JGDktrvu-rWj0) into the top-level of the Shared Drive. Groups are not required to use these but they generally have been useful to groups in the past.
 
-We want to use as light a touch as possible here to make sure that groups feel empowered to make their Shared Drive whatever they need it to be but there are a few things we can do.
+### GitHub Repository
 
-Copy the template Google Sheets we've created (found in [this Drive folder](https://drive.google.com/drive/folders/1g9n1A7XgCeYduB3LdO1JGDktrvu-rWj0?usp=sharing)) and move the copies into their Shared Drive.
+**Rationale:** GitHub is _the_ way we recommend collaborating on code. This emphasis is made more particularly clear elsewhere so we'll leave it at that here.
 
-## GitHub Repository
+**Naming Convention:** 
 
-We encourage all groups to engage with GitHub for--at minimum--storing their final code products. We have found that creating a GitHub repository at this stage tends to increase adoption of GitHub and is therefore very much worthwhile even if no group members use it at the time that their group gets funded.
+- "lter / lterwg-\<abbreviated-group-name>\"
+- "lter / lter-sparc-\<abbreviated-group-name>\"
 
-### Initialize Repository
+Note that the group abbreviation should be entirely lowercase.
 
-Make a repository in the [LTER GitHub Organization](https://github.com/lter) with the following information:
+**Other Notes:** Create the repository in the LTER GitHub organization and use the [working group template repository](https://github.com/lter/lterwg-template) as the starting point. Add any usernames that you have from the group to this repository.
 
-1. Begin with the [working group template repository](https://github.com/lter/lterwg-template)
-    - When you make a new repo it'll provides an option for whether you want to use a template
-2. Create a name that fits one of the following naming conventions
-    - For full working groups (3-4 meetings): "lterwg-`abbreviated-group-name`"
-    - For SPARC groups (1 meeting): "lter-sparc-`abbreviated-group-name`"
-3. Set the "Description" to the title of the working group
-    - As indicated on [the LTER Network Office website](https://lternet.edu/current-working-groups/)
-4. Add a README
-4. Create a `.gitignore` <u>using the R template</u>
-    - R is the most common working group language and the `.gitignore` is easily changed in the event the group is primarily using a different language
+### NCEAS Server Account
+
+Don't do this unless it is needed! The server is another account/login/workflow group members have to keep in mind. If you make this part of the group's intitial infrastructure, you risk overwhelming them for the really vital stuff when the server is not always necessary for all projects.
+
+If it is needed, contact Thomas Hetmank or Nick Outin to get a 'team' set up on Aurora for the working group.
+
+:::
+
+## 3. Offer SciComp-Specific Onboarding
+
+After the group has done the LNO onboarding, schedule a time to do SciComp specific onboarding. You'll discuss the types of support the SciComp team can offer as well as the workshops we're currently capable of offering. You'll share the infrastructure you've made with the group.
+
+Critically, _ask the group if they have any tasks on their collective mind already!_
+
+Finally, if this onboarding meeting is for a SPARC group, reiterate that they get one (1) year of SciComp support but they choose when to start that clock. Some groups use the entire year before their in-person meeting while others don't ask for support until after that meeting.
