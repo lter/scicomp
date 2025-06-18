@@ -63,19 +63,19 @@ website:
           - text: "People"
             href: staff.qmd
           - text: "Inernal: Contributing"
-            href: internal_contributing.qmd
+            href: internal/contributing.qmd
           - text: "Internal: Team Onboarding"
-            href: internal_team-onboard.qmd
+            href: internal/team-onboard.qmd
           - text: "Internal: WG Setup"
-            href: internal_new-wg-setup.qmd
+            href: internal/new-wg-setup.qmd
           - text: "Internal: Data Portals"
-            href: internal_get-data.qmd
+            href: internal/get-data.qmd
           - text: "Internal: Deploy Shiny Apps"
-            href: internal_deploy-shiny.qmd
+            href: internal/deploy-shiny.qmd
       - icon: github
         href: https://github.com/lter/scicomp
   page-footer:
-    center: "Copyright 2024, LTER Network Office"
+    center: "Copyright 2025, LTER Network Office"
     background: secondary
   margin-footer: |
     <img src="images/logos/lter.png" alt="LTER Network logo" width="40%"/>
