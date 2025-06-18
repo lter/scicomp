@@ -1,5 +1,5 @@
 ---
-title: "Sci Comp Team Onboarding"
+title: "SciComp Team Onboarding"
 ---
 
 ### Welcome to the Team!
@@ -17,49 +17,41 @@ Listed below are a mix of references and tutorials on concepts we aim to promote
 - Heidborn 2008. ["Shedding Light on the Dark Data in the Long Tail of Science"](http://doi.org/10.1353/lib.0.0036)
 - Fegraus et al 2005. ["Maximizing the Value of Ecological Data with Structured Metadata:"](https://doi.org/10.1890/0012-9623%282005%2986[158:MTVOED]2.0.CO;2)
 
-## Programs & Resources
+## Necessary Software / Platforms
 
-### GitHub Tutorial
+### 1. Get on GitHub
 
-We rely heavily on [GitHub](https://github.com/) for collaboration, and there are a few things you must do to get set up. First, complete the NCEAS GitHub Tutorial [here](https://lter.github.io/workshop-github/rstudio.html). This tutorial will help you with getting started with `git` and GitHub using RStudio.
+We rely _heavily_ on [GitHub](https://github.com/) for collaboration, and there are a few things you must do to get set up. See below for details:
 
-### LTER GitHub Organization
+1. Create a personal GitHub account
+2. Send your GitHub user name to Marty Downs to be added to the LTER Network Office GitHub organization ([github.com/lter](https://github.com/lter))
+3. Ask Marty to add you the ["scientific-computing" GitHub Team](https://github.com/orgs/lter/teams/scientific-computing)
+    - This is a sub-team of the "network-office" team
+4. Complete the [LTER GitHub workshop](https://lter.github.io/workshop-github/)
 
-Register (if you have not already) for a personal GitHub account and send your username to Marty to be added to the [LTER GitHub](https://github.com/LTER). This GitHub Organization "owns" the working groups repositories that you will be directly working with so being added to this organization will give you access to needed repositories.
+### 2. Familiarize Self with GitHub Issues
 
-### NCEAS GitHub Enterprise Organization
+We use GitHub issues _extensively_ to track progress on tasks and make it easier for SciComp team members to (A) collaborate with one another and (B) share progress with working groups in a completely transparent manner. Incidentally this also ensures we 'walk the walk' with regard to our guidance to working groups.
 
-We use a GitHub Enterprise account to keep track of tasks for the Scientific Computing Support of LTER working groups. To be added to the account you must create an NCEAS account.
+We store tasks as issues on [this website's GitHub repository](https://github.com/lter/scicomp/issues) and in a [GitHub Project in the LTER GitHub organization](https://github.com/orgs/lter/projects/11/views/10). We've created a number of issue templates so that when you make a new issue, you start with a scaffold that--when filled out--ensures you have most of the vital context information documented explicitly. Use those templates and check out past/closed issues if you need an example of implementation.
 
-Follow the directions outlined [here](https://docs.google.com/document/d/1eoR1oDrCrczgbYHPZU_1szB_2fhzu7EUHnh5nFI3eSg/edit) and send your username to Marty Downs (not the email outlined in the Google Doc).
+### 3. Join Slack
 
-After you have been added, you will be able to access the [Issues tab of the `lter-wg-scicomp` GitHub repository](https://github.nceas.ucsb.edu/LTER/lter-wg-scicomp/issues). We use issues on this repository to keep track of tasks and projects as well as who is primarily responsible for a given task and which working group gave us the task initially.
+We use Slack to communicate with one another throughout the day. To be added to the NCEAS Slack group, register [here](https://slack.nceas.ucsb.edu/). If you already have a Slack account, be sure to use the email address you used previously to register for this organization.
 
-### Slack
+Find and join our `#lter-network-office` channel by clicking the plus sign next to the Channels section. Feel free to join any other channels that you might find interesting! Popular channels include `#diversity`, `#nceas-residents`, and `#social`.
 
-We use Slack to communicate with one another throughout the day. To be added to the NCEAS Slack group, register [here](https://slack.nceas.ucsb.edu/). If you already have a slack account, be sure to use the email address you used to register.
+### 4. Get an Account on NCEAS Server: Aurora
 
-Find and join our `#scicomp` channel by clicking the plus sign next to the Channels section. Feel free to join any other channels that you might find interesting! Popular channels include `#diversity`, `#nceas`, and `#social`.
-
-Finally, complete [this short tutorial](https://pages.github.nceas.ucsb.edu/NCEAS/help/chat_room_setup.html) on using Slack.
-
-### NCEAS Server: Aurora
-
-We use the Aurora server (located at aurora.nceas.ucsb.edu) when working with RStudio or JupyterHub. Send an email to help@nceas.ucsb.edu requesting an account mentioning you are working with Marty. Thomas Hetmank or Nick Outin will contact you with directions for setting up an account.
+We use the Aurora server (located at _aurora.nceas.ucsb.edu_) when working with particularly data-intensive projects in RStudio or JupyterHub. Send an email to **help [at] nceas.ucsb.edu** requesting an account mentioning you are working with the LTER Scientific Computing team. Thomas Hetmank or Nick Outin (NCEAS' IT personnel) will contact you with directions for setting up an account.
 
 ## Recurring NCEAS Meetings
 
-There are a number of recurring meetings that you are encouraged to attend. At your hiring, you should receive an invitation to the NCEAS Google Calendar which has links to all the meeting information. These include Coffee Klatch (a coffee social), Hacky Hours, and Data Science Chats (to name a few).
-
-We also have a team Google Calendar to manage team events. Marty will add you if you have not been already.
+There are a number of recurring meetings that you are encouraged to attend. At your hiring, you should receive an invitation to the NCEAS Google Calendar which has links to all the meeting information. The most common of these is Coffee Klatch--a coffee social like a departmental coffee hour--where announcements are shared and NCEAS staff have a chance to do minor chit-chat before returning to work. At time of writing, Coffee Klatch is 10:30-11:00 AM (Pacific Time) on Tuesdays.
 
 ## Data Science Background and Tutorials
 
-For good background information on the tools that we use, read through and practice examples of the following chapters from a training we did for postdocs in early 2020: https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/index.html
-
-Chapters [3](https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/working-on-a-remote-machine.html), [5](https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/introduction-to-r-and-rmarkdown.html), [8](https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/linux-and-the-command-line.html) are a good background about the tools we use.
-
-Chapters [9](https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/data-modeling-tidy-data.html), [10](https://science-for-nature-and-people.github.io/2020-data-collab-workshop/2020-02-snapp/data-cleaning-and-manipulation.html) are a good introduction to data modeling.
+For good background information on many of the tools that we use and practices that we encourage, read through the LTER [Synthesis Skills for Early Career Researchers](https://lter.github.io/ssecr/) (SSECR) course materials. SciComp team members had a strong presence in the design of these materials and the shape of the course closely mirrors patterns that have worked for past working groups.
 
 ### R Self-Assessment
 
