@@ -18,6 +18,7 @@ This issue defines the core onboarding tasks for setting up the infrastructure f
 - [ ] Create infrastructure for the group
     - [ ] Create Google Group
     - [ ] Create Shared Google Drive
+    - [ ] Add [LTER template GoogleSheets](https://drive.google.com/drive/folders/1g9n1A7XgCeYduB3LdO1JGDktrvu-rWj0) to the Shared Drive
     - [ ] Create GitHub repository in LTER GH org (use [template WG repo](https://github.com/lter/lterwg-template))
 - [ ] Open an issue for supporting this group as a sub-issue of [this issue](https://github.com/lter/scicomp/issues/61)
     - "Type" should be "initiative"
