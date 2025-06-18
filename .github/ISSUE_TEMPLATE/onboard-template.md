@@ -13,8 +13,7 @@ This issue defines the core onboarding tasks for setting up the infrastructure f
 
 ## Starting Tasks
 
-- [ ] Wait for LNO onboarding meeting with group PIs to be scheduled
-    - [ ] Attend that meeting and give short shpiel about SciComp support
+- [ ] Wait for which groups were funded to be made public
 - [ ] Create infrastructure for the group
     - [ ] Create Google Group
     - [ ] Create Shared Google Drive
@@ -22,8 +21,10 @@ This issue defines the core onboarding tasks for setting up the infrastructure f
     - [ ] Create GitHub repository in LTER GH org (use [template WG repo](https://github.com/lter/lterwg-template))
 - [ ] Open an issue for supporting this group as a sub-issue of [this issue](https://github.com/lter/scicomp/issues/61)
     - "Type" should be "initiative"
-    - Label should be "working-group"
+    - Label should be "working-group" _OR_ "sparc-group"
 - [ ] Add _this issue_ as a sub-issue of the one for all support tasks for that group
+- [ ] Wait for LNO onboarding meeting with group PIs to be scheduled
+    - [ ] Attend that meeting and give short shpiel about SciComp support
 - [ ] Schedule dedicated SciComp onboarding meeting
     - [ ] Discuss types of support (tasks, sprints, etc.)
     - [ ] Discuss educational offerings
@@ -35,4 +36,4 @@ This issue defines the core onboarding tasks for setting up the infrastructure f
 - GitHub repo: "lter / lterwg-<abbreviated-group-name>" _OR_ "lter / lter-sparc-<abbreviated-group-name>"
     - Note repo name should be all lowercase
 - Shared Drive: "LTER-WG_<Abbreviated-Group-Name>" _OR_ "LTER-SPARC_<Abbreviated-Group-Name>"
-    - Note group abbreviation should be title case (e.g., "Synthesis in Ecology")
+    - Note group abbreviation should be title case (e.g., "Ecological-Synthesis")
