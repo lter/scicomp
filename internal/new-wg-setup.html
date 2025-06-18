@@ -405,16 +405,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#shared-google-drive" id="toc-shared-google-drive" class="nav-link active" data-scroll-target="#shared-google-drive">Shared Google Drive</a>
-  <ul class="collapse">
-  <li><a href="#creating-the-shared-drive" id="toc-creating-the-shared-drive" class="nav-link" data-scroll-target="#creating-the-shared-drive">Creating the Shared Drive</a></li>
-  <li><a href="#adding-users" id="toc-adding-users" class="nav-link" data-scroll-target="#adding-users">Adding Users</a></li>
-  <li><a href="#content-creation" id="toc-content-creation" class="nav-link" data-scroll-target="#content-creation">Content Creation</a></li>
-  </ul></li>
-  <li><a href="#github-repository" id="toc-github-repository" class="nav-link" data-scroll-target="#github-repository">GitHub Repository</a>
-  <ul class="collapse">
-  <li><a href="#initialize-repository" id="toc-initialize-repository" class="nav-link" data-scroll-target="#initialize-repository">Initialize Repository</a></li>
-  </ul></li>
+  <li><a href="#attend-lter-network-office-new-group-onboarding-meeting" id="toc-attend-lter-network-office-new-group-onboarding-meeting" class="nav-link active" data-scroll-target="#attend-lter-network-office-new-group-onboarding-meeting">1. Attend LTER Network Office ‘New Group Onboarding’ Meeting</a></li>
+  <li><a href="#create-the-infrastructure-for-the-group" id="toc-create-the-infrastructure-for-the-group" class="nav-link" data-scroll-target="#create-the-infrastructure-for-the-group">2. Create the Infrastructure for the Group</a></li>
+  <li><a href="#offer-scicomp-specific-onboarding" id="toc-offer-scicomp-specific-onboarding" class="nav-link" data-scroll-target="#offer-scicomp-specific-onboarding">3. Offer SciComp-Specific Onboarding</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
@@ -458,61 +451,53 @@ Note
 </div>
 </div>
 <p>When new working groups are funded, our team takes a number of setup steps to create some of the infrastructure that past groups have requested/found useful. This is mainly an attempt to help the group avoid spending their precious in-person meeting time doing relatively dry technical steps that we can easily accomplish early-on. Some of these steps also set a useful ‘tone’ in terms of facilitating groups’ adherence to reproducibility best practices.</p>
-<section id="shared-google-drive" class="level2">
-<h2 class="anchored" data-anchor-id="shared-google-drive">Shared Google Drive</h2>
-<p>Many groups gravitate towards using Google Drive for storing data, relevant scientific literature, and (eventually) manuscript drafts. One advantage of a true Shared Drive over simply creating a folder and sharing that is that the distributed ownership of the Shared Drive makes it very difficult to accidentally delete/lose important files.</p>
-<p>Some groups have experience serious heartbreak when one member’s Google identity gets closed by their institution and all files/folders created by that member vanish. A Shared Drive makes this horror story an impossibility.</p>
-<section id="creating-the-shared-drive" class="level3">
-<h3 class="anchored" data-anchor-id="creating-the-shared-drive">Creating the Shared Drive</h3>
-<p>Our <code>@nceas.ucsb.edu</code> email addresses are empowered to create Shared Drives. Navigate to your Google Drive, then in the left sidebar click “Shared drives”. Once there you can click the “+ New” button to create a brand new Shared Drive.</p>
-<p>The naming convention you should use is <code>LTER-WG_&lt;WG-Abbreviation&gt;</code> or <code>LTER-SPARC_WG-Abbreviation</code> for full synthesis working groups and SPARC groups respectively.</p>
-<p>Note that for groups with longer names you will want to abbreviate so that the Shared Drive name doesn’t get ambiguously cropped in a default browser window.</p>
+<section id="attend-lter-network-office-new-group-onboarding-meeting" class="level2">
+<h2 class="anchored" data-anchor-id="attend-lter-network-office-new-group-onboarding-meeting">1. Attend LTER Network Office ‘New Group Onboarding’ Meeting</h2>
+<p>Once the decision is made for which group(s) to fund, Marty Downs will schedule an onboarding meeting for group PIs to talk about NCEAS / LTER Network Office resources. A SciComp team member needs to be there to give a brief introduction and pitch for the kinds of support that our team can offer.</p>
 </section>
-<section id="adding-users" class="level3">
-<h3 class="anchored" data-anchor-id="adding-users">Adding Users</h3>
-<p>Once the Shared Drive exists, add the following people as “Content Managers”:</p>
+<section id="create-the-infrastructure-for-the-group" class="level2">
+<h2 class="anchored" data-anchor-id="create-the-infrastructure-for-the-group">2. Create the Infrastructure for the Group</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Google Group</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Shared Drive</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">GitHub Repository</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">NCEAS Server Account</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><strong>Rationale:</strong> Google Groups centralize all group members’ Google identities. This makes sharing access to a piece of the Google ecosystem with an entire team really simple.</p>
+<p><strong>Naming Convention:</strong></p>
 <ul>
-<li><u>All</u> members of the Scientific Computing team</li>
-<li>Marty Downs (LTER Network Office Director)</li>
-<li>Thomas Hetmank (NCEAS Programmer/Analyst)</li>
+<li>“LTER-WG_&lt;Abbreviated-Group-Name&gt;”</li>
+<li>“LTER-SPARC_&lt;Abbreviated-Group-Name&gt;”</li>
 </ul>
-<p>When you reach out to the working groups you can also make a note of their emails and add them as well though you may want to first tell them about the Shared Drive before sending them a semi-random Shared Drive invite.</p>
+<p>Note that the group abbreviation should be title case (e.g., “Ecological-Synthesis”)</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><strong>Rationale:</strong> A Shared Google Drive is a great place to store raw data as well as preserve documentation and script outputs. A true Shared Drive also distributes ownership in a way that makes it safe even when individual Google accounts get deactivated (as is the case when someone changes institutions).</p>
+<p><strong>Naming Convention:</strong> Same as the Google Group!</p>
+<p><strong>Other Notes:</strong> Add the Google Group as ‘maintainers’ and add Marty Downs and Thomas Hetmank as ‘administrators’. Also, move copies of <a href="https://drive.google.com/drive/folders/1g9n1A7XgCeYduB3LdO1JGDktrvu-rWj0">the critical LTER template Google files</a> into the top-level of the Shared Drive. Groups are not required to use these but they generally have been useful to groups in the past.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><strong>Rationale:</strong> GitHub is <em>the</em> way we recommend collaborating on code. This emphasis is made more particularly clear elsewhere so we’ll leave it at that here.</p>
+<p><strong>Naming Convention:</strong></p>
+<ul>
+<li>“lter / lterwg-&lt;abbreviated-group-name&gt;"</li>
+<li>“lter / lter-sparc-&lt;abbreviated-group-name&gt;"</li>
+</ul>
+<p>Note that the group abbreviation should be entirely lowercase.</p>
+<p><strong>Other Notes:</strong> Create the repository in the LTER GitHub organization and use the <a href="https://github.com/lter/lterwg-template">working group template repository</a> as the starting point. Add any usernames that you have from the group to this repository.</p>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p>Don’t do this unless it is needed! The server is another account/login/workflow group members have to keep in mind. If you make this part of the group’s intitial infrastructure, you risk overwhelming them for the really vital stuff when the server is not always necessary for all projects.</p>
+<p>If it is needed, contact Thomas Hetmank or Nick Outin to get a ‘team’ set up on Aurora for the working group.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="content-creation" class="level3">
-<h3 class="anchored" data-anchor-id="content-creation">Content Creation</h3>
-<p>We want to use as light a touch as possible here to make sure that groups feel empowered to make their Shared Drive whatever they need it to be but there are a few things we can do.</p>
-<p>Copy the template Google Sheets we’ve created (found in <a href="https://drive.google.com/drive/folders/1g9n1A7XgCeYduB3LdO1JGDktrvu-rWj0?usp=sharing">this Drive folder</a>) and move the copies into their Shared Drive.</p>
-</section>
-</section>
-<section id="github-repository" class="level2">
-<h2 class="anchored" data-anchor-id="github-repository">GitHub Repository</h2>
-<p>We encourage all groups to engage with GitHub for–at minimum–storing their final code products. We have found that creating a GitHub repository at this stage tends to increase adoption of GitHub and is therefore very much worthwhile even if no group members use it at the time that their group gets funded.</p>
-<section id="initialize-repository" class="level3">
-<h3 class="anchored" data-anchor-id="initialize-repository">Initialize Repository</h3>
-<p>Make a repository in the <a href="https://github.com/lter">LTER GitHub Organization</a> with the following information:</p>
-<ol type="1">
-<li>Begin with the <a href="https://github.com/lter/lterwg-template">working group template repository</a>
-<ul>
-<li>When you make a new repo it’ll provides an option for whether you want to use a template</li>
-</ul></li>
-<li>Create a name that fits one of the following naming conventions
-<ul>
-<li>For full working groups (3-4 meetings): “lterwg-<code>abbreviated-group-name</code>”</li>
-<li>For SPARC groups (1 meeting): “lter-sparc-<code>abbreviated-group-name</code>”</li>
-</ul></li>
-<li>Set the “Description” to the title of the working group
-<ul>
-<li>As indicated on <a href="https://lternet.edu/current-working-groups/">the LTER Network Office website</a></li>
-</ul></li>
-<li>Add a README</li>
-<li>Create a <code>.gitignore</code> <u>using the R template</u>
-<ul>
-<li>R is the most common working group language and the <code>.gitignore</code> is easily changed in the event the group is primarily using a different language</li>
-</ul></li>
-</ol>
+<section id="offer-scicomp-specific-onboarding" class="level2">
+<h2 class="anchored" data-anchor-id="offer-scicomp-specific-onboarding">3. Offer SciComp-Specific Onboarding</h2>
+<p>After the group has done the LNO onboarding, schedule a time to do SciComp specific onboarding. You’ll discuss the types of support the SciComp team can offer as well as the workshops we’re currently capable of offering. You’ll share the infrastructure you’ve made with the group.</p>
+<p>Critically, <em>ask the group if they have any tasks on their collective mind already!</em></p>
+<p>Finally, if this onboarding meeting is for a SPARC group, reiterate that they get one (1) year of SciComp support but they choose when to start that clock. Some groups use the entire year before their in-person meeting while others don’t ask for support until after that meeting.</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
