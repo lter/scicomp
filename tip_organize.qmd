@@ -28,13 +28,58 @@ There is no single "best" mode of organizing a project. However, there are some 
 While there is no "one size fits all" solution, **our team has identified a structure that has worked quite well for past groups because it is relatively simple to maintain and easily extensible as project questions evolve.** In addition, it avoids an overly nested folder structure which makes it easier for new members (or 'future you') to become familiar with the overall schema.
 
 ::::{.columns}
-:::{.column width="55%"}
+:::{.column width="50%"}
+### Google Drive Structure
 
-Key properties of this structure:
+{{< fa brands google-drive >}} Shared Drive  
+&nbsp;|--&nbsp;{{< fa folder >}} data  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-csv >}} data-log.csv  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} raw  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} tidy  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-csv >}} 01_data-harmonized.csv  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-csv >}} 02_data-wrangled.csv  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa file-csv >}} 03_data-filtered.csv  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} climate  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; {{< fa folder >}} land-cover  
+&nbsp;|--&nbsp;{{< fa folder >}} notes   
+&nbsp;|--&nbsp;{{< fa folder >}} presentations  
+&nbsp;&nbsp;L&nbsp; {{< fa folder >}} publications   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa folder >}} community-composition  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; L&nbsp;{{< fa folder >}} graphs   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa folder >}} synchrony  
 
-- Everything nested within a project-wide folder
+:::
+:::{.column width="50%"}
+### GitHub Structure
+
+{{< fa brands github >}} GitHub Repository  
+&nbsp;|--&nbsp;{{< fa file-lines >}} README.md  
+&nbsp;|--&nbsp;{{< fa file-lines >}} .gitignore  
+&nbsp;|--&nbsp;{{< fa folder >}} scripts  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 00_download-data.R  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 01_harmonize.R  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 02_quality-control.R  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 03_filter.R  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 04_stats.R  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; {{< fa file-code >}} 05_graph.R  
+&nbsp;|--&nbsp;{{< fa folder >}} tools  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-lines >}} README.md  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} fxn_calc-beta-diversity.R  
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; {{< fa file-code >}} fxn_bookmark-graph.R   
+&nbsp; L&nbsp;{{< fa folder >}} explore  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-lines >}} README.md  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} downs-stats.py  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; {{< fa file-code >}} lyon-graphs.R  
+
+:::
+::::
+
+Check out the tabs below for highlights of these structures!
+
+:::{.panel-tabset}
+### **_Both!_**
+
 - _Limited_ use of sub-folders
-- Dedicated "README" files containing high-level information about each folder
 - Consistent folder/file naming conventions
    - Good names should be be both human and machine-readable
    - Avoid spaces and special characters
@@ -42,46 +87,29 @@ Key properties of this structure:
 - Shared file prefix (a.k.a. "slug") connecting code files with files they create
     - Allows for easy tracing of errors because the file with issues has an explicit tie to the script that likely introduced that error
 
-:::
-:::{.column width="5%"}
+### {{< fa brands google-drive >}} Google Drive-Specific
+
+- **Contains inputs to code and outputs from code but _not_ code itself**
+    - Trust that GitHub does a better job of tracking code files than Drive can
+    - Also remember that duplicating code files and storing them in multiple places is a recipe for heartache as there is no "single source of truth" upon which to depend
+- Dedicated place for notes / presentations
+- Shared `data/` folder agnostic to specific product
+    - Will let your group start with the same data product for each paper (just filtered/analyzed differently for each product)
+
+### {{< fa brands github >}} GitHub-Specific
+
+- **Contains code but _not_ inputs/outputs**
+     - Use the `.gitignore` file to regulate what Git will/won't track (for more info, see [here](https://lter.github.io/workshop-github/git_ignore.html))
+- Dedicated "README" files containing high-level information about each folder
+- Numbered script names making workflow order explicit
+- Use of custom functions for repeated operations
+    - This is a great way of ensuring reproducibility--and if you create enough functions, a software package might be a nice 'bonus' product for your group!
+- `explore/` folder for 'rough draft' scripts developed by particular members
+    - Including this can be a great way of making everyone feel more comfortable contributing--even if they are not completely confident in their coding skills
+    - Including surnames in file names here can be a nice way of avoiding merge conflicts
+    - You can always rename these files and move them to the `scripts/` folder if they seem valuable for the core workflow!
 
 :::
-:::{.column width="40%"}
-:::{style="font-size:0.9em;"}
-
-_SciComp Suggested Project Structure:_
-
-{{< fa folder >}} synthesis_project  
-&nbsp;|--&nbsp;{{< fa file-lines >}} README.md  
-&nbsp;|--&nbsp;{{< fa folder >}} code  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-lines >}} README.md  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-code >}} 01_harmonize.R  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa file-code >}} 02_quality-control.R  
-&nbsp;|--&nbsp;{{< fa folder >}} data  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-lines >}} README.md  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-csv >}} data-log.csv  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa folder >}} raw  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa folder >}} tidy  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-csv >}} 01_data-harmonized.csv  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa file-csv >}} 02_data-wrangled.csv  
-&nbsp;|--&nbsp;{{< fa folder >}} notes   
-&nbsp;|--&nbsp;{{< fa folder >}} presentations  
-&nbsp;&nbsp;L&nbsp; {{< fa folder >}} publications   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-lines >}} README.md  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa folder >}} community-composition  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa folder >}} biogeochemistry  
-
-:::
-:::
-::::
-
-## GitHub versus Google Drive
-
-Ideally your chosen organization system will work for all platforms that your group uses. For many groups, this includes--at a minimum--a GitHub repository and a Shared Google Drive. While the same general organizing structure will work in both locations, there are some slight differences.
-
-**GitHub should not track the "data" folder** (see [our tutorial on using the ".gitignore" file](https://lter.github.io/workshop-github/git_ignore.html) to regulate what Git will/won't track) and likely the facets of your project that are not directly related to data/code (e.g., "notes", etc.) won't be stored in GitHub either.
-
-Similarly, **you should not store your code in the Drive.** Trust that GitHub does a better job of tracking code files than Drive can and also remember that storing duplicate code files is often a recipe for heartache as there is no "single source of truth" upon which to depend.
 
 ## Additional Resources
 
