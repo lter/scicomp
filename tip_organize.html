@@ -411,7 +411,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#when-should-we-plan" id="toc-when-should-we-plan" class="nav-link" data-scroll-target="#when-should-we-plan">When Should We Plan?</a></li>
   <li><a href="#broad-considerations" id="toc-broad-considerations" class="nav-link" data-scroll-target="#broad-considerations">Broad Considerations</a></li>
   <li><a href="#scicomp-recommendation-example" id="toc-scicomp-recommendation-example" class="nav-link" data-scroll-target="#scicomp-recommendation-example">SciComp Recommendation Example</a></li>
-  <li><a href="#github-versus-google-drive" id="toc-github-versus-google-drive" class="nav-link" data-scroll-target="#github-versus-google-drive">GitHub versus Google Drive</a></li>
   <li><a href="#additional-resources" id="toc-additional-resources" class="nav-link" data-scroll-target="#additional-resources">Additional Resources</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -473,12 +472,57 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="scicomp-recommendation-example">SciComp Recommendation Example</h2>
 <p>While there is no “one size fits all” solution, <strong>our team has identified a structure that has worked quite well for past groups because it is relatively simple to maintain and easily extensible as project questions evolve.</strong> In addition, it avoids an overly nested folder structure which makes it easier for new members (or ‘future you’) to become familiar with the overall schema.</p>
 <div class="columns">
-<div class="column" style="width:55%;">
-<p>Key properties of this structure:</p>
+<div class="column" style="width:50%;">
+<section id="google-drive-structure" class="level3">
+<h3 class="anchored" data-anchor-id="google-drive-structure">Google Drive Structure</h3>
+<p><i class="fa-brands fa-google-drive" aria-label="google-drive"></i> Shared Drive<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> data<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-file-csv" aria-label="file-csv"></i> data-log.csv<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> raw<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> tidy<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-csv" aria-label="file-csv"></i> 01_data-harmonized.csv<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-csv" aria-label="file-csv"></i> 02_data-wrangled.csv<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-file-csv" aria-label="file-csv"></i> 03_data-filtered.csv<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> climate<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> land-cover<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> notes<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> presentations<br>
+&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> publications<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> community-composition<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; L&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> graphs<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> synchrony</p>
+</section>
+</div><div class="column" style="width:50%;">
+<section id="github-structure" class="level3">
+<h3 class="anchored" data-anchor-id="github-structure">GitHub Structure</h3>
+<p><i class="fa-brands fa-github" aria-label="github"></i> GitHub Repository<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-file-lines" aria-label="file-lines"></i> .gitignore<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> scripts<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> 00_download-data.R<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> 01_harmonize.R<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> 02_quality-control.R<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> 03_filter.R<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> 04_stats.R<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> 05_graph.R<br>
+&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> tools<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> fxn_calc-beta-diversity.R<br>
+&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> fxn_bookmark-graph.R<br>
+&nbsp; L&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> explore<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> downs-stats.py<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> lyon-graphs.R</p>
+</section>
+</div>
+</div>
+<p>Check out the tabs below for highlights of these structures!</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><strong><em>Both!</em></strong></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-brands fa-google-drive" aria-label="google-drive"></i> Google Drive-Specific</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false"><i class="fa-brands fa-github" aria-label="github"></i> GitHub-Specific</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <ul>
-<li>Everything nested within a project-wide folder</li>
 <li><em>Limited</em> use of sub-folders</li>
-<li>Dedicated “README” files containing high-level information about each folder</li>
 <li>Consistent folder/file naming conventions
 <ul>
 <li>Good names should be be both human and machine-readable</li>
@@ -490,39 +534,43 @@ ul.task-list li input[type="checkbox"] {
 <li>Allows for easy tracing of errors because the file with issues has an explicit tie to the script that likely introduced that error</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:40%;">
-<div style="font-size:0.9em;">
-<p><em>SciComp Suggested Project Structure:</em></p>
-<p><i class="fa-solid fa-folder" aria-label="folder"></i> synthesis_project<br>
-&nbsp;|–&nbsp;<i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
-&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> code<br>
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-code" aria-label="file-code"></i> 01_harmonize.R<br>
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-file-code" aria-label="file-code"></i> 02_quality-control.R<br>
-&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> data<br>
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-csv" aria-label="file-csv"></i> data-log.csv<br>
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> raw<br>
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> tidy<br>
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-csv" aria-label="file-csv"></i> 01_data-harmonized.csv<br>
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-file-csv" aria-label="file-csv"></i> 02_data-wrangled.csv<br>
-&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> notes<br>
-&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> presentations<br>
-&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> publications<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-file-lines" aria-label="file-lines"></i> README.md<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|–&nbsp;<i class="fa-solid fa-folder" aria-label="folder"></i> community-composition<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; <i class="fa-solid fa-folder" aria-label="folder"></i> biogeochemistry</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<ul>
+<li><strong>Contains inputs to code and outputs from code but <em>not</em> code itself</strong>
+<ul>
+<li>Trust that GitHub does a better job of tracking code files than Drive can</li>
+<li>Also remember that duplicating code files and storing them in multiple places is a recipe for heartache as there is no “single source of truth” upon which to depend</li>
+</ul></li>
+<li>Dedicated place for notes / presentations</li>
+<li>Shared <code>data/</code> folder agnostic to specific product
+<ul>
+<li>Will let your group start with the same data product for each paper (just filtered/analyzed differently for each product)</li>
+</ul></li>
+</ul>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<ul>
+<li><strong>Contains code but <em>not</em> inputs/outputs</strong>
+<ul>
+<li>Use the <code>.gitignore</code> file to regulate what Git will/won’t track (for more info, see <a href="https://lter.github.io/workshop-github/git_ignore.html">here</a>)</li>
+</ul></li>
+<li>Dedicated “README” files containing high-level information about each folder</li>
+<li>Numbered script names making workflow order explicit</li>
+<li>Use of custom functions for repeated operations
+<ul>
+<li>This is a great way of ensuring reproducibility–and if you create enough functions, a software package might be a nice ‘bonus’ product for your group!</li>
+</ul></li>
+<li><code>explore/</code> folder for ‘rough draft’ scripts developed by particular members
+<ul>
+<li>Including this can be a great way of making everyone feel more comfortable contributing–even if they are not completely confident in their coding skills</li>
+<li>Including surnames in file names here can be a nice way of avoiding merge conflicts</li>
+<li>You can always rename these files and move them to the <code>scripts/</code> folder if they seem valuable for the core workflow!</li>
+</ul></li>
+</ul>
 </div>
 </div>
 </div>
-</section>
-<section id="github-versus-google-drive" class="level2">
-<h2 class="anchored" data-anchor-id="github-versus-google-drive">GitHub versus Google Drive</h2>
-<p>Ideally your chosen organization system will work for all platforms that your group uses. For many groups, this includes–at a minimum–a GitHub repository and a Shared Google Drive. While the same general organizing structure will work in both locations, there are some slight differences.</p>
-<p><strong>GitHub should not track the “data” folder</strong> (see <a href="https://lter.github.io/workshop-github/git_ignore.html">our tutorial on using the “.gitignore” file</a> to regulate what Git will/won’t track) and likely the facets of your project that are not directly related to data/code (e.g., “notes”, etc.) won’t be stored in GitHub either.</p>
-<p>Similarly, <strong>you should not store your code in the Drive.</strong> Trust that GitHub does a better job of tracking code files than Drive can and also remember that storing duplicate code files is often a recipe for heartache as there is no “single source of truth” upon which to depend.</p>
 </section>
 <section id="additional-resources" class="level2">
 <h2 class="anchored" data-anchor-id="additional-resources">Additional Resources</h2>
