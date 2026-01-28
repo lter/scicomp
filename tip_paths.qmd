@@ -6,7 +6,7 @@ title: "Reproducible File Paths"
 
 This section contains our recommendations for handling file paths. When you code collaboratively (e.g., with GitHub), accounting for the difference between your folder structure and those of your colleagues becomes critical. **Ideally your code should be completely agnostic about (1) the operating system of the computer it is running on (i.e., Windows vs. Mac) and (2) the folder structure of the computer**. We can--fortunately--handle these two considerations relatively simply. This may seem somewhat dry but it is worth mentioning that failing to use relative file paths is a significant hindrance to reproducibility (see [Trisovic _et al._ 2022](https://www.nature.com/articles/s41597-022-01143-6)).
 
-You may also find our [tutorial on storing user-specific information](https://lter.github.io/scicomp/tutorial_json.html) valuable in this context.
+You may also find our [tutorial on storing user-specific information](https://lter.github.io/scicomp/tutorial_user-info.html) valuable in this context.
 
 ## 1. Preserve File Paths as Objects
 

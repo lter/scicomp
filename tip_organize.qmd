@@ -115,5 +115,5 @@ Check out the tabs below for highlights of these structures!
 
 If you'd like more resources on project organization and reproducibility in general, check out the following:
 
-- LTER's Synthesis Skills for Early Career Researchers (SSECR) [Reproducibility module](https://lter.github.io/ssecr/mod_reproducibility.html)
+- LTER's Synthesis Skills for Early Career Researchers (SSECR) [Reproducibility module](https://lter.github.io/ssecr-2024/mod_reproducibility.html)
 - LTER Scientific Computing Team's [Tips for File Naming](https://lter.github.io/scicomp/tip_names.html)

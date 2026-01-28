@@ -8,7 +8,7 @@ When you first start working on a project with your group members, figuring out 
 
 ## Naming Tips
 
-Here is a summary of some naming tips that we recommend. These were taken from the [Reproducibility Best Practices module](https://lter.github.io/ssecr/mod_reproducibility.html#naming-tips) in the LTER's SSECR course. Please feel free to refer to the aforementioned link for more information.
+Here is a summary of some naming tips that we recommend. These were taken from the [Reproducibility Best Practices module](https://lter.github.io/ssecr-2024/mod_reproducibility.html#naming-tips) in the LTER's SSECR course. Please feel free to refer to the aforementioned link for more information.
 
 - Names should be informative
   - An ideal file name should give some information about the file’s contents, purpose, and relation to other project files.
