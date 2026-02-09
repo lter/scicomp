@@ -18,4 +18,5 @@ This issue is meant primarily to document the support tasks requested and/or per
 
 ## Useful links
 
-- Group's GitHub repository: 
+- Group's GitHub repository:
+- Group's GH team: 
