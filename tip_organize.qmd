@@ -27,50 +27,57 @@ There is no single "best" mode of organizing a project. However, there are some 
 
 While there is no "one size fits all" solution, **our team has identified a structure that has worked quite well for past groups because it is relatively simple to maintain and easily extensible as project questions evolve.** In addition, it avoids an overly nested folder structure which makes it easier for new members (or 'future you') to become familiar with the overall schema.
 
+Top-level folders are colored <span style="color:#209ACA">**blue**</span> so that the high-level structure is easier to quickly scan.
+
 ::::{.columns}
 :::{.column width="50%"}
 ### Google Drive Structure
 
-{{< fa brands google-drive >}} Shared Drive  
-&nbsp;|--&nbsp;{{< fa folder >}} data  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-csv >}} data-log.csv  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} raw  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} tidy  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-csv >}} 01_data-harmonized.csv  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa file-csv >}} 02_data-wrangled.csv  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa file-csv >}} 03_data-filtered.csv  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} climate  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; {{< fa folder >}} land-cover  
-&nbsp;|--&nbsp;{{< fa folder >}} notes   
-&nbsp;|--&nbsp;{{< fa folder >}} presentations  
-&nbsp;&nbsp;L&nbsp; {{< fa folder >}} publications   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp;{{< fa folder >}} community-composition  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; L&nbsp;{{< fa folder >}} graphs   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;L&nbsp; {{< fa folder >}} synchrony  
+<div style="font-family: monospace;">
+
+{{< fa brands google-drive >}} **Shared Drive**  
+|--&nbsp; <span style="color:#209ACA">{{< fa folder >}} **data**</span>  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-csv >}} data-log.csv  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} raw  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} tidy  
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-csv >}} 01_data-harmonized.csv  
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-csv >}} 02_data-wrangled.csv  
+|&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;└ - {{< fa file-csv >}} 03_data-filtered.csv  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} climate  
+|&nbsp;&nbsp;&nbsp;└ - {{< fa folder >}} land-cover  
+|--&nbsp; <span style="color:#209ACA">{{< fa folder >}} **notes**</span>   
+|--&nbsp; <span style="color:#209ACA">{{< fa folder >}} **presentations**</span>  
+└ - <span style="color:#209ACA">{{< fa folder >}} **publications**</span>   
+&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} community-composition  
+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa folder >}} data     
+&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;└ - {{< fa folder >}} graphs   
+&nbsp;&nbsp;&nbsp;&nbsp;└ - {{< fa folder >}} synchrony  
+</div>
 
 :::
 :::{.column width="50%"}
 ### GitHub Structure
 
-{{< fa brands github >}} GitHub Repository  
-&nbsp;|--&nbsp;{{< fa file-lines >}} README.md  
-&nbsp;|--&nbsp;{{< fa file-lines >}} .gitignore  
-&nbsp;|--&nbsp;{{< fa folder >}} scripts  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 00_download-data.R  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 01_harmonize.R  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 02_quality-control.R  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 03_filter.R  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 04_stats.R  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; {{< fa file-code >}} 05_graph.R  
-&nbsp;|--&nbsp;{{< fa folder >}} tools  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-lines >}} README.md  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} fxn_calc-beta-diversity.R  
-&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; {{< fa file-code >}} fxn_bookmark-graph.R   
-&nbsp; L&nbsp;{{< fa folder >}} explore  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-lines >}} README.md  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} downs-stats.py  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; {{< fa file-code >}} lyon-graphs.R  
-
+<div style="font-family: monospace;">
+{{< fa brands github >}} **GitHub Repository**  
+|--&nbsp; {{< fa file-lines >}} README.md  
+|--&nbsp; {{< fa file-lines >}} .gitignore  
+|--&nbsp; <span style="color:#209ACA">{{< fa folder >}} **scripts**</span>  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 00_download-data.R  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 01_harmonize.R  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 02_quality-control.R  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 03_filter.R  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} 04_stats.R  
+|&nbsp;&nbsp;&nbsp;└ - {{< fa file-code >}} 05_graph.R  
+|--&nbsp; <span style="color:#209ACA">{{< fa folder >}} **tools**</span>  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-lines >}} README.md  
+|&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} fxn_calc-beta-diversity.R  
+|&nbsp;&nbsp;&nbsp;└ - {{< fa file-code >}} fxn_bookmark-graph.R   
+└ - <span style="color:#209ACA">{{< fa folder >}} **explore**</span>  
+&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-lines >}} README.md  
+&nbsp;&nbsp;&nbsp;&nbsp;|--&nbsp; {{< fa file-code >}} downs-stats.py  
+&nbsp;&nbsp;&nbsp;&nbsp;└ - {{< fa file-code >}} lyon-graphs.R  
+</div>
 :::
 ::::
 
