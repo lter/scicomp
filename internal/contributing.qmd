@@ -5,7 +5,7 @@ title: "Team Contributing Guidelines"
 While our team is composed of members from different backgrounds, we strive to adhere to a shared set of contributing and style guidelines. This ensures a consistent "feel" of our team's products, regardless of which team member took the lead on a particular task.
 
 :::{.callout-caution icon="false"}
-### Required for SciComp Only!
+### {{< fa house-user >}} Required for SciComp Only!
 
 This document is meant to focus primarily on our _internal_ processes for contributing. If you're not a member of this team, we hope you find this document valuable but you should also feel free to use our guidelines as a starting place rather than absolute rules.
 :::

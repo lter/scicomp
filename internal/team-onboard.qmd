@@ -2,69 +2,111 @@
 title: "SciComp Team Onboarding"
 ---
 
-### Welcome to the Team!
+:::{.callout-caution icon="false"}
+### {{< fa house-user >}} Relevant to SciComp Only!
 
-This page contains a quick, cookbook-style set of instructions for new staff on the Scientific Computing Support Team. We are so excited to have you join us and we hope that these instructions are clear and easy-to-follow. Please don't hesitate to reach out if you run into any issues (see the "Our Team" tab of this site) or [post a GitHub issue yourself](https://github.com/lter/scicomp/issues) on this website's repository!
+This document is primarily meant for members of the LTER Scientific Computing team.
+:::
 
-Listed below are a mix of references and tutorials on concepts we aim to promote to researchers who we support, as well as tools and workflows we use in our team. The goal is to give context about open and reproducible science principles NCEAS is promoting to the scientific community. You will also find information on getting access to the tools that you will need and some general information about working at NCEAS.
+So, you're a new member of the LTER Scientific Computing (SciComp) team: welcome! **We are excited to have you join us and we hope that the onboarding instructions below are clear and easy-to-follow.**
 
----
+The goal of this page is to detail which tools we use (and why we use them) but we'll also provide some larger context for LTER's/NCEAS' approach.
 
-## Background Reading Material
+## What You Need to Do...
 
-- Hampton et al 2015. ["The Tao of open science for ecology"](https://doi.org/10.1890/ES14-00402.1)
-- Borer et al 2009. ["Effective Data Management"](https://doi.org/10.1890/0012-9623-90.2.205)
-- Heidborn 2008. ["Shedding Light on the Dark Data in the Long Tail of Science"](http://doi.org/10.1353/lib.0.0036)
-- Fegraus et al 2005. ["Maximizing the Value of Ecological Data with Structured Metadata:"](https://doi.org/10.1890/0012-9623%282005%2986[158:MTVOED]2.0.CO;2)
+### As Soon As Possible
 
-## Necessary Software / Platforms
+:::{.panel-tabset}
+### Get on GitHub
 
-### 1. Get on GitHub
-
-We rely _heavily_ on [GitHub](https://github.com/) for collaboration, and there are a few things you must do to get set up. See below for details:
+We rely _heavily_ on [GitHub](https://github.com/), and there are a few things you must do to get set up. See below for details:
 
 1. Create a personal GitHub account
-2. Send your GitHub user name to Marty Downs to be added to the LTER Network Office GitHub organization ([github.com/lter](https://github.com/lter))
-3. Ask Marty to add you the ["scientific-computing" GitHub Team](https://github.com/orgs/lter/teams/scientific-computing)
+2. **Personalize your GitHub profile**
+    - E.g., add a picture, link your ORCiD, pin some of your favorite repositories
+    - The point here is to serve as a positive example to working group members as they adopt GitHub best practices
+3. Send your GitHub username to Marty Downs to be added to the LTER Network Office GitHub organization ([github.com/lter](https://github.com/lter))
+4. Ask Marty to add you the ["scientific-computing" GitHub Team](https://github.com/orgs/lter/teams/scientific-computing)
     - This is a sub-team of the "network-office" team
-4. Complete the [LTER GitHub workshop](https://lter.github.io/workshop-github/)
+5. Complete the [LTER GitHub workshop](https://lter.github.io/workshop-github/)
+    - There's a lot there so don't try to do it all in one sitting!
 
-### 2. Familiarize Self with GitHub Issues
+### Get an NCEAS' Server Account
 
-We use GitHub issues _extensively_ to track progress on tasks and make it easier for SciComp team members to (A) collaborate with one another and (B) share progress with working groups in a completely transparent manner. Incidentally this also ensures we 'walk the walk' with regard to our guidance to working groups.
+We occasionally use the Aurora server (located at _aurora.nceas.ucsb.edu_) when working with particularly data-intensive projects. **Send an email to help[at]nceas.ucsb.edu requesting an account** and mention that you are working with the LTER Scientific Computing team. Thomas Hetmank or Nick Outin (NCEAS' IT personnel) will contact you with directions for setting up an account.
 
-We store tasks as issues on [this website's GitHub repository](https://github.com/lter/scicomp/issues) and in a [GitHub Project in the LTER GitHub organization](https://github.com/orgs/lter/projects/11/views/10). We've created a number of issue templates so that when you make a new issue, you start with a scaffold that--when filled out--ensures you have most of the vital context information documented explicitly. Use those templates and check out past/closed issues if you need an example of implementation.
+Note that we _can_ onboard working groups to using Aurora as well but only a minority of groups' projects actually need/want that access.
 
-### 3. Join Slack
+### Join Slack
 
-We use Slack to communicate with one another throughout the day. To be added to the NCEAS Slack group, register [here](https://slack.nceas.ucsb.edu/). If you already have a Slack account, be sure to use the email address you used previously to register for this organization.
+We use Slack to communicate with one another throughout the day. **Register for the NCEAS Slack by clicking [here](https://slack.nceas.ucsb.edu/).** If you already have a Slack account, be sure to use the email address you used previously to register for this organization.
 
-Find and join our `#lter-network-office` channel by clicking the plus sign next to the Channels section. Feel free to join any other channels that you might find interesting! Popular channels include `#diversity`, `#nceas-residents`, and `#social`.
+Find and join our `#lter-network-office` channel by clicking the magnifying glass button at the top of the "Channels "section. Feel free to join any other channels that you might find interesting! Popular channels include `#diversity`, `#nceas-residents`, and `#social`.
 
-### 4. Get an Account on NCEAS Server: Aurora
+### Read Background Literature
 
-We use the Aurora server (located at _aurora.nceas.ucsb.edu_) when working with particularly data-intensive projects in RStudio or JupyterHub. Send an email to **help [at] nceas.ucsb.edu** requesting an account mentioning you are working with the LTER Scientific Computing team. Thomas Hetmank or Nick Outin (NCEAS' IT personnel) will contact you with directions for setting up an account.
+Members of the SciComp team have been part of the authorship team for a couple of great peer-reviewed papers on the philosophical and logistical approaches that we take to support LTER working groups. 
 
-## Recurring NCEAS Meetings
+Read the following papers:
 
-There are a number of recurring meetings that you are encouraged to attend. At your hiring, you should receive an invitation to the NCEAS Google Calendar which has links to all the meeting information. The most common of these is Coffee Klatch--a coffee social like a departmental coffee hour--where announcements are shared and NCEAS staff have a chance to do minor chit-chat before returning to work. At time of writing, Coffee Klatch is 10:30-11:00 AM (Pacific Time) on Tuesdays.
+- Elmendorf, S.C. _et al._ [Ten Simple Rules for Team Synthesis in Ecological Research](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210x.70378). **2026**. Methods in Ecology and Evolution.
+- Brun, J. _et al._ [Enabling Data-Driven Collaborative and Reproducible Environmental Synthesis Science](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.70036). **2025**. Methods in Ecology and Evolution
 
-## Data Science Background and Tutorials
+:::
 
-For good background information on many of the tools that we use and practices that we encourage, read through the LTER [Synthesis Skills for Early Career Researchers](https://lter.github.io/ssecr/) (SSECR) course materials. SciComp team members had a strong presence in the design of these materials and the shape of the course closely mirrors patterns that have worked for past working groups.
+### Within the First 3 Months
 
-### R Self-Assessment
+:::{.panel-tabset}
 
-Finally, please complete this [R Training Assessment](https://cosima.nceas.ucsb.edu/r-self-assessment/) to self-assess your skills in R.
+### Get Familiar with GitHub Issues
 
-Schedule a session with the rest of the team to debrief on your experience.
+We use GitHub issues _extensively_ to track progress on tasks and make it easier for SciComp team members to (A) collaborate with one another and (B) share progress with working groups in a completely transparent manner. Incidentally this also ensures we act in alignment with our guidance to working groups.
 
-## HR-related Resources
+To see our current tasks, check out either [our team's GitHub Project](https://github.com/orgs/lter/projects/11/views/10) or the issues on [this website's GitHub repository](https://github.com/lter/scicomp/issues)
 
-### Reporting Hours & Kronos
+**When you receive a task (or set one for your own improvement as a data scientist), please create an issue for that effort!** Fill out the issue metadata and add track its progress with the GitHub project. We've created a number of issue templates to make creating them a little easier but as you become more familiar with your role, you should feel free to edit those templates as needed.
 
-We submit vacation and sick day hours online through [Kronos](https://ucsb.kronos.net/wfc/navigator/logonWithUID). You should receive an email at the start of your employment adding you to an email listserv that will send reminders on when to approve each month's timesheet.
+Check out past issues to get a sense for how issues tend to be scoped and documented and also how various metadata fields have been leveraged.
 
-### UC Path
+### Become a Synthesis Fellow
 
-[UC Path](https://www.ucpath.ucsb.edu/) is the online HR portal and can be accessed with your UCSB Net ID. It is where you can access things like your paycheck, next date of paycheck, and benefits (if applicable).
+This tab panel title is phrased in a sort of tongue-in-cheek way but ultimately, you will want to gain all the same skills that a graduate of our [Synthesis Skills for Early Career Researchers](https://lter.github.io/ssecr/) (SSECR) course provides early career scientists.
+
+Look through the content on that website and pay special attention to any areas (technical or interpersonal) where you know your skills could stand to be refined. **SciComp team members had a strong presence in the design of these materials and the shape of the course closely mirrors patterns that have worked for past working groups.**
+
+### Do More Reading
+
+Check out these older (but still useful!) publications.
+
+- Hampton, S.E. _et al._ 2015. [The Tao of Open Science for Ecology](https://doi.org/10.1890/ES14-00402.1). **2015**. Ecosphere
+- Borer, E.T. _et al._ [Some Simple Guidelines for Effective Data Management](https://doi.org/10.1890/0012-9623-90.2.205). **2009**. Bulletin of the Ecological Society of America
+- Fegraus, E.H. _et al._ [Maximizing the Value of Ecological Data with Structured Metadata: An Introduction to Ecological Metadata Language (EML) and Principles for Metadata Creation](https://doi.org/10.1890/0012-9623%282005%2986[158:MTVOED]2.0.CO;2). **2005**. Bulletin of the Ecological Society of America
+
+:::
+
+### Going Forward
+
+:::{.panel-tabset}
+### D.R.Y.
+
+"DRY: <u>D</u>on't <u>R</u>epeat <u>Y</u>ourself" is one of the mantras of the working data scientist. When a working group asks for you to do something for them, _the chances are good that one of your predecessors in the SciComp team has already solved a similar problem!_
+
+Glance through the [repositories on the LTER GitHub organization](https://github.com/orgs/lter/repositories) in order to become generally familiar with the code we've written for (and with) groups in the past. Feel free to copy/paste old code written by the team if it saves you some redundant setup effort.
+
+### Plant Seeds
+
+One of the reasons why groups _adore_ working with our team is that our solutions often solve not just the problem at hand, but several related problems in the future too! **Where possible, try to make your solutions as useful as possible to 'future you' or future team members.** Such effort also helps working groups gain and apply new skills both within their working group and in their careers outside of the working group!
+
+The title of this tabset panel comes from a 1950s American author (though it is often attributed to famous Greek philosophers). To paraphrase:
+
+> A society becomes great when people plant the seeds for trees under which they know they will never sit
+
+This is a little grandiose but applies to your work with the SciComp team and, in our opinion, the whole endeavor of reproducible, open science!
+
+### Prioritize Your Development!
+
+Pursuing chances to grow your skillset (whether it be interpersonal or technical), is a benefit both to the SciComp team right now and to your development as a data scientist! **As you increase the breadth and depth of your skills, you'll be better-equipped to help working groups.**
+
+Some past SciComp members have opened GitHub issues to track their own skill development! Such issues can be found as sub-issues under the "[SciComp] Improve Working Group Support" issue ([\#30](https://github.com/lter/scicomp/issues/30)). Check them out for inspiration if desired.
+
+:::
