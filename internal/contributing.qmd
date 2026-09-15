@@ -7,20 +7,39 @@ While our team is composed of members from different backgrounds, we strive to a
 :::{.callout-caution icon="false"}
 ### Required for SciComp Only!
 
-Note that these are only required for Scientific Computing team members but you may find some of this guidance helpful even if you're not a part of our team.
+This document is meant to focus primarily on our _internal_ processes for contributing. If you're not a member of this team, we hope you find this document valuable but you should also feel free to use our guidelines as a starting place rather than absolute rules.
 :::
-
-## LTER Scientific Computing Contributing Guidelines
-
-This document is meant to focus primarily on our _internal_ processes for contributing. If you're not a member of this team, we hope you find this document valuable as-is but you should also feel free to make any modifications you feel are necessary if you choose to use our guidelines as a starting place.
 
 ### Version Control & GitHub
 
-As much as possible, use the style of "[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)" in your commit messages. See [here](https://njlyon0.github.io/tips/commits.html) for a nice summary of the highlights of that approach.
+We use Git & GitHub _extensively_ both because it's extremely useful for our profession and it helps us 'walk the walk' with regard to our guidance to working groups. However, depending on whether the edits you are making are minor or more substantial, you'll want to use different approaches. See below for details on either context.
 
-For **minor changes**, (1) communicate with the team to avoid merge conflicts and (2) make commits directly to `main`
+:::{.panel-tabset}
+### Minor Changes
 
-For **_major_ changes**, (1) communicate with the team to avoid merge conflicts, (2) open a branch with an intuitive but concise name, and (3) open a pull request when you are confident your edits are largely complete. (4) Request a review from a teammate, (5) make any edits they suggest, (6) merge the PR, and (7) delete the branch.
+For **minor changes**, do the following:
+
+1. Communicate with the team (both ours and the relevant working group's) to avoid merge conflicts
+2. Make commits directly to `main`
+
+### Major Changes
+
+For **_major_ changes**, do the following: 
+
+1. Communicate with the team to avoid merge conflicts
+2. Open a branch with an intuitive but concise name
+3. Make any needed edits
+4. Open a pull request when you are confident your edits are largely complete
+5. Request a review from a teammate
+6. Make any edits they suggest, (6) merge the PR, and (7) delete the branch.
+
+:::
+
+Regardless of the scope of your edits, commit frequently with informative messages. As much as possible, use the style of "[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)" in your commit messages. See [here](https://njlyon0.github.io/teach_tutorials/content/version-control.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636c6f636b2d726f746174652d6c656674203e7d7d-conventional-commits) for a nice summary of the highlights of that approach.
+
+
+
+
 
 ### Style Guide
 
