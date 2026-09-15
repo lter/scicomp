@@ -62,11 +62,11 @@ website:
         menu:
           - text: "People"
             href: staff.qmd
-          - text: "Inernal: Contributing"
+          - text: "SciComp Contributing"
             href: internal/contributing.qmd
-          - text: "Internal: Team Onboarding"
+          - text: "SciComp Team Onboarding"
             href: internal/team-onboard.qmd
-          - text: "Internal: WG Setup"
+          - text: "Working Group Onboarding"
             href: internal/new-wg-setup.qmd
       - icon: github
         href: https://github.com/lter/scicomp
