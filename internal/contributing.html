@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>SciComp Team Contributing Guidelines – LTER Scientific Computing Team</title>
+<title>Team Contributing Guidelines – LTER Scientific Computing Team</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<meta name="twitter:title" content="SciComp Team Contributing Guidelines – LTER Scientific Computing Team">
+<meta name="twitter:title" content="Team Contributing Guidelines – LTER Scientific Computing Team">
 <meta name="twitter:description" content="">
 <meta name="twitter:card" content="summary">
 </head>
@@ -407,7 +407,15 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#version-control-github" id="toc-version-control-github" class="nav-link active" data-scroll-target="#version-control-github">Version Control &amp; GitHub</a></li>
+  <li><a href="#style-guide" id="toc-style-guide" class="nav-link" data-scroll-target="#style-guide">Style Guide</a></li>
+  <li><a href="#file-paths" id="toc-file-paths" class="nav-link" data-scroll-target="#file-paths">File Paths</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     <div class="quarto-margin-footer"><div class="margin-footer-item">
 <p><img src="images/logos/lter.png" alt="LTER Network logo" width="40%"> <img src="images/logos/nceas.png" alt="NCEAS logo" width="40%"></p>
 </div></div></div>
@@ -417,7 +425,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">SciComp Team Contributing Guidelines</h1>
+<h1 class="title">Team Contributing Guidelines</h1>
 </div>
 
 
@@ -435,10 +443,67 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>While our team is composed of members from different backgrounds, we strive to adhere to a shared set of contributing and style guidelines. This ensures a consistent “feel” of our team’s products, regardless of which team member took the lead on a particular task.</p>
-<p>Standard convention in GitHub is to house such information in a “CONTRIBUTING.md” file in the top-level of the relevant repository. We have done that in the repository underpinning this website but you can also quickly jump to that file by clicking <a href="https://github.com/lter/scicomp/blob/main/CONTRIBUTING.md">here</a>.</p>
-<p>Note that these are only required for Scientific Computing team members but you may find some of this guidance helpful even if you’re not a part of our team.</p>
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Required for SciComp Only!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This document is meant to focus primarily on our <em>internal</em> processes for contributing. If you’re not a member of this team, we hope you find this document valuable but you should also feel free to use our guidelines as a starting place rather than absolute rules.</p>
+</div>
+</div>
+<section id="version-control-github" class="level3">
+<h3 class="anchored" data-anchor-id="version-control-github">Version Control &amp; GitHub</h3>
+<p>We use Git &amp; GitHub <em>extensively</em> both because it’s extremely useful for our profession and it helps us ‘walk the walk’ with regard to our guidance to working groups. However, depending on whether the edits you are making are minor or more substantial, you’ll want to use different approaches. See below for details on either context.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Minor Changes</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Major Changes</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>For <strong>minor changes</strong>, do the following:</p>
+<ol type="1">
+<li>Communicate with the team (both ours and the relevant working group’s) to avoid merge conflicts</li>
+<li>Make commits directly to <code>main</code></li>
+</ol>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>For <strong><em>major</em> changes</strong>, do the following:</p>
+<ol type="1">
+<li>Communicate with the team to avoid merge conflicts</li>
+<li>Open a branch with an intuitive but concise name</li>
+<li>Make any needed edits</li>
+<li>Open a pull request when you are confident your edits are largely complete</li>
+<li>Request a review from a teammate</li>
+<li>Make any edits they suggest, (6) merge the PR, and (7) delete the branch.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>Regardless of the scope of your edits, commit frequently with informative messages. As much as possible, use the style of “<a href="https://www.conventionalcommits.org/en/v1.0.0/">Conventional Commits</a>” in your commit messages. See <a href="https://njlyon0.github.io/teach_tutorials/content/version-control.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c20666120636c6f636b2d726f746174652d6c656674203e7d7d-conventional-commits">here</a> for a nice summary of the highlights of that approach.</p>
+</section>
+<section id="style-guide" class="level3">
+<h3 class="anchored" data-anchor-id="style-guide">Style Guide</h3>
+<p>For folder/file names and in code, please follow the following style tips:</p>
+<ul>
+<li>Use all lowercase</li>
+<li>Related files/objects should have a shared file prefix (e.g., <code>wrangle_...</code>)
+<ul>
+<li>For files that have an inherent order, use zero-padded numbers as the prefix (e.g., <code>01_</code>, <code>02_</code>, etc.)</li>
+</ul></li>
+<li>Use underscores (<code>_</code>) for separating major pieces of information and hyphens (<code>-</code>) in lieu of spaces (e.g., <code>01_find-area.R</code>, <code>harmonize_spp-rich-info.py</code>, etc.)</li>
+</ul>
+</section>
+<section id="file-paths" class="level3">
+<h3 class="anchored" data-anchor-id="file-paths">File Paths</h3>
+<p>When we write code–for ourselves or for working groups–we use <strong>operating system (OS) agnostic file paths</strong>.</p>
+<p>In R, this means using the <code>file.path()</code> function (from base R) to stitch together elements (e.g., <code>file.path("data", "raw_2024.csv")</code>). In Python it means using the <code>join</code> function from the <code>path</code> module of the <code>os</code> library (e.g., <code>os.path.join("data", "raw_2024.csv")</code>).</p>
+<p>If you plan on re-using a file path, assign it to an object/variable (R/Python) to avoid typos/errors when re-using the file path.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -867,7 +932,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
 <p>Copyright 2025, LTER Network Office</p>
-<div class="toc-actions"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/lter/scicomp/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
