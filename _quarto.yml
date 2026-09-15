@@ -68,10 +68,6 @@ website:
             href: internal/team-onboard.qmd
           - text: "Internal: WG Setup"
             href: internal/new-wg-setup.qmd
-          - text: "Internal: Data Portals"
-            href: internal/get-data.qmd
-          - text: "Internal: Deploy Shiny Apps"
-            href: internal/deploy-shiny.qmd
       - icon: github
         href: https://github.com/lter/scicomp
   page-footer:
