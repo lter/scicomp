@@ -44,6 +44,7 @@ vignettes/*.pdf
 # Special Mac files
 .DS_Store
 
-# Quarto rendering folders
+# Quarto stuff
+**/*.quarto_ipynb
 /.quarto/
 docs/
