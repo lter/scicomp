@@ -26,8 +26,7 @@ We rely _heavily_ on [GitHub](https://github.com/), and there are a few things y
     - E.g., add a picture, link your ORCiD, pin some of your favorite repositories
     - The point here is to serve as a positive example to working group members as they adopt GitHub best practices
 3. Send your GitHub username to Marty Downs to be added to the LTER Network Office GitHub organization ([github.com/lter](https://github.com/lter))
-4. Ask Marty to add you the ["scientific-computing" GitHub Team](https://github.com/orgs/lter/teams/scientific-computing)
-    - This is a sub-team of the "network-office" team
+4. Ask Marty to add you the ["network-office" GitHub Team](https://github.com/orgs/lter/teams/network-office)
 5. Complete the [LTER GitHub workshop](https://lter.github.io/workshop-github/)
     - There's a lot there so don't try to do it all in one sitting!
 

@@ -47,7 +47,7 @@ Note that the group abbreviation should be entirely lowercase.
 
 ### GitHub Team
 
-**Rationale:** [GitHub Teams](https://github.com/orgs/lter/teams?query=lter-) centralize all group members' GitHub identities. This makes granting an entire group access to multiple repositories really simple. It also only requires a single invite rather than one per repository as is the case with per-repo invites.
+**Rationale:** [GitHub Teams](https://github.com/orgs/lter/teams/working-groups/teams) centralize all group members' GitHub identities. This makes granting an entire group access to multiple repositories really simple. It also only requires a single invite rather than one per repository as is the case with per-repo invites.
 
 **Naming Convention:** 
 
@@ -56,7 +56,7 @@ Note that the group abbreviation should be entirely lowercase.
 
 Note that the group abbreviation should be entirely lowercase.
 
-**Other Notes:** Add the group's repository to that team and grant the team "Maintain" access. Offer "Admin" to the PIs but emphasize it will grant them destructive setting power as well.
+**Other Notes:** Make the group's team as a "sub-team" of the "working-groups" team (it'll keep the [top-level "Teams" view](https://github.com/orgs/lter/teams) nice and tidy). Add the group's repository to that team and grant the team "Maintain" access. Offer "Admin" to the PIs but emphasize it will grant them destructive setting power as well. If PIs want admin power, direct add them to the repo and grant them specifically admin power; if you grant admin power to the team, you're giving it to a lot of people who don't need/want it.
 
 ### Other Stuff
 
