@@ -30,19 +30,27 @@ We rely _heavily_ on [GitHub](https://github.com/), and there are a few things y
 5. Complete the [LTER GitHub workshop](https://lter.github.io/workshop-github/)
     - There's a lot there so don't try to do it all in one sitting!
 
-### Get an NCEAS' Server Account
-
-We occasionally use the Aurora server (located at _aurora.nceas.ucsb.edu_) when working with particularly data-intensive projects. **Send an email to help[at]nceas.ucsb.edu requesting an account** and mention that you are working with the LTER Scientific Computing team. Thomas Hetmank or Nick Outin (NCEAS' IT personnel) will contact you with directions for setting up an account.
-
-Note that we _can_ onboard working groups to using Aurora as well but only a minority of groups' projects actually need/want that access.
-
 ### Join Slack
 
 We use Slack to communicate with one another throughout the day. **Register for the NCEAS Slack by clicking [here](https://slack.nceas.ucsb.edu/).** If you already have a Slack account, be sure to use the email address you used previously to register for this organization.
 
 Find and join our `#lter-network-office` channel by clicking the magnifying glass button at the top of the "Channels "section. Feel free to join any other channels that you might find interesting! Popular channels include `#diversity`, `#nceas-residents`, and `#social`.
 
-### Read Background Literature
+### Make Office Hours
+
+A key part of the support that our team offers is twice-weekly office hours. We've been using a GoogleSheet for sign-ups so **put the link to that sheet in your email signature**.
+
+The relevant GoogleSheet can be found in the {{< fa shared-drive >}} LNO Shared Drive in the following path: `LTER-LNO-general > data-science-support > scicomp-team_office-hours`.
+
+After an office hour slot has passed, cut/paste that row of the GoogleSheet into the "archive" GoogleSheet (in the same Drive folder) for posterity. Put it in the right sheet for the calendar year so it's easy to summarize for annual reports.
+
+### Get on Aurora
+
+We occasionally use NCEAS' "Aurora" server (located at _aurora.nceas.ucsb.edu_) when working with particularly data-intensive projects. **Send an email to help[at]nceas.ucsb.edu requesting an account** and mention that you are working with the LTER Scientific Computing team. Thomas Hetmank or Nick Outin (NCEAS' IT personnel) will contact you with directions for setting up an account.
+
+Note that we _can_ onboard working groups to using Aurora as well but only a minority of groups' projects actually need/want that access.
+
+### Read Background Lit.
 
 Members of the SciComp team have been part of the authorship team for a couple of great peer-reviewed papers on the philosophical and logistical approaches that we take to support LTER working groups. 
 
