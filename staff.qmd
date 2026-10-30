@@ -14,7 +14,7 @@ We have been privileged to work with the following teammates who have since gone
 
 <img src="images/staff/nlyon.png" alt="Photo of Nick Lyon" align="right" width="25%"/>
 
-Nick focused on supporting working groups in the data acquisition and management prerequisite to analysis and visualization. Nick also spent significant time creating and offering workshop-style trainings to build capacity within groups for synthesis-related skills. They are a trained restoration ecologist who specialized on interacting communities of plants and insects. Nick has extensive experience taking "raw", field-collected data and readying it for hypothesis testing in a rigorous, transparent way. Nick completed their M.Sc. in Ecology and Evolutionary Biology at Iowa State University.
+Nick focused on supporting working groups particularly in the data harmonization phase of their work and also was a consistent leader in building capacity within groups by offering workshop-style trainings. Nick now works for the University of Wisconsin-Madison's [Data Science Institute](https://dsi.wisc.edu/) as a data scientist.
 
 ### Angel Chen _(she/her)_
 
