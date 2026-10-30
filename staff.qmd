@@ -4,6 +4,11 @@ title: "Our Team"
 
 Because we live in an era where we may only meet in person sporadically, we felt it would be nice to introduce ourselves here to help you put a face to the emails / Slack messages / GitHub issues we exchange going forward! If you would like to email the whole team as one send your questions to **scicomp \[at\] nceas.ucsb.edu**
 
+### Casey O'Hara
+
+
+
+
 ## Past Team Members
 
 We have been privileged to work with the following teammates who have since gone on to other positions.
